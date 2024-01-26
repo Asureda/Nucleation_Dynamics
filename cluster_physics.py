@@ -34,6 +34,7 @@ class ClusterPhysics:
         self.molar_volume = ureg.Quantity(self.molar_mass/self.mass_density, "m**3/mol")
         self.molecular_volume = ureg.Quantity(self.molar_volume / self.AVOGADRO, "m**3")
         self.entropy_fusion = ureg.Quantity(self.heat_fusion / self.melting_point, "joules/kelvin/mol")
+        self.S = 15
 
     def print_properties(self):
         print(f"Constante de Boltzmann: {self.BOLTZMANN}")
@@ -52,43 +53,65 @@ class ClusterPhysics:
 
     def diffusivity(self):
         return self.TEMP_INDEP_DIFFUSIVITY * np.exp(-self.activation_energy/(self.temperature))
+    
+    def unbiased_jump_rate(self):
+        return 6 * self.diffusivity() / (self.jump_distance**2)
+    
+    def number_of_sites_transformation(self, number_of_molecules):
+        return 4 * np.power(number_of_molecules,2.0/3.0)
+    
+    def bulk_free_energy_melting(self):
+        return self.entropy_fusion*(self.temperature - self.melting_point)/self.AVOGADRO
+    
+    def bulk_free_energy_saturation(self):
+        return - ClusterPhysics.BOLTZMANN*self.temperature*np.log(self.S)
+    
+    def surface_free_energy(self):
+        a = (36*np.pi*self.molecular_volume**2)**(1/3)
+        return a*self.sigma
+    
+    def total_free_energy_melting(self, number_of_molecules):
+        return self.bulk_free_energy_melting()*number_of_molecules + self.surface_free_energy()*number_of_molecules**(2/3)
 
+    def total_free_energy_saturation(self, number_of_molecules):
+        return self.bulk_free_energy_saturation()*number_of_molecules + self.surface_free_energy()*number_of_molecules**(2/3)
+  
+    def critical_energy_barrier_melting(self):
+        return (16*np.pi/3)*self.sigma**3*self.molecular_volume**2/(self.bulk_free_energy_melting()**2)
+    
+    def critical_energy_barrier_saturation(self):
+        return (16*np.pi/3)*self.sigma**3*self.molecular_volume**2/(self.bulk_free_energy_saturation()**2)
+    
+    def critical_radius_melting(self):
+        return -(2*self.sigma/(self.bulk_free_energy_melting()/self.molecular_volume)).to_base_units()
 
-def diffusivity(temperature):
-    return TEMP_INDEP_DIFFUSIVITY * np.exp(-ACTIVATION_ENERGY/(CONSTANT_GAS*temperature))
+    def critical_radius_saturation(self):
+        return -(2*self.sigma/(self.bulk_free_energy_saturation()/self.molecular_volume)).to_base_units()
+    
+    def critical_number_of_molecules_melting(self):
+        return (-2*self.critical_energy_barrier_melting()/self.bulk_free_energy_melting())
 
-def unbiased_jump_rate(temperature):
-    return 6 * diffusivity(temperature) / (JUMP_DISTANCE**2)
+    def critical_number_of_molecules_saturation(self):
+        return (-2*self.critical_energy_barrier_saturation()/self.bulk_free_energy_saturation())
+    
+    def attachment_rate_melting(self, number_of_molecules):
+        return 4*number_of_molecules**(2/3)*self.unbiased_jump_rate()*np.exp(-(self.total_free_energy_melting(number_of_molecules+1)-self.total_free_energy_melting(number_of_molecules))/(2*ClusterPhysics.BOLTZMANN*self.temperature))
 
-def number_of_sites_transformation(number_of_molecules):
-    return 4 * np.power(number_of_molecules,2.0/3.0)
+    def attachment_rate_saturation(self, number_of_molecules):
+        return 4*number_of_molecules**(2/3)*self.unbiased_jump_rate()*np.exp(-(self.total_free_energy_saturation(number_of_molecules+1)-self.total_free_energy_saturation(number_of_molecules))/(2*ClusterPhysics.BOLTZMANN*self.temperature))
 
-# Calculate the change in Gibbs free energy per molecule (J/mol)
-def delta_g_prime(temperature, delta_s_f, t_m):
-    return -delta_s_f / AVOGADRO * (temperature - t_m)
+    def detachment_rate_melting(self, number_of_molecules):
+        return 4*number_of_molecules**(2/3)*self.unbiased_jump_rate()*np.exp((self.total_free_energy_melting(number_of_molecules+1)-self.total_free_energy_melting(number_of_molecules))/(2*ClusterPhysics.BOLTZMANN*self.temperature))
 
-def gibbs_free_energy(number_of_molecules, temperature, sigma, delta_s_f, t_m):
-    delta_g = delta_g_prime(temperature, delta_s_f, t_m)
-    return number_of_molecules * delta_g + 4 * sigma *number_of_sites_transformation(number_of_molecules)
+    def detachment_rate_saturation(self, number_of_molecules):
+        return 4*number_of_molecules**(2/3)*self.unbiased_jump_rate()*np.exp((self.total_free_energy_saturation(number_of_molecules+1)-self.total_free_energy_saturation(number_of_molecules))/(2*ClusterPhysics.BOLTZMANN*self.temperature))
 
-# Forward rate constant
-def forward_rate_constant(number_of_molecules, temperature, sigma, delta_s_f, t_m):
-    delta_g_prime_value = delta_g_prime(temperature, delta_s_f, t_m)
-    delta_g_n = gibbs_free_energy(number_of_molecules, sigma, delta_g_prime_value)
-    delta_g_n_plus_1 = gibbs_free_energy(number_of_molecules + 1, sigma, delta_g_prime_value)
-    omega_n = number_of_sites_transformation(number_of_molecules)
-    k_plus = omega_n * np.exp(-(delta_g_n_plus_1 - delta_g_n) / (BOLTZMANN * temperature))
-    return k_plus
-
-# Backward rate constant
-def backward_rate_constant(number_of_molecules, temperature, sigma, delta_s_f, t_m):
-    delta_g_prime_value = delta_g_prime(temperature, delta_s_f, t_m)
-    delta_g_n = gibbs_free_energy(number_of_molecules, sigma, delta_g_prime_value)
-    delta_g_n_plus_1 = gibbs_free_energy(number_of_molecules + 1, sigma, delta_g_prime_value)
-    omega_n = number_of_sites_transformation(number_of_molecules)
-    k_minus = omega_n * np.exp((delta_g_n_plus_1 - delta_g_n) / (BOLTZMANN * temperature))
-    return k_minus
-
+    def number_density_equilibrium(self, number_of_molecules, number_of_sites):
+        return 
+    
+    def number_density_equilibrium_saturation(self, number_of_molecules):
+        return 
+    
 def N_eq(temperature, number_of_molecules, N0):
     print(np.exp(-gibbs_free_energy(number_of_molecules, temperature, SIGMA, DELTA_S, T_M) / (BOLTZMANN * temperature)))
     return N0*AVOGADRO * np.exp(-gibbs_free_energy(number_of_molecules, temperature, SIGMA, DELTA_S, T_M) / (BOLTZMANN * temperature))
