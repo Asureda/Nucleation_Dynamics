@@ -27,19 +27,24 @@ class ClusterPhysics:
         self.S = 15
 
     def print_properties(self):
-        print(f"Constante de Boltzmann: {self.BOLTZMANN}")
-        print(f"Constante de los gases: {self.CONSTANT_GAS}")
-        print(f"Temperatura: {self.temperature}")
-        print(f"Energía de activación: {self.activation_energy}")
-        print(f"Distancia de salto: {self.jump_distance}")
-        print(f"Molar mass: {self.molar_mass}")
-        print(f"Densidad: {self.mass_density}")
-        print(f"Punto de fusión: {self.melting_point}")
-        print(f"Calor de fusión: {self.heat_fusion}")
-        print(f"Entropía de fusión: {self.entropy_fusion}")
-        print(f"Volumen molar: {self.molar_volume}")
-        print(f"Volumen molecular: {self.molecular_volume}")
-        print(f"Sigma: {self.sigma}")
+        properties = [
+            ("Constante de Boltzmann", self.BOLTZMANN),
+            ("Constante de los gases", self.CONSTANT_GAS),
+            ("Temperatura", self.temperature),
+            ("Energía de activación", self.activation_energy),
+            ("Distancia de salto", self.jump_distance),
+            ("Masa molar", self.molar_mass),
+            ("Densidad", self.mass_density),
+            ("Punto de fusión", self.melting_point),
+            ("Calor de fusión", self.heat_fusion),
+            ("Entropía de fusión", self.entropy_fusion),
+            ("Volumen molar", self.molar_volume),
+            ("Volumen molecular", self.molecular_volume),
+            ("Sigma", self.sigma),
+        ]
+    
+        for name, value in properties:
+                print(f"{name}: {value}")
 
     def diffusivity(self):
         return self.TEMP_INDEP_DIFFUSIVITY * np.exp(-self.activation_energy/(self.temperature))
@@ -102,6 +107,8 @@ class ClusterPhysics:
     def number_density_equilibrium_saturation(self, number_of_molecules, number_of_sites):
         return number_of_sites*np.exp(-self.total_free_energy_melting(number_of_molecules)/(ClusterPhysics.BOLTZMANN*self.temperature))
     
+    def stationary_rate_melting(self, number_of_molecules, number_of_sites):
+        return self.attachment_rate_melting(number_of_molecules)*self.number_density_equilibrium_melting(number_of_molecules, number_of_sites)) 
 
 
 """ AVOGADRO = 6.022141e23 # 1/mol
