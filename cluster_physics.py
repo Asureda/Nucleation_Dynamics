@@ -1,16 +1,6 @@
 import numpy as np
 import pint 
 
-AVOGADRO = 6.022141e23 # 1/mol
-BOLTZMANN = 1.3806e-23 # J/K
-TEMP_INDEP_DIFFUSIVITY = 2e9 # m^2/s
-ACTIVATION_ENERGY = 4.4e5 # J/mol
-JUMP_DISTANCE = 4.6e-10 # m
-CONSTANT_GAS = 8.314 # J/mol*K
-DELTA_S = 40 # J/mol*K
-SIGMA = 0.15 # J/m^2
-T_M = 1300 # K
-
 ureg = pint.UnitRegistry()
 
 class ClusterPhysics:
@@ -106,12 +96,21 @@ class ClusterPhysics:
     def detachment_rate_saturation(self, number_of_molecules):
         return 4*number_of_molecules**(2/3)*self.unbiased_jump_rate()*np.exp((self.total_free_energy_saturation(number_of_molecules+1)-self.total_free_energy_saturation(number_of_molecules))/(2*ClusterPhysics.BOLTZMANN*self.temperature))
 
-    def number_density_equilibrium(self, number_of_molecules, number_of_sites):
-        return 
+    def number_density_equilibrium_melting(self, number_of_molecules, number_of_sites):
+        return number_of_sites*np.exp(-self.total_free_energy_melting(number_of_molecules)/(ClusterPhysics.BOLTZMANN*self.temperature))
     
-    def number_density_equilibrium_saturation(self, number_of_molecules):
-        return 
+    def number_density_equilibrium_saturation(self, number_of_molecules, number_of_sites):
+        return number_of_sites*np.exp(-self.total_free_energy_melting(number_of_molecules)/(ClusterPhysics.BOLTZMANN*self.temperature))
     
-def N_eq(temperature, number_of_molecules, N0):
-    print(np.exp(-gibbs_free_energy(number_of_molecules, temperature, SIGMA, DELTA_S, T_M) / (BOLTZMANN * temperature)))
-    return N0*AVOGADRO * np.exp(-gibbs_free_energy(number_of_molecules, temperature, SIGMA, DELTA_S, T_M) / (BOLTZMANN * temperature))
+
+
+""" AVOGADRO = 6.022141e23 # 1/mol
+BOLTZMANN = 1.3806e-23 # J/K
+TEMP_INDEP_DIFFUSIVITY = 2e9 # m^2/s
+ACTIVATION_ENERGY = 4.4e5 # J/mol
+JUMP_DISTANCE = 4.6e-10 # m
+CONSTANT_GAS = 8.314 # J/mol*K
+DELTA_S = 40 # J/mol*K
+SIGMA = 0.15 # J/m^2
+T_M = 1300 # K
+ """

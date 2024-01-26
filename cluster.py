@@ -1,13 +1,13 @@
-import cluster_physics as phys
+from cluster_physics import ClusterPhysics
 
 class Cluster:
-    def __init__(self, temperature, number_of_molecules, number_of_clusters):
-        self.temperature = temperature
+    def __init__(self, params, number_of_molecules, number_of_clusters):
+        # Inicializar un objeto ClusterPhysics
+        self.physics = ClusterPhysics(params)
+        
+        # Atributos de la clase Cluster
         self.number_of_molecules = number_of_molecules
         self.number_of_clusters = number_of_clusters
-        self.sigma = phys.SIGMA
-        self.delta_s_f = phys.DELTA_S
-        self.t_m = phys.T_M
 
     def get_number_of_molecules(self):
         return self.number_of_molecules
@@ -22,7 +22,7 @@ class Cluster:
         self.number_of_clusters = number_of_clusters
 
     def forward_rate(self):
-        return phys.forward_rate_constant(self.number_of_molecules, self.temperature, self.sigma, self.delta_s_f, self.t_m) * self.number_of_clusters
+        return self.physics.attachment_rate_melting(self.number_of_molecules) * self.number_of_clusters
 
     def backward_rate(self):
-        return phys.backward_rate_constant(self.number_of_molecules, self.temperature, self.sigma, self.delta_s_f, self.t_m) * self.number_of_clusters
+        return self.physics.detachment_rate_melting(self.number_of_molecules) * self.number_of_clusters
