@@ -7,45 +7,54 @@ number_clusters_start = 10
 dt = 1e-8/phys.jump_rate(T)
 dt = dt * 5e3
 time_steps = int(1e5)
- 
+N0 = 1 
 class ClusterSimulation:
-    def __init__(self, temperature, time_steps, u, MAX_NUMBER_MOLECULES):
+    def __init__(self, temperature, time_steps, N0, u, MAX_NUMBER_MOLECULES):
         self.cluster_dict = {}
         self.temperature = temperature
         self.time_steps = time_steps
         self.u = u  # Umbral para tratamiento numérico
         self.i_max = MAX_NUMBER_MOLECULES  # Límite superior para cierre del sistema
+        self.N0 = N0
 
         # Inicializar clusters
         for nof_molecules in range(1, MAX_NUMBER_MOLECULES + 1):
-            start = N_eq(temperature, nof_molecules) if nof_molecules < u else 0
+            start = phys.N_eq(self.temperature, nof_molecules, self.N0) if nof_molecules < u else 0
             new_cluster = cluster.Cluster(temperature, nof_molecules, start)
             self.cluster_dict[nof_molecules] = new_cluster
 
     def change_in_clusters_at_number(self, number_molecules):
-        # Condiciones de límite
-        if number_molecules == 1:
-            return 0
-        if number_molecules >= self.i_max:
-            return 0
+        # Handling the lower boundary condition at 'u'
+        if number_molecules <= self.u:
+            # Use effective forward rate for cluster 'u'
+            current_cluster = self.cluster_dict[number_molecules]
+            next_cluster = self.cluster_dict.get(number_molecules + 1, None)
+            rate_change = -current_cluster.effective_forward_rate()  # Need to define 'effective_forward_rate'
+            if next_cluster:
+                rate_change += next_cluster.backward_rate()
+            return rate_change
 
-        current_cluster = self.cluster_dict[number_molecules]
-        prev_cluster = self.cluster_dict.get(number_molecules - 1, None)
-        next_cluster = self.cluster_dict.get(number_molecules + 1, None)
+        # Handling the upper boundary condition at 'i_max'
+        elif number_molecules == self.i_max:
+            prev_cluster = self.cluster_dict.get(number_molecules - 1, None)
+            # No backward rate from i_max to i_max + 1, effectively setting it to 0
+            rate_change = prev_cluster.forward_rate() if prev_cluster else 0
+            return rate_change
 
-        # Calcular cambios de tasa
-        rate_change = 0
-        if prev_cluster:
-            print('prev_cluster', number_molecules)
-            rate_change += prev_cluster.forward_rate()
-        rate_change -= current_cluster.backward_rate()
-        if next_cluster and number_molecules < self.i_max:
-            rate_change -= current_cluster.forward_rate()
-            rate_change += next_cluster.backward_rate()
-
-        return rate_change
-
-    # ... el resto de la clase permanece igual
+        # Handling all other cases
+        elif 1 < number_molecules < self.i_max:
+            current_cluster = self.cluster_dict[number_molecules]
+            prev_cluster = self.cluster_dict.get(number_molecules - 1, None)
+            next_cluster = self.cluster_dict.get(number_molecules + 1, None)
+            rate_change = 0
+            if prev_cluster:
+                rate_change += prev_cluster.forward_rate()
+            rate_change -= current_cluster.forward_rate() + current_cluster.backward_rate()
+            if next_cluster:
+                rate_change += next_cluster.backward_rate()
+            return rate_change
+        else:
+            return 0    # ... el resto de la clase permanece igual
     def update_cluster_at_number(self, number_molecules):
         new_number_clusters = self.cluster_dict[number_molecules].get_number_of_clusters() + dt * self.change_in_clusters_at_number(number_molecules)
         self.cluster_dict[number_molecules].set_number_of_clusters(new_number_clusters)
