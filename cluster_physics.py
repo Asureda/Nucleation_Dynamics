@@ -24,7 +24,8 @@ class ClusterPhysics:
         self.molar_volume = ureg.Quantity(self.molar_mass/self.mass_density, "m**3/mol")
         self.molecular_volume = ureg.Quantity(self.molar_volume / self.AVOGADRO, "m**3")
         self.entropy_fusion = ureg.Quantity(self.heat_fusion / self.melting_point, "joules/kelvin/mol")
-        self.S = 15
+        self.S = params['supersaturation_ratio']
+        self.method = params['method']
 
     def print_properties(self):
         properties = [
@@ -55,60 +56,50 @@ class ClusterPhysics:
     def number_of_sites_transformation(self, number_of_molecules):
         return 4 * np.power(number_of_molecules,2.0/3.0)
     
-    def bulk_free_energy_melting(self):
-        return self.entropy_fusion*(self.temperature - self.melting_point)/self.AVOGADRO
-    
-    def bulk_free_energy_saturation(self):
-        return - ClusterPhysics.BOLTZMANN*self.temperature*np.log(self.S)
-    
+    def bulk_free_energy(self):
+        if self.method == 'melting':
+            return self.entropy_fusion * (self.temperature - self.melting_point) / self.AVOGADRO
+        elif self.method == 'saturation':
+            return - ClusterPhysics.BOLTZMANN * self.temperature * np.log(self.S)
+        else:
+            raise ValueError("Invalid method. Choose 'melting' or 'saturation'.")
+
     def surface_free_energy(self):
         a = (36*np.pi*self.molecular_volume**2)**(1/3)
         return a*self.sigma
-    
-    def total_free_energy_melting(self, number_of_molecules):
-        return self.bulk_free_energy_melting()*number_of_molecules + self.surface_free_energy()*number_of_molecules**(2/3)
 
-    def total_free_energy_saturation(self, number_of_molecules):
-        return self.bulk_free_energy_saturation()*number_of_molecules + self.surface_free_energy()*number_of_molecules**(2/3)
-  
-    def critical_energy_barrier_melting(self):
-        return (16*np.pi/3)*self.sigma**3*self.molecular_volume**2/(self.bulk_free_energy_melting()**2)
-    
-    def critical_energy_barrier_saturation(self):
-        return (16*np.pi/3)*self.sigma**3*self.molecular_volume**2/(self.bulk_free_energy_saturation()**2)
-    
-    def critical_radius_melting(self):
-        return -(2*self.sigma/(self.bulk_free_energy_melting()/self.molecular_volume)).to_base_units()
+    def total_free_energy(self, number_of_molecules):
+        if number_of_molecules <= 1:
+            return 0*ureg.joule
+        return self.bulk_free_energy() * number_of_molecules + self.surface_free_energy() * number_of_molecules ** (2/3)
 
-    def critical_radius_saturation(self):
-        return -(2*self.sigma/(self.bulk_free_energy_saturation()/self.molecular_volume)).to_base_units()
+    def critical_energy_barrier(self):
+        return (16 * np.pi / 3) * self.sigma ** 3 * self.molecular_volume ** 2 / (self.bulk_free_energy() ** 2)
+
+    def critical_radius(self):
+        return -(2 * self.sigma / (self.bulk_free_energy() / self.molecular_volume)).to_base_units()
+
+    def critical_number_of_molecules(self):
+        return -2 * self.critical_energy_barrier() / self.bulk_free_energy()
+
+    def rate_equation(self, number_of_molecules, attachment=True):
+        delta_energy = self.total_free_energy(number_of_molecules + 1) - self.total_free_energy(number_of_molecules)
+        if attachment:
+            return 4 * number_of_molecules ** (2/3) * self.unbiased_jump_rate() * np.exp(-delta_energy / (2 * ClusterPhysics.BOLTZMANN * self.temperature))
+        else:
+            return 4 * number_of_molecules ** (2/3) * self.unbiased_jump_rate() * np.exp(delta_energy / (2 * ClusterPhysics.BOLTZMANN * self.temperature))
+
+    def number_density_equilibrium(self, number_of_molecules):
+        return self.AVOGADRO * np.exp(-self.total_free_energy(number_of_molecules) / (ClusterPhysics.BOLTZMANN * self.temperature))
+
+    def stationary_rate(self, number_of_molecules, number_of_sites):
+        return self.rate_equation(number_of_molecules, attachment=True) * self.number_density_equilibrium(number_of_molecules)
     
-    def critical_number_of_molecules_melting(self):
-        return (-2*self.critical_energy_barrier_melting()/self.bulk_free_energy_melting())
-
-    def critical_number_of_molecules_saturation(self):
-        return (-2*self.critical_energy_barrier_saturation()/self.bulk_free_energy_saturation())
-    
-    def attachment_rate_melting(self, number_of_molecules):
-        return 4*number_of_molecules**(2/3)*self.unbiased_jump_rate()*np.exp(-(self.total_free_energy_melting(number_of_molecules+1)-self.total_free_energy_melting(number_of_molecules))/(2*ClusterPhysics.BOLTZMANN*self.temperature))
-
-    def attachment_rate_saturation(self, number_of_molecules):
-        return 4*number_of_molecules**(2/3)*self.unbiased_jump_rate()*np.exp(-(self.total_free_energy_saturation(number_of_molecules+1)-self.total_free_energy_saturation(number_of_molecules))/(2*ClusterPhysics.BOLTZMANN*self.temperature))
-
-    def detachment_rate_melting(self, number_of_molecules):
-        return 4*number_of_molecules**(2/3)*self.unbiased_jump_rate()*np.exp((self.total_free_energy_melting(number_of_molecules+1)-self.total_free_energy_melting(number_of_molecules))/(2*ClusterPhysics.BOLTZMANN*self.temperature))
-
-    def detachment_rate_saturation(self, number_of_molecules):
-        return 4*number_of_molecules**(2/3)*self.unbiased_jump_rate()*np.exp((self.total_free_energy_saturation(number_of_molecules+1)-self.total_free_energy_saturation(number_of_molecules))/(2*ClusterPhysics.BOLTZMANN*self.temperature))
-
-    def number_density_equilibrium_melting(self, number_of_molecules, number_of_sites):
-        return number_of_sites*np.exp(-self.total_free_energy_melting(number_of_molecules)/(ClusterPhysics.BOLTZMANN*self.temperature))
-    
-    def number_density_equilibrium_saturation(self, number_of_molecules, number_of_sites):
-        return number_of_sites*np.exp(-self.total_free_energy_melting(number_of_molecules)/(ClusterPhysics.BOLTZMANN*self.temperature))
-    
-    def stationary_rate_melting(self, number_of_molecules, number_of_sites):
-        return self.attachment_rate_melting(number_of_molecules)*self.number_density_equilibrium_melting(number_of_molecules, number_of_sites)) 
+    def dr_dt(self, t, r):
+        bulk_g = self.bulk_free_energy().magnitude
+        return (16 * self.diffusivity().magnitude / self.jump_distance.magnitude**2) * (3 * self.molecular_volume.magnitude / (4 * np.pi))**(1/3) * np.sinh(
+            (self.molecular_volume.magnitude / (2 * ClusterPhysics.BOLTZMANN.magnitude * self.temperature.magnitude)) * (bulk_g/self.molecular_volume.magnitude - 2*self.sigma.magnitude/r)
+        )
 
 
 """ AVOGADRO = 6.022141e23 # 1/mol

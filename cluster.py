@@ -1,4 +1,5 @@
 from cluster_physics import ClusterPhysics
+import pint 
 
 class Cluster:
     def __init__(self, params, number_of_molecules, number_of_clusters):
@@ -22,7 +23,7 @@ class Cluster:
         self.number_of_clusters = number_of_clusters
 
     def forward_rate(self):
-        return self.physics.attachment_rate_melting(self.number_of_molecules) * self.number_of_clusters
+        return self.physics.rate_equation(self.number_of_molecules, attachment=True).magnitude * self.number_of_clusters
 
     def backward_rate(self):
-        return self.physics.detachment_rate_melting(self.number_of_molecules) * self.number_of_clusters
+        return self.physics.rate_equation(self.number_of_molecules, attachment=False).magnitude * self.number_of_clusters

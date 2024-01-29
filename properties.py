@@ -109,6 +109,20 @@ class Lithium:
             return eval(correlations[correlation]["expression"]) * correlations[correlation]["units"]
         return "Correlación desconocida"
 
+    def surface_tension(self, T, correlation="Jeppson78"):
+        correlations = {
+            "Jeppson78": {
+                "expression": "0.16*(3550 - T) - 95",
+                "bounds": "200-1300 degrees",
+                "units": ureg('dyne/cm')
+            }
+        }
+        if correlation in correlations:
+            print(f"Rango de {correlation}: {correlations[correlation]['bounds']}")
+            return eval(correlations[correlation]["expression"]) * correlations[correlation]["units"]
+        return "Correlación desconocida"
+
+
     def vapor_pressure(self, T, correlation="Jeppson78"):
         correlations = {
             "Jeppson78": {
@@ -121,6 +135,20 @@ class Lithium:
             print(f"Rango de {correlation}: {correlations[correlation]['bounds']}")
             return eval(correlations[correlation]["expression"]) * correlations[correlation]["units"]
         return "Correlación desconocida"
+    
+    def enthalpy(self, T, correlation="Jeppson78"):
+        correlations = {
+            "Jeppson78": {
+                "expression": "-5.075 + 1.0008*T -5.173*1e-3*T**-1",
+                "bounds": "500 -1300 degrees",
+                "units": ureg('cal/g')
+            }
+        }
+        if correlation in correlations:
+            print(f"Rango de {correlation}: {correlations[correlation]['bounds']}")
+            return eval(correlations[correlation]["expression"]) * correlations[correlation]["units"]
+        return 
+    
     
     def diffusivity_tritium(self, T, correlation="Buxbaum82"):
         correlations = {
