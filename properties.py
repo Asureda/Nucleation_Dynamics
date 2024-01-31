@@ -159,7 +159,6 @@ class Lithium:
             }
         }
         if correlation in correlations:
-            print(f"Rango de {correlation}: {correlations[correlation]['bounds']}")
             return eval(correlations[correlation]["expression"]) * correlations[correlation]["units"]
         return "Correlación desconocida"
 

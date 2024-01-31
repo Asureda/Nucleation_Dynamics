@@ -7,7 +7,8 @@ class ClusterPhysics:
     # Constantes de clase
     # Constantes de clase
     BOLTZMANN = 1.3806e-23 * ureg.joule / ureg.kelvin  # J/K
-    TEMP_INDEP_DIFFUSIVITY = 2e9 * ureg.meter**2 / ureg.second  # m^2/s
+    #TEMP_INDEP_DIFFUSIVITY = 2e9 * ureg.meter**2 / ureg.second  # m^2/s
+    TEMP_INDEP_DIFFUSIVITY = 1.38 * ureg.meter**2 / ureg.second  # m^2/s
     CONSTANT_GAS = 8.314 * ureg.joule / (ureg.mol * ureg.kelvin)  # J/mol*K
 
     def __init__(self, params):
@@ -26,7 +27,9 @@ class ClusterPhysics:
         self.entropy_fusion = ureg.Quantity(self.heat_fusion / self.melting_point, "joules/kelvin/mol")
         self.S = params['supersaturation_ratio']
         self.method = params['method']
-
+        #print(0.71*self.entropy_fusion*self.temperature/(self.AVOGADRO**(1/3)*self.molar_volume**(2/3)))
+        
+        
     def print_properties(self):
         properties = [
             ("Constante de Boltzmann", self.BOLTZMANN),
@@ -69,8 +72,8 @@ class ClusterPhysics:
         return a*self.sigma
 
     def total_free_energy(self, number_of_molecules):
-        if number_of_molecules <= 1:
-            return 0*ureg.joule
+        #if number_of_molecules <= 1:
+        #    return 0*ureg.joule
         return self.bulk_free_energy() * number_of_molecules + self.surface_free_energy() * number_of_molecules ** (2/3)
 
     def critical_energy_barrier(self):

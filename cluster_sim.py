@@ -18,12 +18,8 @@ class ClusterSimulation:
             self.cluster_dict[nof_molecules] = new_cluster
 
     def change_in_clusters_at_number(self, number_molecules):
-        # Handling the lower boundary condition at 'u'
         current_cluster = self.cluster_dict[number_molecules]
         first_cluster = self.cluster_dict[1]
-        #prev_cluster = self.cluster_dict.get(number_molecules - 1, None)
-        #next_cluster = self.cluster_dict.get(number_molecules + 1, None)
-
 
         if(number_molecules == 1):
             return 0
