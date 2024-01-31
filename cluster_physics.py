@@ -72,8 +72,8 @@ class ClusterPhysics:
         return a*self.sigma
 
     def total_free_energy(self, number_of_molecules):
-        #if number_of_molecules <= 1:
-        #    return 0*ureg.joule
+        if number_of_molecules <= 1:
+            return 0*ureg.joule
         return self.bulk_free_energy() * number_of_molecules + self.surface_free_energy() * number_of_molecules ** (2/3)
 
     def critical_energy_barrier(self):
@@ -84,7 +84,7 @@ class ClusterPhysics:
 
     def critical_number_of_molecules(self):
         return -2 * self.critical_energy_barrier() / self.bulk_free_energy()
-
+        
     def rate_equation(self, number_of_molecules, attachment=True):
         delta_energy = self.total_free_energy(number_of_molecules + 1) - self.total_free_energy(number_of_molecules)
         if attachment:
