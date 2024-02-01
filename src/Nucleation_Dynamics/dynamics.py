@@ -1,9 +1,9 @@
-import cluster
-from cluster_physics import ClusterPhysics
+from Nucleation_Dynamics.cluster_properties import ClusterPhysics
 import numpy as np
 import pint
+
 ureg = pint.UnitRegistry()
-class ClusterSimulation:
+class ClusterDynamics:
     def __init__(self, params, time_steps, dt, u, MAX_NUMBER_MOLECULES):
         self.physics_object = ClusterPhysics(params)
         self.temperature = self.physics_object.temperature.magnitude
@@ -18,29 +18,38 @@ class ClusterSimulation:
         self.forward_rate_array = self.forward_rate_array
         self.cluster_array = np.zeros(MAX_NUMBER_MOLECULES)
         self.number_molecules_array = np.arange(1, MAX_NUMBER_MOLECULES+1)
-        
+        self.cluster_array[0] = self.physics_object.AVOGADRO.magnitude
         # Inicializar clusters
         for nof_molecules in range(1, MAX_NUMBER_MOLECULES+1):
             start = self.physics_object.number_density_equilibrium(nof_molecules).magnitude if nof_molecules <= u else 0
             self.cluster_array[nof_molecules - 1] = start
 
     def change_in_clusters_at_number(self, number_molecules):
+        
         current_cluster_array = self.cluster_array[number_molecules - 1]
         if(number_molecules == 1):
             return 0
-        if number_molecules>1: 
+        if number_molecules>1 and number_molecules<self.i_max:
             prev_cluster_array = self.cluster_array[number_molecules - 2]
-        if(number_molecules < self.i_max):
             next_cluster_array = self.cluster_array[number_molecules]
+
+            current_backward_rate = self.backward_rate_array[number_molecules - 1]*current_cluster_array
+            current_forward_rate = self.forward_rate_array[number_molecules - 1]*current_cluster_array
+            prev_forward_rate = self.forward_rate_array[number_molecules - 2]*prev_cluster_array
+            next_backward_rate = self.backward_rate_array[number_molecules]*next_cluster_array
+            return -current_forward_rate-current_backward_rate+prev_forward_rate+next_backward_rate
+
         else:
             next_cluster_array = current_cluster_array
+            prev_cluster_array = self.cluster_array[number_molecules - 2]
+            return -self.backward_rate_array[number_molecules-1]*current_cluster_array + self.forward_rate_array[number_molecules - 2]*prev_cluster_array
 
-        current_backward_rate = self.backward_rate_array[number_molecules - 1]*current_cluster_array
-        current_forward_rate = self.forward_rate_array[number_molecules - 1]*current_cluster_array
-        prev_forward_rate = self.forward_rate_array[number_molecules - 2]*prev_cluster_array
-        next_backward_rate = self.backward_rate_array[number_molecules-1]*next_cluster_array
+        # current_backward_rate = self.backward_rate_array[number_molecules - 1]*current_cluster_array
+        # current_forward_rate = self.forward_rate_array[number_molecules - 1]*current_cluster_array
+        # prev_forward_rate = self.forward_rate_array[number_molecules - 2]*prev_cluster_array
+        # next_backward_rate = self.backward_rate_array[number_molecules-1]*next_cluster_array
         
-        return -current_forward_rate-current_backward_rate+prev_forward_rate+next_backward_rate
+        # return -current_forward_rate-current_backward_rate+prev_forward_rate+next_backward_rate
     
     def update_cluster_at_number(self, number_molecules):
         new_number_clusters_array = self.cluster_array[number_molecules - 1] + self.dt * self.change_in_clusters_at_number(number_molecules)
@@ -54,7 +63,7 @@ class ClusterSimulation:
         self.total_free_energy_array = np.zeros(max_number_of_molecules) 
         for i in range(1, max_number_of_molecules+1):
             self.total_free_energy_array[i-1] = self.physics_object.total_free_energy(i).magnitude
-
+    
     def precompute_rate_equations_array(self, max_number_of_molecules):
         self.forward_rate_array = np.zeros(max_number_of_molecules)
         self.backward_rate_array = np.zeros(max_number_of_molecules)

@@ -1,0 +1,54 @@
+
+[build-system]
+requires = [
+    "setuptools>=65.5.0",
+    "setuptools_scm[toml]>=7.0.5"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Nucleation_Dynamics"
+version = "0.1.0-dev"
+description = "Cluster Dynamics simulation for Nucleation"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+authors = [
+  { name="Alexandre Sureda Croguennoc",email="alexandre.sureda@idom.com" },
+]
+
+requires-python = ">=3.8"
+keywords = ["cluster", "kinetics", "thermodynamic", "nucleation", "dynamics",  "master-equation"]
+dependencies = [
+    "numpy>=1.21.1",
+    "matplotlib>=3.4.2",
+    "setuptools_scm[toml]>=7.0.5",
+    "pint"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Asureda/Nucleation_Dynamics"
+"Bug Tracker" = "https://github.com/Asureda/Nucleation_Dynamics/issues"
+
+[project.optional-dependencies]
+tests = [
+    "pytest>=5.4.3",
+    "pytest-cov>=2.12.1",
+    "pytest-runner>=5.3.1",
+]
+docs = [
+    "sphinx>=4.1.2",
+    "sphinx_rtd_theme",
+    "sphinx_autodoc_typehints",
+    "sphinxcadquery"
+]
+
+[tool.black]
+line-length = 120
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
