@@ -2,7 +2,7 @@ from Nucleation_Dynamics.cluster_properties import ClusterPhysics
 import numpy as np
 import pint
 import time
-from numba import njit  # Importa njit de Numba
+from scipy.integrate import solve_ivp
 
 ureg = pint.UnitRegistry()
 
@@ -20,22 +20,16 @@ class ClusterDynamics:
         self.number_molecules_array = np.arange(1, MAX_NUMBER_MOLECULES + 1)
         equilibrium_densities = np.array([self.physics_object.number_density_equilibrium(i).magnitude for i in range(1, u + 1)])
         self.cluster_array[:u] = equilibrium_densities
-        #self.cluster_array[0] = self.physics_object.AVOGADRO.magnitude
 
-    @staticmethod
-    @njit
-    def update_clusters(cluster_array, forward_rate_array, backward_rate_array, dt, i_max):
-        changes = np.zeros(i_max)
-        changes[1:-1] = -forward_rate_array[1:-1] * cluster_array[1:-1] - \
-                        backward_rate_array[1:-1] * cluster_array[1:-1] + \
-                        forward_rate_array[:-2] * cluster_array[:-2] + \
-                        backward_rate_array[2:] * cluster_array[2:]
-        changes[-1] = -backward_rate_array[-1] * cluster_array[-1] + \
-                      forward_rate_array[-2] * cluster_array[-2]
-        return cluster_array + dt * changes
-
-    def update_all_clusters(self):
-        self.cluster_array = self.update_clusters(self.cluster_array, self.forward_rate_array, self.backward_rate_array, self.dt, self.i_max)
+    def dy_dt(self, t, y):
+        changes = np.zeros(self.i_max)
+        changes[1:-1] = -self.forward_rate_array[1:-1] * y[1:-1] - \
+                        self.backward_rate_array[1:-1] * y[1:-1] + \
+                        self.forward_rate_array[:-2] * y[:-2] + \
+                        self.backward_rate_array[2:] * y[2:]
+        changes[-1] = -self.backward_rate_array[-1] * y[-1] + \
+                      self.forward_rate_array[-2] * y[-2]
+        return changes
 
     def precompute_total_free_energy_array(self, max_number_of_molecules):
         self.total_free_energy_array = np.array([self.physics_object.total_free_energy(i).magnitude for i in range(1, max_number_of_molecules + 1)])
@@ -46,8 +40,9 @@ class ClusterDynamics:
 
     def simulate(self):
         start_time = time.time()
-        for _ in range(self.time_steps):
-            self.update_all_clusters()
+        t_span = [0, self.time_steps * self.dt]
+        sol = solve_ivp(self.dy_dt, t_span, self.cluster_array, method='RK45', t_eval=np.linspace(t_span[0], t_span[1], self.time_steps))
+        self.cluster_array = sol.y[:, -1]
         end_time = time.time()
         computation_time = end_time - start_time
         print('Computation time: {:.4f} seconds'.format(computation_time))

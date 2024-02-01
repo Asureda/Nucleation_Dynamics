@@ -1,8 +1,6 @@
 README.md
 pyproject.toml
 examples/cluster_dynamics.ipynb
-examples/cluster_simulation.ipynb
-examples/critical_parameters.ipynb
 src/Nucleation_Dynamics/__init__.py
 src/Nucleation_Dynamics/cluster_properties.py
 src/Nucleation_Dynamics/dynamics.py
