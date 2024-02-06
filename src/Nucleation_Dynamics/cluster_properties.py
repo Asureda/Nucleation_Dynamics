@@ -195,7 +195,8 @@ class ClusterPhysics:
         """
         Calculates and returns the critical number of molecules for cluster formation.
         """
-        return -2 * self.critical_energy_barrier / self.bulk_free_energy
+
+        return (4/3)*np.pi*self.critical_radius**3/self.molecular_volume #-2 * self.surface_free_energy / self.bulk_free_energy
 
     def total_free_energy(self, number_of_molecules):
         """
@@ -245,7 +246,7 @@ class ClusterPhysics:
             pint.Quantity: The equilibrium number density of the clusters.
         """
         B1 = self.AVOGADRO*np.exp(self.total_free_energy(1) / (ureg.boltzmann_constant * self.temperature))
-        return (B1 * np.exp(-self.total_free_energy(number_of_molecules) / (ureg.boltzmann_constant * self.temperature))).to_base_units()
+        return (self.AVOGADRO * np.exp(-self.total_free_energy(number_of_molecules) / (ureg.boltzmann_constant * self.temperature))).to_base_units()
 
     def stationary_rate(self, number_of_molecules, number_of_sites):
         """
