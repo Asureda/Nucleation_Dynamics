@@ -67,6 +67,7 @@ class ScipyClusterDynamics:
 
             if sol.success:
                 # Almacenar la solución y en cluster_array
+                self.time = sol.t
                 self.cluster_array = sol.y
                 # Inicializar un array para almacenar dy/dt para cada t_eval
                 self.dydt_array = np.zeros_like(sol.y)
@@ -77,8 +78,19 @@ class ScipyClusterDynamics:
                 print("La integración no fue exitosa.")
 
             end_time = time.time()
-            print(f'Computation time: {end_time - start_time:.4f} seconds')
+            #print(f'Computation time: {end_time - start_time:.4f} seconds')
 
+            self.execution_time = end_time - start_time
+            self.success = sol.success
+            self.nfev = sol.nfev
+
+            self.results = {
+            'execution_time': self.execution_time,
+            'success': self.success,
+            'nfev': self.nfev,
+            # Añadir más métricas según sea necesario
+        }
+    
     def pp(self):
         for i in range(1, self.i_max + 1):
             print("n cluster with", i, "molecules", self.cluster_array[i - 1])
