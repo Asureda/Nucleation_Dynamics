@@ -2,8 +2,8 @@ from Nucleation_Dynamics.cluster_properties import ClusterPhysics
 import numpy as np
 import pint
 import time
-from diffeqpy import de
-from juliacall import Main as jl
+from diffeqpy import ode
+
 ureg = pint.UnitRegistry()
 
 class JuliaClusterDynamics:
