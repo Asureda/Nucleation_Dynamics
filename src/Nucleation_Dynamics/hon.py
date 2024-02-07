@@ -27,7 +27,7 @@ class HON:
         self.atom_radius = ureg.Quantity(((3 * self.atom_volume.magnitude) / (4 * math.pi))**(1/3), "m")
         self.atom_surface = (3 * self.atom_volume) / self.atom_radius
 
-    def S0_HON(self, T, M):
+    def S0_HON(self, T, M, C):
         N_A =  6.0221409e+23*ureg.Quantity(1.0,"1/mol")
         C_ = self.C*ureg.Quantity(1.0,"mol/m**3")
 

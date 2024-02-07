@@ -3,11 +3,11 @@ import numpy as np
 import pint
 import time
 from numba import njit
-
+from scipy.integrate import solve_ivp
 ureg = pint.UnitRegistry()
 
 
-class OpenClusterDynamics:
+class ClosedClusterDynamics:
     """
     A class to simulate cluster dynamics based on nucleation theory and cluster properties.
 
@@ -47,8 +47,8 @@ class OpenClusterDynamics:
         self.precompute_rate_equations_array(MAX_NUMBER_MOLECULES)
         self.cluster_array = np.zeros(MAX_NUMBER_MOLECULES)
         self.number_molecules_array = np.arange(1, MAX_NUMBER_MOLECULES + 1)
-        equilibrium_densities = np.array([self.physics_object.number_density_equilibrium(i).magnitude for i in range(1, u + 1)])
-        self.cluster_array[:u] = equilibrium_densities
+        self.equilibrium_densities = np.array([self.physics_object.number_density_equilibrium(i).magnitude for i in range(1, u + 1)])
+        self.cluster_array[:u] = self.equilibrium_densities
         # Adjust the size of cluster_evolution and rates_evolution arrays based on record_frequency
         self.cluster_evolution = np.zeros((self.i_max, self.time_steps // self.record_frequency + (self.time_steps % self.record_frequency > 0)))
         self.rates_evolution = np.zeros((self.i_max, self.time_steps // self.record_frequency + (self.time_steps % self.record_frequency > 0)))
@@ -59,8 +59,9 @@ class OpenClusterDynamics:
         """
         start_time = time.time()
         record_index = 0
+        initial_N1 = self.equilibrium_densities[0]
         for step in range(self.time_steps):
-            self.cluster_array, changes=  self.rk4_step(self.cluster_array, self.dt, self.update_clusters, self.forward_rate_array, self.backward_rate_array, self.i_max)
+            self.cluster_array, changes=  self.rk4_step(self.cluster_array, self.dt, self.update_clusters_closed, self.forward_rate_array, self.backward_rate_array, self.i_max, initial_N1)
             # Record the state at specified intervals
             if step % self.record_frequency == 0:
                 self.cluster_evolution[:, record_index] = self.cluster_array
@@ -71,8 +72,8 @@ class OpenClusterDynamics:
         print('Computation time: {:.4f} seconds'.format(computation_time))
 
     @staticmethod
-    @njit(fastmath=True)
-    def rk4_step(y, dt, dy_dt, forward_rate_array, backward_rate_array, i_max):
+    @njit
+    def rk4_step(y, dt, dy_dt, forward_rate_array, backward_rate_array, i_max, initial_N1):
         """
         Performs a single RK4 step.
 
@@ -88,18 +89,18 @@ class OpenClusterDynamics:
             numpy.ndarray: Updated state of the system after the RK4 step.
         """
         
-        k1 = dt * dy_dt(y, forward_rate_array, backward_rate_array, i_max)
-        k2 = dt * dy_dt(y + 0.5 * k1, forward_rate_array, backward_rate_array, i_max)
-        k3 = dt * dy_dt(y + 0.5 * k2, forward_rate_array, backward_rate_array, i_max)
-        k4 = dt * dy_dt(y + k3, forward_rate_array, backward_rate_array, i_max)
+        k1 = dt * dy_dt(y, forward_rate_array, backward_rate_array, i_max, initial_N1)
+        k2 = dt * dy_dt(y + 0.5 * k1, forward_rate_array, backward_rate_array, i_max, initial_N1)
+        k3 = dt * dy_dt(y + 0.5 * k2, forward_rate_array, backward_rate_array, i_max, initial_N1)
+        k4 = dt * dy_dt(y + k3, forward_rate_array, backward_rate_array, i_max, initial_N1)
         return y + (k1 + 2*k2 + 2*k3 + k4) / 6, (k1 + 2*k2 + 2*k3 + k4) / 6 / dt
 
-
     @staticmethod
-    @njit(fastmath=True)
-    def update_clusters(cluster_array, forward_rate_array, backward_rate_array, i_max):
+    @njit
+    def update_clusters_closed(cluster_array, forward_rate_array, backward_rate_array, i_max, initial_N1):
         """
-        Updates the cluster sizes based on forward and backward rates using a JIT-compiled function for speed.
+        Updates the cluster sizes based on forward and backward rates using a JIT-compiled function for speed,
+        and applies the boundary condition for N1.
 
         Parameters:
             cluster_array (numpy.ndarray): Current cluster sizes.
@@ -107,20 +108,22 @@ class OpenClusterDynamics:
             backward_rate_array (numpy.ndarray): Backward rates for cluster shrinkage.
             dt (float): Time step size.
             i_max (int): Maximum number of molecules in a cluster.
+            initial_N1 (float): Initial number of clusters containing one molecule.
 
         Returns:
-            numpy.ndarray: Updated cluster sizes.
+            numpy.ndarray: Updated cluster sizes with the boundary condition applied.
         """
-        
+        # Update cluster sizes based on rates
         changes = np.zeros(i_max)
+        sum_iNi = np.sum(np.arange(2, i_max + 1) * cluster_array[1:])
+        cluster_array[0] = initial_N1 - sum_iNi
         changes[1:-1] = -forward_rate_array[1:-1] * cluster_array[1:-1] - \
                         backward_rate_array[1:-1] * cluster_array[1:-1] + \
                         forward_rate_array[:-2] * cluster_array[:-2] + \
                         backward_rate_array[2:] * cluster_array[2:]
         changes[-1] = -backward_rate_array[-1] * cluster_array[-1] + \
-                      forward_rate_array[-2] * cluster_array[-2] #- forward_rate_array[-1] * cluster_array[-1]
+                    forward_rate_array[-2] * cluster_array[-2]
         return changes
-
 
     def precompute_total_free_energy_array(self, max_number_of_molecules):
         """
@@ -145,7 +148,6 @@ class OpenClusterDynamics:
         equilibrium_densities = np.array([self.physics_object.number_density_equilibrium(i).magnitude for i in range(1, self.i_max + 1)])
         equilibrium_sum = np.sum((self.forward_rate_array*equilibrium_densities)**-1)
         return 1/equilibrium_sum
-    
     def pp(self):
         """
         Pretty prints the number of clusters for each size.

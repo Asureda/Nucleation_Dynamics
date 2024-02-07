@@ -2,9 +2,11 @@ README.md
 pyproject.toml
 examples/cluster_dynamics.ipynb
 src/Nucleation_Dynamics/__init__.py
+src/Nucleation_Dynamics/closed_dynamics.py
 src/Nucleation_Dynamics/cluster_properties.py
 src/Nucleation_Dynamics/dynamics.py
 src/Nucleation_Dynamics/hon.py
+src/Nucleation_Dynamics/scipy_dynamics.py
 src/Nucleation_Dynamics.egg-info/PKG-INFO
 src/Nucleation_Dynamics.egg-info/SOURCES.txt
 src/Nucleation_Dynamics.egg-info/dependency_links.txt
