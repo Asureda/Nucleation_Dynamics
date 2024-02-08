@@ -62,7 +62,7 @@ class ScipyClusterDynamics:
         if y0 is None:
             y0 = self.cluster_array
         if t_eval is None:
-            t_eval = np.linspace(t_span[0], t_span[1], 50)
+            t_eval = np.linspace(t_span[0], t_span[1], 75)
 
         # Define una función envoltura que llama a la función dy_dt correcta con parámetros adicionales
         def dy_dt_wrapper(t, y):
