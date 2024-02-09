@@ -21,7 +21,7 @@ authors = [
 ]
 
 requires-python = ">=3.8"
-keywords = ["cluster", "kinetics", "thermodynamic", "nucleation", "dynamics",  "master-equation"]
+keywords = ["cluster", "kinetics", "thermodynamic", "nucleation", "dynamics",  "master-equation","physics"]
 dependencies = [
     "numpy>=1.21.1",
     "matplotlib>=3.4.2",
