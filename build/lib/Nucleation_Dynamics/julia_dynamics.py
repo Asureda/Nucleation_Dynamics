@@ -45,14 +45,14 @@ class JuliaClusterDynamics:
         self.forward_rate_array = np.array([self.physics_object.rate_equation(i, attachment=True).magnitude for i in range(1, max_number_of_molecules + 1)], dtype=np.float64)
         self.backward_rate_array = np.array([self.physics_object.rate_equation(i, attachment=False).magnitude for i in range(1, max_number_of_molecules + 1)], dtype=np.float64)
 
-    def simulate(self, t_span=None, y0=None, t_eval=None, rtol=1e-3, atol=1e-6):
+    def simulate(self,method, t_span=None, y0=None, t_eval=None, rtol=1e-3, atol=1e-6):
         start_time = time.time()
         if t_span is None:
             t_span = (0.0, float(self.dt * self.time_steps))
         if y0 is None:
             y0 = self.cluster_array
         if t_eval is None:
-            t_eval = np.linspace(t_span[0], t_span[1], 50)
+            t_eval = np.linspace(t_span[0], t_span[1], 100)
 
         # Define the differential equation system
         def f(df, y, p, t):
@@ -62,7 +62,7 @@ class JuliaClusterDynamics:
         p = (self.forward_rate_array, self.backward_rate_array)
         prob = ode.ODEProblem(f, self.cluster_array, t_span, p)
         # Solve the differential equation problem
-        self.sol = ode.solve(prob, ode.RadauIIA5(autodiff=False), reltol=1e-8, abstol=1e-8)
+        self.sol = ode.solve(prob, method, reltol=rtol, abstol=atol)
 
         end_time = time.time()
         self.execution_time = end_time - start_time

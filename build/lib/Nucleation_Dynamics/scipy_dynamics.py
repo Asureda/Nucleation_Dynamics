@@ -4,6 +4,7 @@ import pint
 import time
 from scipy.integrate import solve_ivp
 from numba import njit
+
 ureg = pint.UnitRegistry()
 
 class ScipyClusterDynamics:
@@ -62,7 +63,7 @@ class ScipyClusterDynamics:
         if y0 is None:
             y0 = self.cluster_array
         if t_eval is None:
-            t_eval = np.linspace(t_span[0], t_span[1], 75)
+            t_eval = np.linspace(t_span[0], t_span[1], 100)
 
         # Define una función envoltura que llama a la función dy_dt correcta con parámetros adicionales
         def dy_dt_wrapper(t, y):
