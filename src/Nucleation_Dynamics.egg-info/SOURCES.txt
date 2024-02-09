@@ -1,6 +1,7 @@
 README.md
 pyproject.toml
 examples/cluster_dynamics.ipynb
+examples/cluster_dynamics.png
 examples/solver_comparison.ipynb
 src/Nucleation_Dynamics/__init__.py
 src/Nucleation_Dynamics/closed_dynamics.py
