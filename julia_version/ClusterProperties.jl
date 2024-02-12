@@ -1,7 +1,5 @@
 module ClusterPhysicsModule
 
-println("Módulo ClusterPhysics cargado sin usar Unitful.")
-
 export ClusterPhysics, temperature, activation_energy, diffusivity_factor, sigma, molar_mass,
        jump_distance, mass_density, melting_point, heat_fusion, supersaturation_ratio, method,
        diffusivity, unbiased_jump_rate, molar_volume, molecular_volume, entropy_fusion,
