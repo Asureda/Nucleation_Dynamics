@@ -160,7 +160,7 @@ class ClusterPhysics:
             return (self.entropy_fusion * (self.temperature - self._params['melting_point']) / self.AVOGADRO).to('joule')
         elif method == 'saturation':
             S = self._params.get('supersaturation_ratio')
-            return -(self.boltzmann_constant * self.temperature * np.log(S)).to('joule')
+            return -((ureg.boltzmann_constant * self.temperature * np.log(S)).to('joule')).to('joule')
         else:
             raise ValueError("Invalid method. Choose 'melting' or 'saturation'.")
 
@@ -247,6 +247,65 @@ class ClusterPhysics:
         """
         B1 = self.AVOGADRO*np.exp(self.total_free_energy(1) / (ureg.boltzmann_constant * self.temperature))
         return (B1 * np.exp(-self.total_free_energy(number_of_molecules) / (ureg.boltzmann_constant * self.temperature))).to_base_units()
+
+    def surface_energy_correlation(self, heat_fusion, melting_points, fractions, type="bcc"):
+        """
+        Calculates the equilibrium number density of clusters with a given number of molecules.
+
+        Parameters:
+            number_of_molecules (int): The number of molecules in the cluster.
+
+        Returns:
+            pint.Quantity: The equilibrium number density of the clusters.
+        """
+        if type == "bcc" : 
+            alpha = 0.71 
+        elif type == "fcc":
+            alpha = 0.86
+        heat_fusion_a = ureg.Quantity(heat_fusion[0],"joule/mol")
+        heat_fusion_b = ureg.Quantity(heat_fusion[1],"joule/mol")
+        melting_point_a = ureg.Quantity(melting_points[0],"kelvin")
+        melting_point_b = ureg.Quantity(melting_points[1],"kelvin")
+        entropy_a = heat_fusion_a/melting_point_a
+        entropy_b = heat_fusion_b/melting_point_b
+        entropy = fractions[0]*entropy_a + fractions[1]*entropy_b
+        print("Entropy",entropy)
+        print("Entropy_a",entropy_a)
+        print("Entropy_b",entropy_b)
+        
+        return (alpha*entropy*self.temperature/(self.AVOGADRO*self.molar_volume**2)**(1/3)).to("joule/meter**2")
+
+    # Define the function to calculate the given formula
+    def calculate_delta_mu_A(self, entropy_fusion, melting_point, x_A_i, x_A_s, x_A_s_eq):
+        """
+        Calculate the change in chemical potential for component A.
+        
+        Parameters:
+        T_i (float): Initial temperature.
+        T (float): Final temperature.
+        delta_S_A (float): Entropy change for component A.
+        R (float): Universal gas constant.
+        x_A_i (float): Initial mole fraction of A.
+        x_A_s (float): Mole fraction of A at the surface.
+        x_A_s_eq (float): Equilibrium mole fraction of A at the surface.
+        
+        Returns:
+        float: Calculated change in chemical potential for component A.
+        """
+        entropy_fusion_ = ureg.Quantity(entropy_fusion,"joule/(mol*kelvin)")
+        melting_point_ = ureg.Quantity(melting_point,"kelvin")
+        # Using np.log for natural logarithm
+        term1 = (self.temperature - melting_point_) * entropy_fusion_/self.AVOGADRO
+        term2 = (ureg.boltzmann_constant * self.temperature * np.log(x_A_i / x_A_s)).to('joule')
+        term3 = (ureg.boltzmann_constant * melting_point_ * np.log(x_A_i / x_A_s_eq)).to('joule')
+
+        print(( self.temperature - melting_point_)*(entropy_fusion_/self.AVOGADRO-ureg.boltzmann_constant*np.log(x_A_i)))
+        print(term1)
+        print(term2)
+        print(term3)
+        
+        return term1+term2+term3
+
 
     def stationary_rate(self, number_of_molecules, number_of_sites):
         """
