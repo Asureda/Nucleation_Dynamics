@@ -99,7 +99,29 @@ class ScipyClusterDynamics:
             # Añadir más métricas según sea necesario
         } 
 
-        print(self.results)   
+        print(self.results)  
+
+    def save_results_to_hdf5(self, filename="simulation_results.h5"):
+            """
+            Saves the time points, solution array, and rate of change array to an HDF5 file.
+
+            Parameters:
+            - filename: Name of the HDF5 file to save the results.
+            """
+            with h5py.File(filename, "w") as f:
+                # Create datasets for time, solution array, and dy/dt array
+                f.create_dataset("time", data=self.time)
+                f.create_dataset("solution", data=self.cluster_array)
+                f.create_dataset("dydt", data=self.dydt_array)
+
+                # Optionally, store additional metadata or results
+                f.attrs['execution_time'] = self.execution_time
+                f.attrs['success'] = self.success
+                f.attrs['nfev'] = self.nfev
+                # Add more attributes as needed
+
+            print(f"Results saved to {filename}")
+
     def pp(self):
         for i in range(1, self.i_max + 1):
             print("n cluster with", i, "molecules", self.cluster_array[i - 1])

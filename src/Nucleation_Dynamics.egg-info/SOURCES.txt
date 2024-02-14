@@ -1,8 +1,10 @@
 README.md
 pyproject.toml
 examples/cluster_dynamics.ipynb
-examples/cluster_dynamics.png
 examples/solver_comparison.ipynb
+julia_version/ClusterDynamics.jl
+julia_version/ClusterProperties.jl
+julia_version/test.ipynb
 src/Nucleation_Dynamics/__init__.py
 src/Nucleation_Dynamics/closed_dynamics.py
 src/Nucleation_Dynamics/cluster_properties.py

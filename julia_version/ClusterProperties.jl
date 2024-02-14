@@ -4,7 +4,7 @@ export ClusterPhysics, temperature, activation_energy, diffusivity_factor, sigma
        jump_distance, mass_density, melting_point, heat_fusion, supersaturation_ratio, method,
        diffusivity, unbiased_jump_rate, molar_volume, molecular_volume, entropy_fusion,
        bulk_free_energy, surface_free_energy, critical_energy_barrier, critical_radius,
-       critical_number_of_molecules, total_free_energy, rate_equation, number_density_equilibrium,
+       critical_number_of_molecules, total_free_energy,rectified_total_free_energy, rate_equation, number_density_equilibrium,
        stationary_rate, dr_dt
 
 # Constantes
@@ -96,6 +96,16 @@ function total_free_energy(cp::ClusterPhysics, number_of_molecules::Int)
         return bulk_free_energy(cp) * number_of_molecules +
                surface_free_energy(cp) * number_of_molecules^(2/3)
     end
+end
+
+function rectified_total_free_energy(cp::ClusterPhysics, number_of_molecules::Int)
+    if number_of_molecules < 1
+        return 0.0
+    else
+        delta_g1 = bulk_free_energy(cp) + surface_free_energy(cp)
+        delta_g = bulk_free_energy(cp) * number_of_molecules + surface_free_energy(cp) * number_of_molecules^(2/3)
+        return delta_g - delta_g1
+    end 
 end
 
 function rate_equation(cp::ClusterPhysics, number_of_molecules::Int, attachment=true)

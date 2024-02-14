@@ -160,7 +160,7 @@ class ClusterPhysics:
             return (self.entropy_fusion * (self.temperature - self._params['melting_point']) / self.AVOGADRO).to('joule')
         elif method == 'saturation':
             S = self._params.get('supersaturation_ratio')
-            return -(self.boltzmann_constant * self.temperature * np.log(S)).to('joule')
+            return -((ureg.boltzmann_constant * self.temperature * np.log(S)).to('joule')).to('joule')
         else:
             raise ValueError("Invalid method. Choose 'melting' or 'saturation'.")
 
@@ -247,6 +247,34 @@ class ClusterPhysics:
         """
         B1 = self.AVOGADRO*np.exp(self.total_free_energy(1) / (ureg.boltzmann_constant * self.temperature))
         return (B1 * np.exp(-self.total_free_energy(number_of_molecules) / (ureg.boltzmann_constant * self.temperature))).to_base_units()
+
+    def surface_energy_correlation(self, heat_fusion, melting_points, fractions, type="bcc"):
+        """
+        Calculates the equilibrium number density of clusters with a given number of molecules.
+
+        Parameters:
+            number_of_molecules (int): The number of molecules in the cluster.
+
+        Returns:
+            pint.Quantity: The equilibrium number density of the clusters.
+        """
+        if type == "bcc" : 
+            alpha = 0.71 
+        elif type == "fcc":
+            alpha = 0.86
+        heat_fusion_a = ureg.Quantity(heat_fusion[0],"joule/mol")
+        heat_fusion_b = ureg.Quantity(heat_fusion[1],"joule/mol")
+        melting_point_a = ureg.Quantity(melting_points[0],"kelvin")
+        melting_point_b = ureg.Quantity(melting_points[1],"kelvin")
+        entropy_a = heat_fusion_a/melting_point_a
+        entropy_b = heat_fusion_b/melting_point_b
+        entropy = fractions[0]*entropy_a + fractions[1]*entropy_b
+        print("Entropy",entropy)
+        print("Entropy_a",entropy_a)
+        print("Entropy_b",entropy_b)
+        
+        return (alpha*entropy*self.temperature/(self.AVOGADRO*self.molar_volume**2)**(1/3)).to("joule/meter**2")
+
 
     def stationary_rate(self, number_of_molecules, number_of_sites):
         """
