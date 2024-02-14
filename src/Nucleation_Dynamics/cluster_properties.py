@@ -275,6 +275,37 @@ class ClusterPhysics:
         
         return (alpha*entropy*self.temperature/(self.AVOGADRO*self.molar_volume**2)**(1/3)).to("joule/meter**2")
 
+    # Define the function to calculate the given formula
+    def calculate_delta_mu_A(self, entropy_fusion, melting_point, x_A_i, x_A_s, x_A_s_eq):
+        """
+        Calculate the change in chemical potential for component A.
+        
+        Parameters:
+        T_i (float): Initial temperature.
+        T (float): Final temperature.
+        delta_S_A (float): Entropy change for component A.
+        R (float): Universal gas constant.
+        x_A_i (float): Initial mole fraction of A.
+        x_A_s (float): Mole fraction of A at the surface.
+        x_A_s_eq (float): Equilibrium mole fraction of A at the surface.
+        
+        Returns:
+        float: Calculated change in chemical potential for component A.
+        """
+        entropy_fusion_ = ureg.Quantity(entropy_fusion,"joule/(mol*kelvin)")
+        melting_point_ = ureg.Quantity(melting_point,"kelvin")
+        # Using np.log for natural logarithm
+        term1 = (self.temperature - melting_point_) * entropy_fusion_/self.AVOGADRO
+        term2 = (ureg.boltzmann_constant * self.temperature * np.log(x_A_i / x_A_s)).to('joule')
+        term3 = (ureg.boltzmann_constant * melting_point_ * np.log(x_A_i / x_A_s_eq)).to('joule')
+
+        print(( self.temperature - melting_point_)*(entropy_fusion_/self.AVOGADRO-ureg.boltzmann_constant*np.log(x_A_i)))
+        print(term1)
+        print(term2)
+        print(term3)
+        
+        return term1+term2+term3
+
 
     def stationary_rate(self, number_of_molecules, number_of_sites):
         """
