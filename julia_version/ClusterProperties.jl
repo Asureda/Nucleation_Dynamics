@@ -119,7 +119,7 @@ end
 
 function number_density_equilibrium(cp::ClusterPhysics, number_of_molecules::Int)
     B1 = AVOGADRO * exp(total_free_energy(cp, 1) / (kB * cp.temperature))
-    return B1 * exp(-total_free_energy(cp, number_of_molecules) / (kB * cp.temperature))
+    return AVOGADRO * exp(-total_free_energy(cp, number_of_molecules) / (kB * cp.temperature))
 end
 
 end  # Fin del módulo
