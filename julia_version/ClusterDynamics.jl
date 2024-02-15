@@ -40,10 +40,11 @@ struct JuliaClusterDynamics
 end
 
 function dy_dt!(df, y, p, t)
-    forward_rate_array, backward_rate_array, boundary_type = p
+    forward_rate_array, backward_rate_array, N, boundary_type = p
     fill!(df, 0.0)  # Continuar usando fill! para inicializar df con ceros
     len_y = length(y)
 
+    #y[1] = N - sum(y[2:end]*forward_rate_array[2:end])
     for i in 2:len_y-1
         df[i] = forward_rate_array[i-1] * y[i-1] - 
                 (forward_rate_array[i] + backward_rate_array[i]) * y[i] +
@@ -60,7 +61,8 @@ end
 
 function simulate(dynamics::JuliaClusterDynamics; t_span=(0.0, dynamics.dt * dynamics.time_steps), method=Tsit5(), rtol=1e-3, atol=1e-6)
     # Incluye `dynamics.boundary_type` en los parámetros pasados a `dy_dt!`
-    prob = ODEProblem(dy_dt!, dynamics.cluster_array, t_span, (dynamics.forward_rate_array, dynamics.backward_rate_array, dynamics.boundary_type))
+    prob = ODEProblem(dy_dt!, dynamics.cluster_array, t_span, (dynamics.forward_rate_array, dynamics.backward_rate_array,dynamics.cluster_array[1], dynamics.boundary_type))
     sol = solve(prob, method, reltol=rtol, abstol=atol)
     return sol
 end
+
