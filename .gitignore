@@ -5,10 +5,6 @@ __pycache__/*
 venv/
 virtualenv/
 
-# Jupyter Notebooks
-*.ipynb
-*.ipynb_checkpoints
-
 # Data files
 # Exclude specific CSV files in examples directory
 !examples/data/chromium.csv
