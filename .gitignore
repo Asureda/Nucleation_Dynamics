@@ -1,0 +1,24 @@
+# Python built directories
+__pycache__/
+__pycache__/*
+*.pyc
+venv/
+virtualenv/
+
+# Jupyter Notebooks
+*.ipynb
+*.ipynb_checkpoints
+
+# Data files
+# Exclude specific CSV files in examples directory
+!examples/data/chromium.csv
+
+# Environment variables
+env
+.env
+
+# Operating System files
+.DS_Store
+._DS_Store
+ds_store
+DS_Store
