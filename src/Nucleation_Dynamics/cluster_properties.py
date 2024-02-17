@@ -232,6 +232,7 @@ class ClusterPhysics:
         number_of_molecules = np.array(number_of_molecules, ndmin=1)
         if method == "diffuse_interface":
             Rs = (3*number_of_molecules*self.molecular_volume/(4*np.pi))**(1/3)
+            print(Rs)
             free_energy = -(4*np.pi/3)*((Rs -  self._params['interface_layer'])**3*self.heat_fusion/self.molar_volume - Rs**3*self.temperature*self.entropy_fusion/self.molar_volume).to('joule')
 
             total_energy = np.where(number_of_molecules < 1,
