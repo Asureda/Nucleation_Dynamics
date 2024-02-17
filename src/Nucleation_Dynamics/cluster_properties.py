@@ -53,7 +53,7 @@ class ClusterPhysics:
                             ('temperature', params['temperature'], "kelvin"),
                             ('activation_energy', params['activation_energy'], "kelvin"),  # Corregido a "joule / mol"
                             ('diffusivity_factor', params['diffusivity_factor'], 'meter**2 / second'),
-                            ('jump_distance', params['jump_distance'], "angstrom"),
+                            ('jump_distance', params['jump_distance'], "meter"),
                             ('interface_layer', params["interface_layer"], "angstrom"),
                             ('molar_mass', params['molar_mass'], "gram / mol"),
                             ('mass_density', params['mass_density'], "gram / centimeter**3"),
