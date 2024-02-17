@@ -13,6 +13,10 @@ virtualenv/
 env
 .env
 
+build/
+
+*.egg-info/
+
 # Operating System files
 .DS_Store
 ._DS_Store

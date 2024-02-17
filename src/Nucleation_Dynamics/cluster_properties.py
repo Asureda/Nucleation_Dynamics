@@ -14,7 +14,7 @@ class ClusterPhysics:
         _params (dict): A dictionary storing the physical parameters of the system.
     """
 
-    def __init__(self, json_file_path):
+    def __init__(self, json_file_path, method="melting"):
         """
         Initializes the ClusterPhysics object with parameters loaded from a JSON file.
 
@@ -22,6 +22,7 @@ class ClusterPhysics:
             json_file_path (str): The path to the JSON file containing the physical parameters of the system.
         """
         self.ureg = ureg
+        self._method = method
         params = self._load_params_from_json(json_file_path)  # Cargar parámetros desde un archivo JSON
         self._initialize_params(params)
         self._precompute_constants()
@@ -52,14 +53,14 @@ class ClusterPhysics:
                             ('temperature', params['temperature'], "kelvin"),
                             ('activation_energy', params['activation_energy'], "kelvin"),  # Corregido a "joule / mol"
                             ('diffusivity_factor', params['diffusivity_factor'], 'meter**2 / second'),
-                            ('jump_distance', params['jump_distance'], "meter"),
+                            ('jump_distance', params['jump_distance'], "angstrom"),
+                            ('interface_layer', params["interface_layer"], "angstrom"),
                             ('molar_mass', params['molar_mass'], "gram / mol"),
                             ('mass_density', params['mass_density'], "gram / centimeter**3"),
                             ('melting_point', params['melting_point'], "kelvin"),
                             ('heat_fusion', params['heat_fusion'], "joule / mol"),
                             ('sigma', params['sigma'], "joule / meter**2"),
-                            ('supersaturation_ratio', params['supersaturation_ratio'], None),
-                            ('method', params['method'], None)
+                            ('supersaturation_ratio', params['supersaturation_ratio'], None)
                         ]}
         
     def _precompute_constants(self):
@@ -99,6 +100,11 @@ class ClusterPhysics:
         return self._params['jump_distance']
 
     @property
+    def interface_layer(self):
+        """Returns the average jump distance for atoms or molecules in the cluster."""
+        return self._params['interface_layer']
+
+    @property
     def mass_density(self):
         """Returns the mass density of the cluster material."""
         return self._params['mass_density']
@@ -121,7 +127,7 @@ class ClusterPhysics:
     @property
     def method(self):
         """Returns the method used for calculating bulk free energy ('melting' or 'saturation')."""
-        return self._params['method']
+        return self._method
 
     @property
     @cache
@@ -169,7 +175,7 @@ class ClusterPhysics:
         """
         Calculates and returns the bulk free energy of the cluster based on the specified method.
         """
-        method = self._params.get('method')
+        method = self.method
         if method == 'melting':
             return (self.entropy_fusion * (self.temperature - self._params['melting_point']) / self.AVOGADRO).to('joule')
         elif method == 'saturation':
@@ -212,7 +218,7 @@ class ClusterPhysics:
 
         return (4/3)*np.pi*self.critical_radius**3/self.molecular_volume #-2 * self.surface_free_energy / self.bulk_free_energy
 
-    def total_free_energy(self, number_of_molecules):
+    def total_free_energy(self, number_of_molecules, method = None):
         """
         Calculates the total free energy of a cluster with a given number of molecules.
 
@@ -222,11 +228,21 @@ class ClusterPhysics:
         Returns:
             pint.Quantity: The total free energy of the cluster.
         """
+
         number_of_molecules = np.array(number_of_molecules, ndmin=1)
-        total_energy = np.where(number_of_molecules < 1,
-                                0 * ureg.joule,
-                                self.bulk_free_energy * number_of_molecules +
-                                self.surface_free_energy * number_of_molecules ** (2 / 3))
+        if method == "diffuse_interface":
+            Rs = (3*number_of_molecules*self.molecular_volume/(4*np.pi))**(1/3)
+            free_energy = -(4*np.pi/3)*((Rs -  self._params['interface_layer'])**3*self.heat_fusion/self.molar_volume - Rs**3*self.temperature*self.entropy_fusion/self.molar_volume).to('joule')
+
+            total_energy = np.where(number_of_molecules < 1,
+                        0 * ureg.joule,
+                        free_energy * number_of_molecules +
+                        self.surface_free_energy * number_of_molecules ** (2 / 3))
+        else:
+            total_energy = np.where(number_of_molecules < 1,
+                                    0 * ureg.joule,
+                                    self.bulk_free_energy * number_of_molecules +
+                                    self.surface_free_energy * number_of_molecules ** (2 / 3))
         if total_energy.size == 1:
             return total_energy[0]
         return total_energy
