@@ -1,7 +1,7 @@
 # Nucleation Dynamics
 
 ## Overview
-Nucleation Dynamics is a computational framework designed to simulate and analyze nucleation processes. It leverages Julia and Python programming languages to offer a powerful and flexible environment for numerical simulations.
+Nucleation Dynamics isdesigned to simulate and analyze nucleation processes. It leverages Julia and Python programming languages to offer a powerful and flexible environment for numerical simulations.
 
 ## I. CLUSTER DYNAMICS
 
