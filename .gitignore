@@ -8,7 +8,7 @@ virtualenv/
 # Data files
 # Exclude specific CSV files in examples directory
 !examples/data/chromium.csv
-
+!src/Nucleation_Dynamics/hon.py
 # Environment variables
 env
 .env

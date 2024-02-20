@@ -73,31 +73,55 @@ class ClusterPhysics:
     def temperature(self):
         """Returns the temperature of the system."""
         return self._params['temperature']
+    
+    @temperature.setter
+    def temperature(self, value):
+        self._params['temperature'] = ureg.Quantity(value, 'kelvin')
 
     @property
     def activation_energy(self):
         """Returns the activation energy for diffusivity."""
         return self._params['activation_energy']
+    
+    @activation_energy.setter
+    def activation_energy(self, value):
+        self._params['activation_energy'] = self.ureg.Quantity(value, 'kelvin')
 
     @property
     def sigma(self):
         """Returns the surface tension (sigma) of the cluster material."""
         return self._params['sigma']
+    
+    @sigma.setter
+    def sigma(self, value):
+        self._params['sigma'] = self.ureg.Quantity(value, 'joule/meter**2')
 
     @property
     def molar_mass(self):
         """Returns the molar mass of the cluster material."""
         return self._params['molar_mass']
+    
+    @molar_mass.setter
+    def molar_mass(self, value):
+        self._params['molar_mass'] = self.ureg.Quantity(value, 'gram/mol')
 
     @property
     def diffusivity_factor(self):
         """Returns the diffusivity factor of the cluster material."""
         return self._params['diffusivity_factor']
+    
+    @diffusivity_factor.setter
+    def diffusivity_factor(self, value):
+        self._params['diffusivity_factor'] = self.ureg.Quantity(value, 'meter**2/second')
 
     @property
     def jump_distance(self):
         """Returns the average jump distance for atoms or molecules in the cluster."""
         return self._params['jump_distance']
+    
+    @jump_distance.setter
+    def jump_distance(self, value):
+        self._params['jump_distance'] = self.ureg.Quantity(value, 'meter')
 
     @property
     def interface_layer(self):
@@ -107,22 +131,38 @@ class ClusterPhysics:
     @property
     def mass_density(self):
         """Returns the mass density of the cluster material."""
-        return self._params['mass_density']
+        self._params['mass_density']
+    
+    @mass_density.setter
+    def mass_density(self, value):
+        self._params['mass_density'] = self.ureg.Quantity(value, 'gram/centimeter**3')
 
     @property
     def melting_point(self):
         """Returns the melting point of the cluster material."""
         return self._params['melting_point']
+    
+    @melting_point.setter
+    def melting_point(self, value):
+        self._params['melting_point'] = self.ureg.Quantity(value, 'kelvin')
 
     @property
     def heat_fusion(self):
         """Returns the heat of fusion of the cluster material."""
         return self._params['heat_fusion']
+    
+    @heat_fusion.setter
+    def heat_fusion(self, value):
+        self._params['heat_fusion'] = self.ureg.Quantity(value, 'joule/mol')
 
     @property
     def supersaturation_ratio(self):
         """Returns the supersaturation ratio of the system."""
         return self._params['supersaturation_ratio']
+    
+    @supersaturation_ratio.setter
+    def supersaturation_ratio(self, value):
+        self._params['supersaturation_ratio'] = value    
 
     @property
     def method(self):
@@ -264,11 +304,7 @@ class ClusterPhysics:
             forward_rate = 4 * number_of_molecules ** (2/3) * self.unbiased_jump_rate * np.exp(-delta_energy / (2 * ureg.boltzmann_constant * self.temperature))
             return forward_rate
         else:
-            forward_rate = 4 * number_of_molecules ** (2/3) * self.unbiased_jump_rate * np.exp(-delta_energy / (2 * ureg.boltzmann_constant * self.temperature))
-            number_density_n = self.number_density_equilibrium(number_of_molecules)
-            number_density_n_plus_1 = self.number_density_equilibrium(number_of_molecules + 1)
             return 4 * number_of_molecules ** (2/3) * self.unbiased_jump_rate * np.exp(delta_energy / (2 * ureg.boltzmann_constant * self.temperature))
-            #return forward_rate * number_density_n / number_density_n_plus_1
 
     def number_density_equilibrium(self, number_of_molecules):
         """
@@ -340,21 +376,61 @@ class ClusterPhysics:
         print(term3)
         
         return term1+term2+term3
-
-
-    def stationary_rate(self, number_of_molecules, number_of_sites):
+    
+    def stationary_rate(self, start, max_number_molecules):
+        equilibrium_densities = np.array([self.number_density_equilibrium(i).magnitude for i in range(start, max_number_molecules + 1)])
+        forward_rate_array = np.array([self.rate_equation(i, attachment=True).magnitude for i in range(start, max_number_molecules + 1)])
+        equilibrium_sum = np.sum((forward_rate_array*equilibrium_densities)**-1)
+        return (1/equilibrium_sum)*ureg("1/(mole*second)")
+    
+    def free_energy_second_derivative(self, number_molecules, method=None):
         """
-        Calculates the stationary rate of cluster formation or dissolution.
+        Calculates the second derivative of the total free energy with respect to the number of molecules,
+        evaluated at the critical number of molecules, considering the discrete nature of molecule numbers.
 
         Parameters:
-            number_of_molecules (int): The number of molecules in the cluster.
-            number_of_sites (int): The number of available sites for cluster formation.
+            critical_number_of_molecules (int): The critical number of molecules for cluster formation.
+            method (str): Optional method argument to pass different total_free_energy computation methods.
 
         Returns:
-            pint.Quantity: The stationary rate of cluster formation or dissolution.
+            pint.Quantity: The second derivative of the total free energy evaluated at the critical number of molecules.
         """
-        return self.rate_equation(number_of_molecules, attachment=True) * self.number_density_equilibrium(number_of_molecules)
+        # Since the number of molecules is discrete, we use delta = 1
+        delta_n = 1
+        f_x = self.total_free_energy(number_molecules, method=method)
+        f_x_plus_delta = self.total_free_energy(number_molecules + delta_n, method=method)
+        f_x_minus_delta = self.total_free_energy(number_molecules - delta_n, method=method)
+
+        # Compute the second derivative using the central difference formula for discrete variables
+        second_derivative = (f_x_plus_delta - 2 * f_x + f_x_minus_delta) / delta_n ** 2
+        return second_derivative
     
+    def zeldovich_factor(self, number_molecules, method=None):
+        """
+        Calculates the Zeldovich factor for the critical number of molecules.
+
+        Parameters:
+            critical_number_of_molecules (int): The critical number of molecules for cluster formation.
+
+        Returns:
+            pint.Quantity: The Zeldovich factor for the critical number of molecules.
+        """
+        return ((np.abs(self.free_energy_second_derivative(number_molecules, method =None)) / (2 * np.pi * ureg.boltzmann_constant * self.temperature)) ** (1 / 2)).to_base_units()
+
+    def turnbull_solution(self, time, number_molecules, max_number_molecules, method=None):
+        t = time*ureg.second
+        stationary_rate = self.stationary_rate(int(self.critical_number_of_molecules.magnitude + 1), max_number_molecules)
+        radius = (3*number_molecules*self.molecular_volume/(4*np.pi))**(1/3)
+        critical_rate = self.rate_equation(self.critical_number_of_molecules, attachment=True)
+        zeldovich_factor = self.zeldovich_factor(self.critical_number_of_molecules, method=None)
+        tau = (2*np.pi*critical_rate*zeldovich_factor**2)**-1
+        utf = 2*self.critical_radius*(self.bulk_free_energy*tau/(ureg.boltzmann_constant*self.temperature))**-1
+        first_term = (radius/utf).to_base_units()
+        second_term =( np.log(6*self.critical_energy_barrier/(ureg.boltzmann_constant*self.temperature))).to_base_units()
+        third_term = (np.log(radius/self.critical_radius - 1)).to_base_units()
+        t_i = first_term + tau*(second_term - 2 + third_term)
+        
+        return stationary_rate*np.exp(-np.exp(-(t-t_i)/tau))
     def dr_dt(self, t, r):
         """
         Differential rate equation for cluster growth or shrinkage.

@@ -1,7 +1,7 @@
 {
     "temperature": 750,
-    "activation_energy": 52922.780851575655,
-    "diffusivity_factor": 2e9,
+    "activation_energy": 59920.2,
+    "diffusivity_factor": 2e-9,
     "jump_distance": 4.6e-10,
     "molar_mass": 150.05,
     "mass_density": 2.5,
