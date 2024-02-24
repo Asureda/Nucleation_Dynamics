@@ -1,0 +1,406 @@
+
+    % !TeX program = pdflatex
+	% !TeX TXS-program:bibliography = txs:///biber
+
+    \documentclass{article}
+    \usepackage[a4paper,margin=2.5cm]{geometry}
+    \usepackage{xcolor}
+    \usepackage{tikz} % custom box and geometry
+    \usepackage{helvet}   % Use Helvetica \font
+    \usepackage{graphicx} % Required for \includegraphics
+    \usepackage{array}   % For customizing table properties
+    \usepackage{tabularx} % For adjustable-width columns
+    \usepackage{colortbl} % For coloring rows/columns
+    \usepackage{makecell}
+    \usepackage{fancyhdr} % header and footer
+    \usepackage{lastpage} % pagae number
+    \usepackage{caption} % image and table caption
+    \usepackage{subcaption}
+    \usepackage{float} % for H ímage and table exact disposition
+    \usepackage{multirow} 
+    \usepackage{tocloft} % Addings dotted list of contents
+    \usepackage{hyperref} % Add refrenced links in the pdf
+    
+    % Added Version 0.1.0 ----------------------------------------------------
+    % Corrected biblio
+    \usepackage[style=numeric, sorting=none] {biblatex}
+	\addbibresource{reference.bib}
+	% Table and figure section based footnote
+	\usepackage{soul}
+	\usepackage{amsmath}
+    \usepackage{wasysym} %new adition
+	\usepackage{array}
+	\usepackage{booktabs}
+	\numberwithin{table}{section}
+	\numberwithin{figure}{section}
+	\renewcommand{\thetable}{\thesection-\arabic{table}}
+	\renewcommand{\thefigure}{\thesection-\arabic{figure}}
+    % Long tables across pages
+    \usepackage{longtable}
+    % review comments
+    \usepackage{easyReview}
+    % Include code: coloring and from file
+	\usepackage{listings}
+	
+	\definecolor{codegreen}{rgb}{0,0.6,0}
+	\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+	\definecolor{codepurple}{rgb}{0.58,0,0.82}
+	\definecolor{backcolour}{RGB}{245,255,255}
+	
+	\lstdefinestyle{mystyle}{
+		backgroundcolor=\color{backcolour},   
+		commentstyle=\color{codegreen},
+		keywordstyle=\color{magenta},
+		numberstyle=\tiny\color{codegray},
+		stringstyle=\color{codepurple},
+		basicstyle=\ttfamily\footnotesize,
+		breakatwhitespace=false,         
+		breaklines=true,                 
+		captionpos=b,                    
+		keepspaces=true,                 
+		numbers=left,                    
+		numbersep=5pt,                  
+		showspaces=false,                
+		showstringspaces=false,
+		showtabs=false,                  
+		tabsize=2
+	}
+	
+	\lstset{style=mystyle}
+	
+	% table footnote
+	\usepackage{tablefootnote}
+	
+    % Added Version 0.1.0 -----------------------------------------------------
+    
+    
+    % Adding colored box here
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \usepackage[most]{tcolorbox}
+    \tcbuselibrary{skins,breakable}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \usepackage{setspace}
+    \usepackage{background}
+    \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+    
+    \renewcommand{\familydefault}{\sfdefault} % Set default font to sans-serif (Helvetica)
+
+    \definecolor{blueboxcolor}{RGB}{42,48,126}
+    \definecolor{greyboxcolor}{RGB}{97,99,101}
+    \definecolor{greybordercolor}{RGB}{150,150,150}
+    \definecolor{greylight}{RGB}{210,210,210}
+    
+    % Interspace
+    \renewcommand{\baselinestretch}{1.5}
+
+    % Watermark
+    \backgroundsetup{contents=DRAFT, color=black, angle=45, scale=15, opacity=0.2}
+    
+    \begin{document}
+    \NoBgThispage
+    \pagestyle{empty} % No page numbers
+
+    % Cover Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{tikzpicture}[remember picture,overlay]
+        % Blue box
+        \fill[blueboxcolor] (current page.south east) rectangle ([xshift=-8.5cm]current page.north east);
+        \node[anchor=south east, align=right, white, font=\LARGE\bfseries] at ([xshift=-0.85cm,yshift=3cm]current page.south east) {NUCLEAR SERVICES};
+
+        % Logo (change 'logo.png' to the actual logo file name)
+        \node[anchor=north west] at ([xshift=-7.8cm,yshift=-3cm]current page.north east) {\includegraphics[width=7cm]{idom_logo.png}};
+
+        % Grey box
+        \fill[greyboxcolor] (current page.north west) ++(-0.65cm,-8.3cm) rectangle ++(20cm,-4.35cm);
+
+        % Text in grey box
+        \node[anchor=north west, text width=19cm, align=right, white, font=\LARGE] at ([yshift=-8.35cm]current page.north west) {
+            % Use setspace to set line spacing to 1
+        	\begin{spacing}{1}
+                % Insert input parameters here
+                Liquid Lithium solid impurities cyclone separator \\
+First Light Fusion \\
+01/2024 \\
+Chemical assessment of particulate impurities \\
+
+                S022641 / SIM0001\,v.0
+            \end{spacing}
+        };
+    \end{tikzpicture}
+
+    % Disclaimer Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \newpage
+
+    \thispagestyle{empty} % No page numbers
+
+    \begin{tikzpicture}[remember picture,overlay]
+        % White box with grey border and rounded corners
+        \fill[white, rounded corners=10pt, draw=greybordercolor, line width=0.5pt] (current page.center) ++(-7.5cm,-7.5cm) rectangle ++(15cm,-2.8cm);
+        
+        % Text in white box
+        \node[anchor=center, text width=20cm, align=center, greybordercolor, font=\normalsize] at ([yshift=-9cm]current page.center) {
+        	% Use setspace to set line spacing to 1
+        	\begin{spacing}{1}
+            Total or partial reproduction, transfer, distribution or storage of part or all of the contents in this document by any kind of digital media, printing or any other kind is prohibited without the prior written permission of IDOM, Consulting, Engineering \& Architecture, S.A.U. \\
+            \vspace{0.3cm}
+            \emph{Copyright ©\the\year{}}, IDOM, Consulting, Engineering \& Architecture, S.A.U.
+        	\end{spacing}
+        };
+    \end{tikzpicture}
+
+    % Signature page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\thispagestyle{empty} % No page numbers
+
+\begin{center}
+    \begin{spacing}{1} % Set line spacing to 1
+    \begin{tabular}{@{}p{16.322cm}@{}}
+
+        \parbox{15.89cm}{\centering \includegraphics[height=2.2cm]{FLF.png}} \\
+        \Large{} \\
+        \Xhline{1.7pt} % Use \Xhline with thickness parameter
+        \rule[0cm]{0pt}{1.5cm} \parbox{15.89cm}{\centering {\LARGE First Light Fusion}} \\
+        \rule[-1.15cm]{0pt}{1.8cm} \parbox{15.89cm}{\centering {\LARGE Liquid Lithium solid impurities cyclone separator}} \\
+        \Xhline{1.7pt} % Use \Xhline with thickness parameter
+        \rule{0pt}{0.8cm} \\
+        \hline
+        %\rowcolor{greybordercolor}
+        \begin{tabular}{@{}|p{5cm}|p{5cm}|p{5cm}|@{}} \rowcolor{lightgray}
+           \rule[-0.3cm]{0pt}{0.8cm} \textbf{\emph{Performed by:}} & \textbf{\emph{Reviewed by:}} & \textbf{\emph{Approved by:}} \\
+        \end{tabular} \\
+        \hline
+        \begin{tabular}{@{}|p{5cm}|p{5cm}|p{5cm}|@{}}
+           &  &  \\
+           &  &  \\
+           &  &  \\
+           &  &  \\
+           &  &  \\
+           &  &  \\
+           &  &  \\
+           &  &  \\
+           &  &  \\
+           &  &  \\
+           &  &  \\
+           &  &  \\
+        \end{tabular} \\
+        \hline
+        \begin{tabular}{@{}|p{5cm}|p{5cm}|p{5cm}|@{}}
+            &  &  \\
+           Alexandre Sureda (ASC) & Andhika Feri Wibisono (AFW) & Beatriz Echeste (BE) \\
+Fernando Scarafia (FS) &  &  \\
+Juan Diego Iberico (DIL) &  &  \\
+ & & \\
+
+        \end{tabular} \\
+        \hline
+        \begin{tabular}{@{}|p{5cm}|p{5cm}|p{5cm}|@{}}
+          
+          \rule[-0.3cm]{0pt}{1cm} \the\month{}/\the\year{} & \the\month{}/\the\year{} & \the\month{}/\the\year{}  \\
+        \end{tabular} \\
+        \hline
+        \rule{0pt}{0.6cm} \\
+        \hline
+        \rule{0pt}{0.4cm} \\
+    \end{tabular}
+    \end{spacing}
+\end{center}
+
+% NEW TABLE NEW TABLE NEW TABLE NEW TABLE NEW TABLE NEW TABLE NEW TABLE
+\begin{center}
+    \begin{spacing}{1} % Set line spacing to 1
+    \begin{tabular}{|p{15.89cm}|}
+    \hline
+        \begin{tabular}{@{}p{3cm} p{3cm}|p{3.5cm}|p{1.5cm}|p{2cm}@{}}
+            &  & & & \\
+           \textit{Project} & & \textit{Document} & \textit{Version} & \textit{CD} \\
+            &  & & & \\
+           \textit{ID:}& \textit{S022641} & & &  \\
+           
+           \textit{Quality:} & \textit{Level 2} & \textit{SIM0001} & \textit{v.0} & \textit{S022641.04.02}\\
+           
+            &  &  & & \\
+           
+        \end{tabular} \\
+    \hline
+    \end{tabular}
+    \end{spacing}
+\end{center}
+
+% Intentionally blank page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\thispagestyle{empty} % No page numbers
+
+\begin{tikzpicture}[remember picture,overlay]
+    
+    % Text in white box
+    \node[anchor=center, text width=20cm, align=center, greybordercolor, font=\normalsize] at ([yshift=0cm]current page.center) {
+        \textit{Intentionally left blank} \\
+    };
+\end{tikzpicture}
+
+% Record of changes page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+% HEADER & FOOTER - HEADER & FOOTER - HEADER & FOOTER - HEADER & FOOTER - HEADER & FOOTER
+\pagestyle{fancy}
+
+% Header --------------------------------------------------------------------------------
+\fancyhead{} % clear all header fields
+\fancyhead[L]{Liquid Lithium solid impurities cyclone separator}
+\fancyhead[R]{\hspace{1cm} \includegraphics[width=3cm]{IDOM_blue_logo.png}}
+% Header line control
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\headruleskip}{5pt}
+
+%F Footer -------------------------------------------------------------------------------
+\fancyfoot{} % clear all footer fields
+\fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+\fancyfoot[L]{S022641/NS/ASC, FS/ SIM0001 \, v.0 \ \ \ \ \ \ \ \ CD S022641.04.02}
+% Foot line control 
+\renewcommand{\footrulewidth}{0.1pt}
+\renewcommand{\footruleskip}{10pt}
+
+% Redefine the plain page style to match your fancy style
+\fancypagestyle{plain}{%
+	\fancyhf{} % clear all header and footer fields
+	\fancyhead[L]{Liquid Lithium solid impurities cyclone separator} % Include the desired header in plain style
+	\fancyhead[R]{\hspace{1cm} \includegraphics[width=3cm]{IDOM_blue_logo.png}}
+	\fancyfoot[R]{Page \thepage \hspace{1pt} of \pageref{LastPage}}
+	\fancyfoot[L]{S022641/NS/ASC, FS/ SIM0001 \, v.0 \ \ \ \ \ \ \ \ CD S022641.04.02}
+	\renewcommand{\headrulewidth}{0.1pt} % Restore the header line
+	\renewcommand{\footrulewidth}{0.1pt} % Keep the footer line
+	\renewcommand{\footruleskip}{10pt}
+}
+
+% HEADER & FOOTER - HEADER & FOOTER - HEADER & FOOTER - HEADER & FOOTER - HEADER & FOOTER
+
+
+% RECORD OF CHANGES (table) -----------------------------------------------------------------------
+\begin{center}
+    \begin{tabular}{@{}p{16.322cm}@{}}
+        \rule[-0.7cm]{0pt}{1.5cm} \parbox{15.89cm}{\large \textbf{RECORD OF CHANGES}} \\
+        \hline
+        %\rowcolor{greybordercolor}
+        \begin{tabular}{@{}|p{2cm}|p{2.5cm}|p{10.5cm}|@{}}
+           \rule[-0.5cm]{0pt}{1.2cm} \emph{Version} & \emph{Date} & \emph{Changes} \\
+        \end{tabular} \\
+        \hline
+        \begin{tabular}{@{}|p{2cm}|p{2.5cm}|p{10.5cm}|@{}}
+           \rule[-0.2cm]{0pt}{0.7cm} v.0 & 01/2024  & Draft version \\
+           \rule[-0.2cm]{0pt}{0.7cm}  &   &  \\
+           \rule[-0.2cm]{0pt}{0.7cm}  &   &  \\
+           \rule[-0.2cm]{0pt}{0.7cm}  &   &  \\
+           \rule[-0.2cm]{0pt}{0.7cm}  &   &  \\
+           \rule[-0.2cm]{0pt}{0.7cm}  &   &  \\
+           \rule[-0.2cm]{0pt}{0.7cm}  &   &  \\
+           \rule[-0.2cm]{0pt}{0.7cm}  &   &  \\
+           \rule[-0.2cm]{0pt}{0.7cm}  &   &  \\
+        \end{tabular} \\
+        \hline
+    \end{tabular}
+\end{center}
+
+% CHANGES TO PREVIOUS VERSION (table) -----------------------------------------------------------
+\begin{center}
+    \begin{tabular}{@{}p{16.322cm}@{}}
+
+        \rule[-0.7cm]{0pt}{1.5cm} \parbox{15.89cm}{\large \textbf{CHANGES TO PREVIOUS VERSION}} \\
+        \hline
+        \begin{tabular}{@{}|p{15.87cm}|@{}}
+           \rule[-5.5cm]{0pt}{6cm} N/A\\
+        \end{tabular} \\
+        \hline
+    \end{tabular}
+\end{center}
+
+% PENDING INFORMATION (table) -----------------------------------------------------------------------
+\begin{center}
+    \begin{tabular}{@{}p{16.322cm}@{}}
+
+        \rule[-0.7cm]{0pt}{1.5cm} \parbox{15.89cm}{\large \textbf{PENDING INFORMATION}} \\
+        \hline
+        %\rowcolor{greybordercolor}
+        \begin{tabular}{@{}|p{2cm}|p{2.5cm}|p{10.5cm}|@{}}
+           \rule[-0.5cm]{0pt}{1.2cm} \emph{No.} & \emph{Section} & \emph{Description} \\
+        \end{tabular} \\
+        \hline
+        \begin{tabular}{@{}|p{2cm}|p{2.5cm}|p{10.5cm}|@{}}
+           \rule[-0.5cm]{0pt}{0.6cm} N/A & N/A & N/A \\
+           %\hline
+           \rule[-0.5cm]{0pt}{0.6cm}  &  &  \\
+           %\hline
+           \rule[-0.5cm]{0pt}{0.6cm}  &  &  \\
+
+        \end{tabular} \\
+        \hline
+    \end{tabular}
+\end{center}
+
+% Intentionally blank page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\begin{tikzpicture}[remember picture,overlay]
+    
+    % Text in white box
+    \node[anchor=center, text width=20cm, align=center, greybordercolor, font=\normalsize] at ([yshift=0cm]current page.center) {
+        \textit{Intentionally left blank} \\
+    };
+\end{tikzpicture}
+
+% TABLE OF CONTENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\tableofcontents
+
+% LIST OF TABLES AND FIGURE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\listoffigures
+
+\newpage
+\listoftables
+
+% ADD .TEX files %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{glossary.tex}
+\input{doc_body.tex}
+
+
+% ADD REFERENCES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\addcontentsline{toc}{section}{\protect\numberline{}REFERENCES}
+% Added Version 0.1.0
+\printbibliography    
+% Added Version 0.1.0
+
+
+% ADD ANEEXES HERE -----------------------------------------------------------------------------
+\newpage
+\section*{ANNEX 1}\label{sec:annex_1}
+\addcontentsline{toc}{section}{\protect\numberline{}ANNEX 1}
+
+\begin{table}[h!]
+	%\centering
+	\begin{tabular}{p{4cm}p{1cm}p{2cm}p{2cm}p{2cm}p{2cm}}
+		\rule[-0.3cm]{0pt}{0.8cm} \textbf{Evaluation} & \textbf{units} & \textbf{CC} &\textbf{Decanter centrifuge} & \textbf{Disk Stack} & \textbf{Hydrocyclone} \\ \Xhline{1.3pt}
+		\rule[-0.3cm]{0pt}{0.8cm} Continuous extraction & yes/not & yes & yes & yes & yes \\ \hline
+		\rule[-0.3cm]{0pt}{0.8cm} Material compatibility & - & SS & SS & SS & SS/Polymers \\ \hline
+		\rule[-0.3cm]{0pt}{0.8cm} Energy cost\footnote{} & $kW$ & 18.5 & 250 & 75 & 0 \\ \hline
+		\rule[-0.3cm]{0pt}{0.8cm} Particle size & $\mu m$ & NRAI\footnote[2]{} & $>$10 & $>$1 & $>$12 \\ \hline
+		\rule[-0.3cm]{0pt}{0.8cm} Maintenance \& cleaning & - & moving parts & moving parts & moving parts & excellent \\ \hline
+		\rule[-0.3cm]{0pt}{0.8cm} Max. flow rate & $m^3/s$ & 0.012 & 0.007 & 0.028 & 0.5 \\ \hline
+		\rule[-0.3cm]{0pt}{0.8cm} Impurities concentration & \% & NRAI\footnote[2]{} & $>$10\% & $>$0.02\% & $>$10\% \\ \hline
+		\rule[-0.3cm]{0pt}{0.8cm} Centrifugal force& G & 2000 & 4000 & 14000 & 5000 \\ \hline
+	\end{tabular}
+	\captionsetup{font=bf, size=small}
+	\caption{Centrifugal separator comparison data-sheet}
+	\label{rad_values}
+\end{table}
+
+\footnotetext{Based on required engine power to achieve the operation centrifugal force, for comparative reasons.}
+
+\footnotetext[2]{Not Reasonable Available Information.}
+% ----------------------------------------------------------------------------------------------------------------------------------
+
+\end{document}

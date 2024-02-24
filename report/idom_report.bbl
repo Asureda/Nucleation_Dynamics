@@ -1,0 +1,835 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{units}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a44b6b00e5eebd7494e1fd00658685e2}{%
+           family={NIST},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{fullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{bibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorbibnamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authornamehash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \strng{authorfullhash}{a44b6b00e5eebd7494e1fd00658685e2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SI - Unit rules and style conventions}
+      \field{volume}{1}
+      \field{year}{2003}
+      \field{pages}{5}
+      \range{pages}{1}
+    \endentry
+    \entry{SoA}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1a6ad069c145183b56932728d9b9c45a}{%
+           family={S22641\_SOA001\_v.0},
+           familyi={S\bibinitperiod},
+           given={IDOM},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1a6ad069c145183b56932728d9b9c45a}
+      \strng{fullhash}{1a6ad069c145183b56932728d9b9c45a}
+      \strng{bibnamehash}{1a6ad069c145183b56932728d9b9c45a}
+      \strng{authorbibnamehash}{1a6ad069c145183b56932728d9b9c45a}
+      \strng{authornamehash}{1a6ad069c145183b56932728d9b9c45a}
+      \strng{authorfullhash}{1a6ad069c145183b56932728d9b9c45a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Liquid Lithium solid impurities cyclone separator: SoA and Material assessment}
+      \field{year}{2023}
+    \endentry
+    \entry{Ott1970}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f6d7feed25b5332aee5ee73f7ae42b31}{%
+           family={Ott},
+           familyi={O\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6d7feed25b5332aee5ee73f7ae42b31}
+      \strng{fullhash}{f6d7feed25b5332aee5ee73f7ae42b31}
+      \strng{bibnamehash}{f6d7feed25b5332aee5ee73f7ae42b31}
+      \strng{authorbibnamehash}{f6d7feed25b5332aee5ee73f7ae42b31}
+      \strng{authornamehash}{f6d7feed25b5332aee5ee73f7ae42b31}
+      \strng{authorfullhash}{f6d7feed25b5332aee5ee73f7ae42b31}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Phys. Sci.}
+      \field{title}{Impurity Diffusion in Lithium 1. The Diffusion of Cd, Hg and Ga 2. Survey of the Diffusion of Metallic Impurities in Lithium}
+      \field{year}{1970}
+      \verb{doi}
+      \verb 10.1515/ZNA-1970-1020
+      \endverb
+    \endentry
+    \entry{Keough1985}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0b56312021eec1b3ffd6698f5c92724a}{%
+           family={Keough},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima F},
+           giveni={R\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=7348d81c55aad5a702bb9d8e77967888}{%
+           family={Meadows},
+           familyi={M\bibinitperiod},
+           given={George\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{1b5bd73c0dba03eeb34f10fcddc5342f}
+      \strng{fullhash}{1b5bd73c0dba03eeb34f10fcddc5342f}
+      \strng{bibnamehash}{1b5bd73c0dba03eeb34f10fcddc5342f}
+      \strng{authorbibnamehash}{1b5bd73c0dba03eeb34f10fcddc5342f}
+      \strng{authornamehash}{1b5bd73c0dba03eeb34f10fcddc5342f}
+      \strng{authorfullhash}{1b5bd73c0dba03eeb34f10fcddc5342f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{1}
+      \field{title}{Lithium purification technique}
+      \field{year}{1985}
+      \verb{urlraw}
+      \verb https://www.osti.gov/biblio/865506
+      \endverb
+      \verb{url}
+      \verb https://www.osti.gov/biblio/865506
+      \endverb
+    \endentry
+    \entry{Chopra1988}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9185bcc85c515c6c209e446fbf1922b4}{%
+           family={Chopra},
+           familyi={C\bibinitperiod},
+           given={0.\bibnamedelimi K.},
+           giveni={0\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e40988450952a78928d35f66e8fe8132}{%
+           family={Hull},
+           familyi={H\bibinitperiod},
+           given={A.\bibnamedelimi B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec125d24a3e8ce1e56e02afc75b0d4c3}
+      \strng{fullhash}{ec125d24a3e8ce1e56e02afc75b0d4c3}
+      \strng{bibnamehash}{ec125d24a3e8ce1e56e02afc75b0d4c3}
+      \strng{authorbibnamehash}{ec125d24a3e8ce1e56e02afc75b0d4c3}
+      \strng{authornamehash}{ec125d24a3e8ce1e56e02afc75b0d4c3}
+      \strng{authorfullhash}{ec125d24a3e8ce1e56e02afc75b0d4c3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{I}nfluence of carbon and nitrogen impurities on the corrosion of structural materials in a flowing lithium environment}
+      \field{year}{1988}
+    \endentry
+    \entry{Muroga2008}{article}{}
+      \name{author}{7}{}{%
+        {{hash=e68cee6184f5f2854c01aef20ef0c29e}{%
+           family={Muroga},
+           familyi={M\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b6b2c0b097f027e5e874fa8a4ff67749}{%
+           family={Nagasaka},
+           familyi={N\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=bbdfa586faed9f1419e779c1b31d7e6b}{%
+           family={Kondo},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3784aa208a569fe2a7ccbbcc72eda9a1}{%
+           family={Sagara},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=10b3adaa9f70f0094890d370d4275109}{%
+           family={Noda},
+           familyi={N\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=79ff273445808143c7457271e1958c7f}{%
+           family={Suzuki},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=83d9364312f07e9be264cf858d743769}{%
+           family={Terai},
+           familyi={T\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d01481867b8c4fe889d5e9e9b7e4726}
+      \strng{fullhash}{566784c8939d25ce2edf4fa828f3069e}
+      \strng{bibnamehash}{4d01481867b8c4fe889d5e9e9b7e4726}
+      \strng{authorbibnamehash}{4d01481867b8c4fe889d5e9e9b7e4726}
+      \strng{authornamehash}{4d01481867b8c4fe889d5e9e9b7e4726}
+      \strng{authorfullhash}{566784c8939d25ce2edf4fa828f3069e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{C}ompatibility of {R}educed {A}ctivation {F}erritic/{M}artensitic {S}teels with {L}iquid {B}reeders}
+      \field{year}{2008}
+    \endentry
+    \entry{Heinzel2006}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e0e8859246c71eb25361f55ad2723f8a}{%
+           family={Heinzel},
+           familyi={H\bibinitperiod},
+           given={Annette},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9ae226115c8877979b05693fe85084a5}{%
+           family={Kondo},
+           familyi={K\bibinitperiod},
+           given={Masatoshi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=069d2ac0a9ce49d06b6360b52358126c}{%
+           family={Takahashi},
+           familyi={T\bibinitperiod},
+           given={Minoru},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{75017cf341c49a06c882e3cd8f582630}
+      \strng{fullhash}{75017cf341c49a06c882e3cd8f582630}
+      \strng{bibnamehash}{75017cf341c49a06c882e3cd8f582630}
+      \strng{authorbibnamehash}{75017cf341c49a06c882e3cd8f582630}
+      \strng{authornamehash}{75017cf341c49a06c882e3cd8f582630}
+      \strng{authorfullhash}{75017cf341c49a06c882e3cd8f582630}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-3115}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{month}{5}
+      \field{number}{3}
+      \field{title}{Corrosion of steels with surface treatment and Al-alloying by GESA exposed in lead–bismuth}
+      \field{volume}{350}
+      \field{year}{2006}
+      \field{pages}{264\bibrangedash 270}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.jnucmat.2006.01.014
+      \endverb
+    \endentry
+    \entry{IAEA2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=43bef79daf6be7eeabe93c7a1f418288}{%
+           family={IAEA},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{43bef79daf6be7eeabe93c7a1f418288}
+      \strng{fullhash}{43bef79daf6be7eeabe93c7a1f418288}
+      \strng{bibnamehash}{43bef79daf6be7eeabe93c7a1f418288}
+      \strng{authorbibnamehash}{43bef79daf6be7eeabe93c7a1f418288}
+      \strng{authornamehash}{43bef79daf6be7eeabe93c7a1f418288}
+      \strng{authorfullhash}{43bef79daf6be7eeabe93c7a1f418288}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IAEA-TECDOC-1912}
+      \field{title}{{C}hallenges {F}or {C}oolants {I}n {F}ast {N}eutron {S}pectrum {S}ystems}
+      \field{year}{2020}
+    \endentry
+    \entry{Finn1981}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c96a116b652f3e0bcdd2cac8428ccf02}{%
+           family={Finn},
+           familyi={F\bibinitperiod},
+           given={P.A.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=874765cbc79be95121688c45357fc17c}{%
+           family={Breon},
+           familyi={B\bibinitperiod},
+           given={S.R.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d869f4f0a15c269d735f97acb938ab4b}{%
+           family={Chellew},
+           familyi={C\bibinitperiod},
+           given={N.R.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{af139b87aecca741503e4273f53800fb}
+      \strng{fullhash}{af139b87aecca741503e4273f53800fb}
+      \strng{bibnamehash}{af139b87aecca741503e4273f53800fb}
+      \strng{authorbibnamehash}{af139b87aecca741503e4273f53800fb}
+      \strng{authornamehash}{af139b87aecca741503e4273f53800fb}
+      \strng{authorfullhash}{af139b87aecca741503e4273f53800fb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-3115}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{month}{1}
+      \field{title}{Compatibility study of solid ceramic breeder materials}
+      \field{volume}{103}
+      \field{year}{1981}
+      \field{pages}{561\bibrangedash 566}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/0022-3115(82)90658-4
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1016/0022-3115(82)90658-4
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1016/0022-3115(82)90658-4
+      \endverb
+    \endentry
+    \entry{PULHAM1984}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8347d6d3a8a660acb5e19cbdd6ccb08e}{%
+           family={Pulham},
+           familyi={P\bibinitperiod},
+           given={Richard\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=f42002dc092fa83d64b4c6c5674aa4ee}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={W.\bibnamedelimi Robert},
+           giveni={W\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=563eaf4185d0b1e465b6e833ce6cccc8}{%
+           family={Collinson},
+           familyi={C\bibinitperiod},
+           given={John\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2bcf0663cee61369f1eadd2227a092ba}
+      \strng{fullhash}{2bcf0663cee61369f1eadd2227a092ba}
+      \strng{bibnamehash}{2bcf0663cee61369f1eadd2227a092ba}
+      \strng{authorbibnamehash}{2bcf0663cee61369f1eadd2227a092ba}
+      \strng{authornamehash}{2bcf0663cee61369f1eadd2227a092ba}
+      \strng{authorfullhash}{2bcf0663cee61369f1eadd2227a092ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{title}{{C}hemical compatibility between {L}ithium {O}xide and transition metal}
+      \field{year}{1984}
+    \endentry
+    \entry{Parida2019}{article}{}
+      \name{author}{7}{}{%
+        {{hash=b8737e5451b4fc1651d34da326efffd5}{%
+           family={Parida},
+           familyi={P\bibinitperiod},
+           given={Sanjit\bibnamedelima Kumar},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=a194d2e8c47124d753f7f4e407f2a16a}{%
+           family={Nagaraj},
+           familyi={N\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=9f89e18f80936cc822c21d930b6d9c4f}{%
+           family={Venkatesh},
+           familyi={V\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7688e941e61b8024b08af435bb03b491}{%
+           family={Sudha},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b7a9ec08df60df4854760a269d307e70}{%
+           family={Sekhar},
+           familyi={S\bibinitperiod},
+           given={Kuntla\bibnamedelima Reddy},
+           giveni={K\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=e681ca05ef1a908838ca59b17d781e19}{%
+           family={Ramaseshan},
+           familyi={R\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bf66d1845cf81ab39f503002667c80c3}{%
+           family={Ganesan},
+           familyi={G\bibinitperiod},
+           given={Rajesh},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier BV}%
+      }
+      \strng{namehash}{cd0f993758881bf1ad39d58f29e363d2}
+      \strng{fullhash}{1d9e36bf044ca01f7274545c5ec35fff}
+      \strng{bibnamehash}{cd0f993758881bf1ad39d58f29e363d2}
+      \strng{authorbibnamehash}{cd0f993758881bf1ad39d58f29e363d2}
+      \strng{authornamehash}{cd0f993758881bf1ad39d58f29e363d2}
+      \strng{authorfullhash}{1d9e36bf044ca01f7274545c5ec35fff}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-3115}
+      \field{journaltitle}{Journal of Nuclear Materials}
+      \field{month}{12}
+      \field{title}{Studies on chemical compatibility of steels with liquid lithium}
+      \field{volume}{526}
+      \field{year}{2019}
+      \field{pages}{151761}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.jnucmat.2019.151761
+      \endverb
+    \endentry
+    \entry{Xia2019}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=7184337f85d342972d7b5ae7b59fae8b}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={Wenxing\bibnamedelima Xia},
+           giveni={W\bibinitperiod\bibinitdelim X\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{7184337f85d342972d7b5ae7b59fae8b}
+      \strng{fullhash}{7184337f85d342972d7b5ae7b59fae8b}
+      \strng{bibnamehash}{7184337f85d342972d7b5ae7b59fae8b}
+      \strng{authorbibnamehash}{7184337f85d342972d7b5ae7b59fae8b}
+      \strng{authornamehash}{7184337f85d342972d7b5ae7b59fae8b}
+      \strng{authorfullhash}{7184337f85d342972d7b5ae7b59fae8b}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Study of corrosion behaviors of 316L Stainless steel welds in liquid lithium with hydrogen impurity}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/15361055.2018.1533618
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/15361055.2018.1533618
+      \endverb
+    \endentry
+    \entry{Tortorelli1980}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f5df6f38ea10889afa3ecfcb6bd1cd49}{%
+           family={P.\bibnamedelimi F},
+           familyi={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Tortoreili},
+           giveni={T\bibinitperiod}}}%
+        {{hash=36aa67e691e351d5ebd85d79f4fe4be7}{%
+           family={DeVan},
+           familyi={D\bibinitperiod},
+           given={J.\bibnamedelimi H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=7e67075363c55624e6305948c3969b9a}{%
+           family={Selle},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f03a573fae25bbeb1a91db212a8a81e}
+      \strng{fullhash}{0f03a573fae25bbeb1a91db212a8a81e}
+      \strng{bibnamehash}{0f03a573fae25bbeb1a91db212a8a81e}
+      \strng{authorbibnamehash}{0f03a573fae25bbeb1a91db212a8a81e}
+      \strng{authornamehash}{0f03a573fae25bbeb1a91db212a8a81e}
+      \strng{authorfullhash}{0f03a573fae25bbeb1a91db212a8a81e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{C}orrosion in {L}ithium-{S}tainless {S}teel thermal convection systems}
+      \field{year}{1980}
+    \endentry
+    \entry{Tsisar2019}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=4675ac02f81561adcd4ce5ff4675f799}{%
+           family={al.},
+           familyi={a\bibinitperiod},
+           given={V.\bibnamedelimi TSISAR},
+           giveni={V\bibinitperiod\bibinitdelim T\bibinitperiod},
+           prefix={et},
+           prefixi={e\bibinitperiod}}}%
+      }
+      \strng{namehash}{4675ac02f81561adcd4ce5ff4675f799}
+      \strng{fullhash}{4675ac02f81561adcd4ce5ff4675f799}
+      \strng{bibnamehash}{4675ac02f81561adcd4ce5ff4675f799}
+      \strng{authorbibnamehash}{4675ac02f81561adcd4ce5ff4675f799}
+      \strng{authornamehash}{4675ac02f81561adcd4ce5ff4675f799}
+      \strng{authorfullhash}{4675ac02f81561adcd4ce5ff4675f799}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Morphological and Compositional Features of Corrosion Behavior of SUS410-SUS410, SUS316-SUS316 and SUS410-SUS316 TIG Welded Joints in Li}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/15361055.2018.1533618
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/15361055.2018.1533618
+      \endverb
+    \endentry
+    \entry{Maroni1975}{article}{}
+      \name{author}{3}{}{%
+        {{hash=3142672ec9575ceed06e645fcc9334c8}{%
+           family={Maroni},
+           familyi={M\bibinitperiod},
+           given={Victor\bibnamedelima A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=b5b38b28f4f40e1d02d9682fc4925b21}{%
+           family={Wolson},
+           familyi={W\bibinitperiod},
+           given={Raymond\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=ee40d81bf43dc869ca0d019f220566fa}{%
+           family={Staahl},
+           familyi={S\bibinitperiod},
+           given={Gustav\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited}%
+      }
+      \strng{namehash}{ef5749cbbef69652161fd8a07aea5c22}
+      \strng{fullhash}{ef5749cbbef69652161fd8a07aea5c22}
+      \strng{bibnamehash}{ef5749cbbef69652161fd8a07aea5c22}
+      \strng{authorbibnamehash}{ef5749cbbef69652161fd8a07aea5c22}
+      \strng{authornamehash}{ef5749cbbef69652161fd8a07aea5c22}
+      \strng{authorfullhash}{ef5749cbbef69652161fd8a07aea5c22}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1943-7471}
+      \field{journaltitle}{Nuclear Technology}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Some Preliminary Considerations of A Molten-Salt Extraction Process to Remove Tritium from Liquid Lithium Fusion Reactor Blankets}
+      \field{volume}{25}
+      \field{year}{1975}
+      \field{pages}{83\bibrangedash 91}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.13182/nt75-a24351
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.13182/NT75-A24351
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.13182/NT75-A24351
+      \endverb
+    \endentry
+    \entry{Bandhauer2013}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=d1c03d1724d2f8a2ed285c26b13f5b87}{%
+           family={Bandhauer},
+           familyi={B\bibinitperiod},
+           given={Todd\bibnamedelima M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=338e47012686c48ceb14a9d46f3b2d5a}{%
+           family={Adler},
+           familyi={A\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8cc12d8627480466719dcaa7f83484f0}
+      \strng{fullhash}{8cc12d8627480466719dcaa7f83484f0}
+      \strng{bibnamehash}{8cc12d8627480466719dcaa7f83484f0}
+      \strng{authorbibnamehash}{8cc12d8627480466719dcaa7f83484f0}
+      \strng{authornamehash}{8cc12d8627480466719dcaa7f83484f0}
+      \strng{authorfullhash}{8cc12d8627480466719dcaa7f83484f0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ALTERNATIVE METHODS FOR TRITIUM RECOVERY FROM THE LIFELITHIUM BLANKET: FY13 FINAL REPORT}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:43604591
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:43604591
+      \endverb
+    \endentry
+    \entry{Van}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=fef2282d2391fba444bfe4876f355538}{%
+           family={Wassenbergh},
+           familyi={W\bibinitperiod},
+           given={S.\bibnamedelimi Van},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=8130d2a780f96b04cada8deb1a5a69e6}{%
+           family={Sanderson},
+           familyi={S\bibinitperiod},
+           given={S.\bibnamedelimi L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{fullhash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{bibnamehash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{authorbibnamehash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{authornamehash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{authorfullhash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hydrodynamic analysis of bioinspired vortical cross-step filtration by computational modelling}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://doi.org/10.1098/rsos.230315
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1098/rsos.230315
+      \endverb
+    \endentry
+    \entry{Concha2007}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f6c4a1cf962ae57795fcddc243c28ab3}{%
+           family={Concha},
+           familyi={C\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6c4a1cf962ae57795fcddc243c28ab3}
+      \strng{fullhash}{f6c4a1cf962ae57795fcddc243c28ab3}
+      \strng{bibnamehash}{f6c4a1cf962ae57795fcddc243c28ab3}
+      \strng{authorbibnamehash}{f6c4a1cf962ae57795fcddc243c28ab3}
+      \strng{authornamehash}{f6c4a1cf962ae57795fcddc243c28ab3}
+      \strng{authorfullhash}{f6c4a1cf962ae57795fcddc243c28ab3}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Department of Metallurgial Engineering, University of Conception}
+      \field{title}{Flow pattern in Hydrocyclones}
+      \field{year}{2007}
+    \endentry
+    \entry{Altmeyer2003}{article}{}
+      \name{author}{7}{}{%
+        {{hash=2ef5a2194db8b28f288e715fd36ebe83}{%
+           family={Altmeyer},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=45be4d9c06068d858d07ecf0ac61808e}{%
+           family={Mathieu},
+           familyi={M\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f9a0cf57670b06c3c3f03ab08baa15f7}{%
+           family={Jullimier},
+           familyi={J\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5155689f45c6d25f465afb7ee1804a67}{%
+           family={Contal},
+           familyi={C\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6eeb4e04dbfb05b7d6e84a6ffec7c7a7}{%
+           family={Midoux},
+           familyi={M\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=da7ea28b8d86bc897ee9a7998d48e6d7}{%
+           family={Rode},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=21d84a4893c9bf08cde94ccab6eb56b1}{%
+           family={Leclerc},
+           familyi={L\bibinitperiod},
+           given={J.\bibnamedelimi P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{bef56e7b4704c0c6db7734dfc6a4e390}
+      \strng{fullhash}{ee3aaeddff08dcece8859a8ca867669a}
+      \strng{bibnamehash}{bef56e7b4704c0c6db7734dfc6a4e390}
+      \strng{authorbibnamehash}{bef56e7b4704c0c6db7734dfc6a4e390}
+      \strng{authornamehash}{bef56e7b4704c0c6db7734dfc6a4e390}
+      \strng{authorfullhash}{ee3aaeddff08dcece8859a8ca867669a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chemical Engineering and Processing}
+      \field{title}{Comparison of different models of cyclone prediction performance for various operating conditions using a general software}
+      \field{volume}{43}
+      \field{year}{2003}
+    \endentry
+    \entry{Zhao2011}{article}{}
+      \name{author}{1}{}{%
+        {{hash=411d55c8a5bfee709dbb7816c8227131}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Bingtao},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{411d55c8a5bfee709dbb7816c8227131}
+      \strng{fullhash}{411d55c8a5bfee709dbb7816c8227131}
+      \strng{bibnamehash}{411d55c8a5bfee709dbb7816c8227131}
+      \strng{authorbibnamehash}{411d55c8a5bfee709dbb7816c8227131}
+      \strng{authornamehash}{411d55c8a5bfee709dbb7816c8227131}
+      \strng{authorfullhash}{411d55c8a5bfee709dbb7816c8227131}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Separation and Purification Technology}
+      \field{title}{Prediction of gas-particle separation efficiency for cyclones: A time-of-flight model}
+      \field{volume}{85}
+      \field{year}{2011}
+      \field{pages}{171\bibrangedash 177}
+      \range{pages}{7}
+    \endentry
+    \entry{Wei2016}{article}{}
+      \name{author}{5}{}{%
+        {{hash=797281af2115c6d5dddffea7d8ec7731}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Wang},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e0a71aa109520f1fe1029338c4022ff1}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Yu\bibnamedelima Jui},
+           giveni={Y\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=95b8b6e5932ae32799d95fe0d4d546ff}{%
+           family={tao},
+           familyi={t\bibinitperiod},
+           given={Zheng\bibnamedelima Xiao},
+           giveni={Z\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+        {{hash=1d122c926f0096fe7908b644991b5a04}{%
+           family={LuXia},
+           familyi={L\bibinitperiod}}}%
+        {{hash=29788f048681bf2d4e9a4fc92816ae05}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Lin},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{30544becdb20c305269a080eb43d3388}
+      \strng{fullhash}{c6eadf94e672288ba918b11995034fc3}
+      \strng{bibnamehash}{30544becdb20c305269a080eb43d3388}
+      \strng{authorbibnamehash}{30544becdb20c305269a080eb43d3388}
+      \strng{authornamehash}{30544becdb20c305269a080eb43d3388}
+      \strng{authorfullhash}{c6eadf94e672288ba918b11995034fc3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Conference of Applied Energy}
+      \field{title}{A new Method of Prediction the Hydrocyclone Efficiency with the Light Dispersed Phase}
+      \field{year}{2016}
+    \endentry
+    \entry{Marthinussen2011}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3883896b860a0822e5fad19f21c926e5}{%
+           family={Marthinussen},
+           familyi={M\bibinitperiod},
+           given={Svein\bibnamedelima Arne},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3883896b860a0822e5fad19f21c926e5}
+      \strng{fullhash}{3883896b860a0822e5fad19f21c926e5}
+      \strng{bibnamehash}{3883896b860a0822e5fad19f21c926e5}
+      \strng{authorbibnamehash}{3883896b860a0822e5fad19f21c926e5}
+      \strng{authornamehash}{3883896b860a0822e5fad19f21c926e5}
+      \strng{authorfullhash}{3883896b860a0822e5fad19f21c926e5}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Department of Physics and Technology University of Bergen}
+      \field{title}{The Effect of Fluid Viscosity on Hydrocyclone Performance}
+      \field{year}{2011}
+    \endentry
+    \entry{Sabbagh2014}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5433395eca8ac611bc26f526f41c9f80}{%
+           family={Sabbagh},
+           familyi={S\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c636f6b48a5ced0125d8dbaeb0e52f1a}{%
+           family={Lipsett},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=a2145bf65aa7a4936b3f08f8f70f9212}{%
+           family={Koch},
+           familyi={K\bibinitperiod},
+           given={Charles\bibnamedelima R.},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=4cac561c20ea8ceb2d379b5fd63f426f}{%
+           family={Nobes},
+           familyi={N\bibinitperiod},
+           given={David\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2038e4c5071f9f7b19537cc3baecba4}
+      \strng{fullhash}{2c3fcd047fad21232efbfc68c2ffc740}
+      \strng{bibnamehash}{a2038e4c5071f9f7b19537cc3baecba4}
+      \strng{authorbibnamehash}{a2038e4c5071f9f7b19537cc3baecba4}
+      \strng{authornamehash}{a2038e4c5071f9f7b19537cc3baecba4}
+      \strng{authorfullhash}{2c3fcd047fad21232efbfc68c2ffc740}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ASME}
+      \field{title}{Theoretical and experimental study of hydrocyclone performance and equivalent setting area}
+      \field{year}{2014}
+    \endentry
+    \entry{power_scenario}{article}{}
+      \name{author}{1}{}{%
+        {{hash=edd376bec6ebdf535f1c356e6e176482}{%
+           family={IDOM},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{edd376bec6ebdf535f1c356e6e176482}
+      \strng{fullhash}{edd376bec6ebdf535f1c356e6e176482}
+      \strng{bibnamehash}{edd376bec6ebdf535f1c356e6e176482}
+      \strng{authorbibnamehash}{edd376bec6ebdf535f1c356e6e176482}
+      \strng{authornamehash}{edd376bec6ebdf535f1c356e6e176482}
+      \strng{authorfullhash}{edd376bec6ebdf535f1c356e6e176482}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{SIM007 v.1}
+      \field{title}{Reactor Chamber design: power scenario analysis}
+      \field{year}{2023}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
