@@ -263,20 +263,46 @@ of the kinetic treatment of the process.
 The section concludes with the characterization of each impurity.
 
 \subsection{Nucleation Theory}
-
-First-order phase transitions, such as the condensation of vapor, boiling of a liquid, and crystallization of a melt, are critical phenomena in materials science and thermodynamics. These transitions are rigorously analyzed through the framework of homogeneous nucleation theory. This theory is pivotal for calculating the decay rate of a metastable state, essentially quantifying the rate at which nucleating clusters form within an initially homogeneous and nonequilibrium state. According to this theoretical approach, the transformation from a metastable state to a thermodynamically stable phase is facilitated through the formation of new phase clusters \cite{Larissa}. A quintessential example of this is the condensation of small liquid droplets from vapor that has been rapidly cooled into a metastable region. Within such a homogeneous medium, fluctuations spontaneously generate clusters of various sizes, among which those exceeding a critical size will grow, transitioning into a new phase and thus propelling the phase transition process forward. This necessitates a detailed kinetic examination of the cluster evolution to understand the underlying mechanisms of the phase transition.
-
-\paragraph{} In the nucleation regime, the evolution of the system is significantly marked by the formation of clusters that represent a new equilibrium phase. The dynamics of this process are intricately governed by the delicate balance between volume and surface contributions, as encapsulated by the capillary approximation. The volume contribution, acting as the driving force behind nucleation, lowers the system's free energy and is directly proportional to the cluster's volume, thereby favoring the formation and growth of these clusters. Conversely, the surface contribution introduces an energetic cost, scaling with the cluster's surface area. This cost is associated with creating an interface between the original phase and the new cluster, serving as a barrier that inherently inhibits the growth of the cluster \cite{Clouet1}.
-
-\paragraph{} Central to most nucleation theories is the calculation of the cluster free energy, denoted as \(W_i\). Certain characteristics of \(W_i\) are intuitively clear. For instance, the 'monomers' of the new phase are indistinguishable from the molecules of the parent phase, leading to the conclusion that the free energy of monomers should logically be zero (\(W_1 = 0\)). Moreover, \(W_i\) exhibits a maximum as a function of size. Conversely, the average molecular free energy, \(W_i/i\), tends towards the chemical potential difference between the phases, \(\Delta \mu\), for large clusters (\(i \rightarrow \infty\)), where \(\Delta \mu < 0\) signifies the chemical potential difference between the phases \cite{Laszlo1}.
-
-\paragraph{} Within the Classical Nucleation Theory (CNT), the 'droplet' approximation is employed for calculating \(W_i\). In this model, the clusters are envisioned as spherical particles that possess crystalline properties extending up to a mathematically sharp interface. This simplification allows for a more tractable analysis of the nucleation process, albeit with certain assumptions that may not hold in all physical scenarios.
+First-order phase transitions, such as the condensation of vapor, boiling of a liquid, and crystallization of a melt, are critical phenomena in materials science and thermodynamics.
+The decay of metastable states, such as the solidification of a supercooled liquid, takes place through the nucleation and growth of some small-sized clusters within the system \cite{Larissa}. The 
+initial stage of the phase transformation is usually described within the time-honored CNT \cite{Volmer1926,Hayashi1974}, where the droplet is described as a sphere of, say, bulk solid, 
+separated from the liquid by a sharp interface, giving rise to a free-energy penalty proportional to the interface area and a total Gibbs-free-energy activation barrier.
 
 \begin{equation}
-    W_i = i \Delta \mu + a i^{2/3}\gamma_{\infty},
+    \Delta G(i) = -|\Delta\mu|i + A\gamma_{\infty} i^{2/3},
 \end{equation}
 
-where \(\gamma_{\infty}\) represents the interfacial free energy of the equilibrium (planar) crystal/liquid interface, \(a\) is a geometric factor defined as \(a = (36 \pi \nu^2)^{1/3}\), and \(\nu\) is the molecular volume. The critical size of the nucleus and the nucleation barrier are determined by setting the derivative of \(\Delta G\) with respect to the radius, \(r\), equal to zero:
+where \(i\) is the number of particles in the cluster, \(\Delta\mu < 0\) is the chemical potential difference between the two phases, \(A = (36 \pi \nu^2)^{1/3}\) being \(\nu\) 
+the molecular volume and \(\gamma_{\infty}\) the specific surface energy (surface tension) of the planar interface, all anisotropies being neglected at this stage. The droplet grows if it exceeds a 
+critical size \(i^\ast\) corresponding to the maximum \(\Delta G(i)\) (\(\equiv \Delta G^\ast\)). 
+The CNT relies on the liquid droplet model, which assumes that tiny droplets possess the same characteristics as the bulk 
+condensed phases and have surface energies identical to those of an infinite flat surface. Nonetheless, there is an ongoing 
+debate about the applicability of macroscopic thermodynamic principles to describe liquid drops when dealing with small clusters 
+composed of merely a few dozen molecules \cite{Wilemski}. The inadequacy of the droplet model for small particles is highlighted by the fact that the 
+energy required to form monomers is not zero \cite{Gránásy}. This indicates that the attributes of small clusters cannot be 
+simply categorized into bulk and surface properties, rendering the notion of surface tension somewhat misleading when applied to these clusters \cite{Anisimov}.
+For instance, the 'monomers' of the new phase are indistinguishable from the molecules of the parent phase, leading to the conclusion that the free energy of monomers should logically 
+be zero (\(\Delta G(1) = 0\)) \cite{Laszlo1}. 
+\\
+However, in the conceptual state of this work, this simple model is useful to provide quantitatively and qualitatively the critical size of these nuclei.
+\\
+CNT also is able to estimate the nucleation rate
+
+\begin{equation}
+    I = I_0 e^{-\beta \Delta G^\ast},
+\end{equation}
+
+where \(\beta = 1/(k_B T)\) is the inverse temperature and \(I_0\) a kinetic prefactor that varies slowly with \(T\). Clearly, this connection between \(I\) and \(\gamma_{\infty}\) relies 
+on several severe approximations. Moreover, \(I_0\) is notoriously influenced by genuinely non-equilibrium effects and various expressions resulting from a more detailed consideration of the nucleation kinetics are known since a 
+long time \cite{Hayashi1974}.
+
+\paragraph{} In the nucleation regime, the evolution of the system is significantly marked by the formation of clusters that represent a new equilibrium phase. The dynamics of this process 
+are intricately governed by the balance between volume and surface contributions, as encapsulated by the capillary approximation. The volume contribution, acting as the driving 
+force behind nucleation, lowers the system's free energy and is directly proportional to the cluster's volume, thereby favoring the formation and growth of these clusters. Conversely, 
+the surface contribution introduces an energetic cost, scaling with the cluster's surface area. This cost is associated with creating an interface between the original phase and the new 
+cluster, serving as a barrier that inherently inhibits the growth of the cluster \cite{Clouet1}.
+
+The critical size of the nucleus and the nucleation barrier are determined by setting the derivative of \(\Delta G\) with respect to the size, \(i\), equal to zero:
 
 \begin{equation}
     R^* = -2\gamma_{\infty} (\Delta \mu / \nu)^{-1},
@@ -285,16 +311,22 @@ where \(\gamma_{\infty}\) represents the interfacial free energy of the equilibr
 and
 
 \begin{equation}
-    W_{i^*} = \frac{16 \pi}{3} \gamma_{\infty}^3(\Delta \mu / \nu)^{-2}.
+    \Delta G^\ast = \frac{16 \pi}{3} \gamma_{\infty}^3(\Delta \mu / \nu)^{-2}.
 \end{equation}
 
-The nucleation free energy is obtained by considering the difference in chemical potentials between the parent and the equilibrium phases for all atoms composing the cluster:
+Analyzing the critical parameters obtained from the CNT, is it evident that the key variables of the model are the nucleation driving force and the surface energy. In the following sections,
+some formalisms for the driving force will be presented and discussed, as well as for the surface energy. 
+\subsubsection{Driving force}
+The nucleation driving force is obtained by considering the difference in chemical potentials between the parent and the equilibrium phases for all atoms composing the cluster:
 
 \begin{equation}
     \Delta \mu = \sum_i y_i^e (\mu_i^e - \mu_i^0),
 \end{equation}
 
-where \(y_i^e\) is the atomic fraction of type \(i\) atoms in the nucleating equilibrium phase, and \(\mu_i^e\) and \(\mu_i^0\) are the corresponding chemical potentials in the nucleating equilibrium phase and in the parent phase, respectively. In a metastable parent phase, chemical potentials are higher than those at equilibrium. The critical factors for applying CNT are the driving force, \(\Delta \mu\), and the surface energy, \(\gamma_{\infty}\), of the solid particle. The driving force depends on the nucleation pathway, such as the saturation-based formalism commonly used in the context of vapor to liquid or crystal transitions \cite{Myerson2019, Ford2004, Sun2009}:
+where \(y_i^e\) is the atomic fraction of type \(i\) atoms in the nucleating equilibrium phase, and \(\mu_i^e\) and \(\mu_i^0\) are the corresponding chemical 
+potentials in the nucleating equilibrium phase and in the parent phase, respectively. In a metastable parent phase, chemical potentials are higher than those at equilibrium. 
+The critical factors for applying CNT are the driving force, \(\Delta \mu\), and the surface energy, \(\gamma_{\infty}\), of the solid particle. The driving force depends 
+on the nucleation pathway, such as the saturation-based formalism commonly used in the context of vapor to liquid or crystal transitions \cite{Myerson2019, Ford2004, Sun2009}:
 
 \begin{equation}
     \Delta\mu = \mu - \mu_{\text{coex}} = kT \ln\left(\frac{n_1}{n_1^{\text{sat}}}\right),
@@ -374,16 +406,16 @@ At a temperature \(T\), arbitrarily lower than \(T_l\), the chemical potentials 
 
 The free energy change, per unit volume, associated with forming a small amount of solid of composition \(x_{s}^\ast\) out of the liquid is given by
 \begin{equation}
-\Delta G_r = [x_s^\ast \Delta\mu_A + (1 - x_s^\ast) \Delta\mu_B]V \label{eq:delta_G_r}
+\Delta G_v = [x_s^\ast \Delta\mu_A + (1 - x_s^\ast) \Delta\mu_B]/V \label{eq:delta_G_v}
 \end{equation} 
 
 where \(V\) is the average molar volume of the solid, assumed here to vary linearly between the molar volumes \(V^A\) and \(V^B\) of the pure solid systems:
 \begin{equation}
 V = x_s^A V^A + (1 - x_s^A) V^B. \label{eq:V}
 \end{equation}
-The solid composition that is most likely to nucleate, \(x_n\), is assumed to be the one with the largest difference in free energy, \(\Delta G_r\), between the liquid and solid state. This intuitively obvious assumption is used because of its simplicity. Further justification based on a more rigorous calculation is given in Appendix I. It can be seen from that \(\Delta G_n\) is maximized if \(\Delta \mu^A = \Delta \mu^B\), so that the composition \(x_n\) corresponds to the point of tangency on the solid curve of a line parallel to the tangent to the liquid curve at \(x_l\), so that
+The solid composition that is most likely to nucleate, \(x_n\), is assumed to be the one with the largest difference in free energy, \(\Delta G_v\), between the liquid and solid state. This intuitively obvious assumption is used because of its simplicity. Further justification based on a more rigorous calculation is given in Appendix I. It can be seen from that \(\Delta G_n\) is maximized if \(\Delta \mu^A = \Delta \mu^B\), so that the composition \(x_n\) corresponds to the point of tangency on the solid curve of a line parallel to the tangent to the liquid curve at \(x_l\), so that
 \begin{equation}
-\bar{\Delta G_r} \approx \Delta \mu^A \approx \Delta \mu^B. \label{eq:bar_delta_G_r}
+\bar{\Delta G_v} \approx \Delta \mu^A \approx \Delta \mu^B. \label{eq:bar_delta_G_v}
 \end{equation}
 Therefore, given the composition dependence of the liquid and solid free energies, one can calculate the solid nucleus composition and the free energy of formation for the nucleus as a function of initial liquid composition, \(x_l\), and undercooling \(\Delta T = T_l - T\).
 
@@ -442,7 +474,7 @@ Similarly, for component B
 \end{equation}
 Finally, as discussed previously, at \(T < T_l\), the free energy change on nucleation is
 \begin{equation}
-V \Delta G_r = \Delta \mu^A = \Delta \mu^B. \label{eq:free_energy_change_nucleation}
+V \Delta G_v = \Delta \mu^A = \Delta \mu^B. \label{eq:free_energy_change_nucleation}
 \end{equation}
 Also, since \(\Delta \mu^A = \Delta \mu^B\), from equations \eqref{eq:final_delta_mu_A} and \eqref{eq:final_delta_mu_B}
 \begin{equation}
@@ -459,9 +491,97 @@ and since \(\Delta \mu^A = 0\), at \(T_l\),
 \end{equation}
 so that
 \begin{equation}
-V \Delta G_r = \Delta \mu^A = (T_l - T)(\Delta S_f^A - R \ln x_l^A). \label{eq:simplified_free_energy_change}
+V \Delta G_v = \Delta \mu^A = (T_l - T)(\Delta S_f^A - R \ln x_l^A). \label{eq:simplified_free_energy_change}
 \end{equation}
-An analogous equation holds for crystallization of pure B. This simplified result is particularly useful for metal-metalloid glass forming alloys such as Au–Si where the equilibrium solid solubility of the metalloid in the crystalline metal is very low.
+An analogous equation holds for crystallization of pure B. This simplified result is particularly useful for metal-metalloid glass forming alloys such as Au–Si where the equilibrium 
+solid solubility of the metalloid in the crystalline metal is very low.
+
+\subsubsection{Surface energy}
+
+As discussed in the previous section, surface energy is one of the critical parameters in CNT. Firstly, because this theory fails to predict the behaviour of small clusters 
+and at the same time assumes a surface energy value for a flat surface. In addition, the dependence of the surface energy on the nucleation rate is probably the most important part of this formalism. 
+
+Because this parameter is an exponential in the calculation of the nucleation rate, it depends very strongly on the value of the surface tension. For example, a change in $\gamma_{\infty}$ of only one order of magnitude
+leads to a change in the nucleation rate of about eight orders of magnitude \cite{Ulbricht1998}.
+\\
+Nonetheless, a dependable method for measuring surface tension is absent, with the exception of aligning experimental nucleation rate data with theoretical models \cite{Fokin2006HomogeneousCN}. 
+Furthermore, a critical hypothesis of the CNT, referred to as the capillarity approximation, overlooks the influence of curvature and size on surface tension \cite{SANGWAL19963}.
+Therefore, ideally it has to be obtained from experiments or from ab-initio calculations \cite{Sun2020, Lee2018, Vitos1998, Holec2012, Binnie2010}. 
+Another well-accepted methodology is from the complete thermodynamic model of the mixture, using Buttler's formulation \cite{Silva, Picha2004, Krasin2015}, 
+the problem with this methodology arises in having all the information and having a detailed phase diagram.
+\\
+Given the difficulties noted above in measuring or simulating the surface free energy of the liquid-solid interface, the natural question is whether theoretical methods 
+can predict its magnitude and the physical processes that affect it. 
+theoretical methods can predict its magnitude and the physical processes that affect it. 
+
+In order to determine $gamma$, it is useful to discuss the energetic and entropic components that make it up, 
+since, as we shall see, the different models that have been developed differ markedly in the relative contributions they attribute to these two components. 
+The surface Gibbs free energy can be written as
+\begin{equation} \label{eq:Gibbs_free_energy}
+\gamma = E^{(s)} - T S^{(s)} + P V^{(s)}
+\end{equation}
+In this context, $E^{(s)}$ represents the energy excess at the surface, $S^{(s)}$ denotes the entropy at the surface, and $V^{(s)}$ is the additional volume. 
+The latter term remains negligible unless under conditions of high pressure, and can be completely negated by appropriately selecting the Gibbs dividing surface such 
+that $V^{(s)}$ becomes zero. This results in only energetic and entropic elements contributing to $\gamma$.
+
+An early and widely adopted model for assessing the free energy at the liquid-solid interface was introduced by \cite{Skapski1956ATO}. This model 
+presupposes complete wetting of the crystal by the liquid, leading to a contact angle $\theta$ of zero in the equilibrium involving three phases: 
+crystal, liquid, and vapor. Following from Eq.~\ref{eq:Gibbs_free_energy}, with $\theta$ set to zero and consequently $\cos \theta$ equal to one, the derived expression is
+\begin{equation} \label{eq:Skapski_model}
+\gamma_{sl} = \gamma_{sv} - \gamma_{lv}
+\end{equation}
+
+Assuming the general case holds, the analysis simplifies to evaluating $\gamma_{sv}$ and $\gamma_{lv}$ independently. This method involves deducing the 
+energy difference due to bond disruption between the solid-vapor and liquid-vapor phases, incorporating the solid's fusion enthalpy and melting-induced volume 
+change, alongside a modest entropic variation from the external layers of both phases. Consequently, the derived formula is
+\begin{equation} \label{eq:Skapski_result}
+\gamma_{sl} = \frac{\Delta H}{4f N_{A} v^{2/3}} + \frac{2\Delta V}{3V_{s}} \gamma_{lv} + \frac{T_m (\Delta S_l - \Delta S_s)}{f N_{A} v^{2/3}}
+\end{equation}
+where $f$ is a factor that relates the area $A$ of a mole of surface atoms to the volume of a mole of atoms in the bulk solid through
+\begin{equation} \label{eq:relation_factor}
+A = f N_{A} v^{2/3}
+\end{equation}
+Numerically, the factor stands at 1.12 for the bcc (110) surface and 1.09 for the fcc (111) surface. Given the 
+minimal entropic contribution in Eq.~\ref{eq:Skapski_model}, this framework primarily emphasizes energy aspects. 
+Predominantly, the initial term, hinting at a direct relationship between $\gamma_{sl}$ and $\Delta H/v^{2/3}$, 
+aligns with empirical findings from initial nucleation studies, underpinning classical homogeneous nucleation theory.
+
+In \cite{Zadumkin1966SurfaceEA} introduced an energy-centric model for surface free energy, emphasizing electron-ion interactions and 
+significant volume changes upon melting. Conversely, Turnbull proposed an entropy-focused model, envisioning the solid as a plane 
+intersecting the liquid, effectively halving the surface density compared to the bulk liquid. This model assumes negligible energy 
+alteration when replacing absent atoms, albeit with reduced configurational entropy due to their fixed positions, tying this adjustment directly to the fusion entropy.
+\begin{equation} \label{eq:Turnbull_model}
+\gamma_{sl} = \frac{T_m \Delta S}{2f N_{A} v^{2/3}} - \frac{\Delta H}{2f N_{A} v^{2/3}}
+\end{equation}
+
+Recent approaches have applied physical or computational simulations, notably using hard sphere packings, to gauge surface free energy, 
+as detailed by \cite{Spaepen1975ASM}. In these models, spheres form a densely packed crystalline structure, excluding octahedral voids 
+to mirror the dense liquid's random packing. Preference is given to tetrahedral gaps, aiming to enhance interfacial layer density. After 
+assessing the configurational entropy across different surface arrangements, findings indicated no significant density reduction at the 
+interface compared to the dense, random liquid structure. This suggests a minimal energetic impact if hard spheres mimic atoms with attractive forces, 
+thus classifying the model as predominantly entropic and forecasting minor energy contributions to $\gamma_{sl}$.
+
+\begin{equation} \label{eq:Spaepen_model}
+\gamma = \frac{\alpha_m \Delta S}{N_{av} v^{2/3}} T
+\end{equation}
+where $\alpha_m$ is 0.86 for the fcc (111) or hcp (0001) surfaces, and 0.71 for the bcc (110) surface. At $T = T_m$, this has the same form as 
+the empirical equation with $\gamma$ proportional to $\Delta H/v^{2/3}$.
+
+Up to now we discussed almost exclusively the case of one-component substances. There is considerable interest, 
+especially for metallurgical applications, in the nucleation of binary mixtures or alloys. Calculations in this case 
+require a knowledge not only of the bulk thermodynamics of the mixtures (both liquid and solid), but also information about the liquid--solid surface free energy.
+
+Thompson and Spaepen\textsuperscript{42} have extended the theory of \cite{Spaepen1975ASM} to binary alloys. They use Eq.~\ref{eq:Spaepen_model}
+
+\begin{equation} \label{eq:Thompson_Spaepen_model}
+\gamma = \frac{\alpha_m \Delta S}{N_{A} v^{2/3}} T
+\end{equation}
+and take $v$ to change linearly with mole fraction between its values for the two pure components. In the same way they take
+\begin{equation} \label{eq:Delta_S}
+\Delta S = x_A \Delta S_A + (1 - x_A) \Delta S_B
+\end{equation}
+where $x_A$ is the mole fraction of A in the solid and $\Delta S_A$ and $\Delta S_B$ are the entropies of fusion of the two separate components.
+
 
 \subsection{Temporal Dynamics of Particles Formation}
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\
