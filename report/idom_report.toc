@@ -12,26 +12,29 @@
 \contentsline {subsection}{\numberline {7.2}Corrosion Products}{20}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Maroni's Process}{21}{subsection.7.3}%
 \contentsline {section}{\numberline {8}CHEMICAL ANALYSIS}{23}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Particle Size Distribution}{23}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Temporal Dynamics of Particles Formation}{23}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Homogeneous Precipitation}{23}{subsection.8.3}%
-\contentsline {section}{\numberline {9}CENTRIFUGAL TECHNOLOGY SELECTION}{24}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Single Step Separation Approach}{24}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Multi-Step Separation Approach}{29}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Hydrocyclone: Mathematical modelling}{31}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Fluid model}{32}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Motion of suspended particles}{33}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Cyclone effective volume}{34}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Residence time model}{35}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Separation efficiency model}{35}{subsection.9.8}%
-\contentsline {section}{\numberline {10}Results: Parametric analysis}{36}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Parametric analysis: Temperature}{36}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Parametric analysis: Cyclone diameter}{37}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Parametric analysis: volumetric inlet flow rate}{38}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Optimization methodology}{39}{subsection.10.4}%
-\contentsline {subsubsection}{\numberline {10.4.1}Geometrical optimization}{39}{subsubsection.10.4.1}%
-\contentsline {subsubsection}{\numberline {10.4.2}Optimization: Results}{40}{subsubsection.10.4.2}%
-\contentsline {subsection}{\numberline {10.5}Conceptual Design Approach}{44}{subsection.10.5}%
-\contentsline {section}{\numberline {11}CONCLUSIONS}{45}{section.11}%
-\contentsline {section}{\numberline {}REFERENCES}{46}{section.11}%
-\contentsline {section}{\numberline {}ANNEX 1}{48}{section*.26}%
+\contentsline {subsection}{\numberline {8.1}Nucleation Theory}{23}{subsection.8.1}%
+\contentsline {paragraph}{}{24}{section*.9}%
+\contentsline {paragraph}{}{24}{section*.10}%
+\contentsline {paragraph}{}{24}{section*.11}%
+\contentsline {subsection}{\numberline {8.2}Temporal Dynamics of Particles Formation}{30}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Homogeneous Precipitation}{31}{subsection.8.3}%
+\contentsline {section}{\numberline {9}CENTRIFUGAL TECHNOLOGY SELECTION}{32}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Single Step Separation Approach}{32}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Multi-Step Separation Approach}{37}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Hydrocyclone: Mathematical modelling}{39}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Fluid model}{40}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Motion of suspended particles}{41}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Cyclone effective volume}{42}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Residence time model}{43}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Separation efficiency model}{43}{subsection.9.8}%
+\contentsline {section}{\numberline {10}Results: Parametric analysis}{44}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Parametric analysis: Temperature}{44}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Parametric analysis: Cyclone diameter}{45}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Parametric analysis: volumetric inlet flow rate}{46}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Optimization methodology}{47}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}Geometrical optimization}{47}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}Optimization: Results}{48}{subsubsection.10.4.2}%
+\contentsline {subsection}{\numberline {10.5}Conceptual Design Approach}{52}{subsection.10.5}%
+\contentsline {section}{\numberline {11}CONCLUSIONS}{53}{section.11}%
+\contentsline {section}{\numberline {}REFERENCES}{54}{section.11}%
+\contentsline {section}{\numberline {}ANNEX 1}{57}{section*.30}%

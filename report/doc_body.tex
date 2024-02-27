@@ -243,13 +243,225 @@ The Maroni process has been studied in the SoA deliverable ref. \cite{SoA}, wher
 
 \newpage
 \section{CHEMICAL ANALYSIS} \label{sec:chem}% ··························································
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+
+This section investigates the nucleation of impurities within liquid lithium, which serves as a breeder and shielding material in the reaction chamber. The nucleation of impurities within liquid lithium poses a 
+complex challenge, impacting not only the material's thermal and physical properties but also the safety and longevity of the fusion reactors. Despite its significance, 
+the study of impurity nucleation in liquid lithium remains underexplored, with limited literature providing a comprehensive understanding of these mechanisms.
+\\
+Due to the objective of using purification processes based on centrifugation phenomena, the limiting factor of these impurities will be their densities, the quantities in which 
+they are present and above all the particle size of these impurities. Therefore, as a starting point for the characterisation of these impurities from a thermodynamic and kinetic point of view, 
+classical nucleation theory (CNT) and kinetic theory have been used to study the evolution and speed of this phenomenon.
+\\
+The primary issue with this model stems from its oversimplifications, which will be detailed in subsequent sections. A significant limitation is that these models originate from statistical mechanics, 
+constraining them to a limited number of particles. Specifically, when examining clusters of macroscopic particles on the scale of micrometers, employing statistical mechanics or molecular dynamics models proves 
+impractical. Consequently, for such scales, the application of continuous models becomes more appropriate, examples of which include phase field models \cite{Zhu2004,Garcia}, computational fluid dynamics or precipitation dynamics \cite{Sommitsch}.
+
+Furthermore, this research can serve as a foundational basis for applying continuous models more effectively. For instance, one could enhance these models by incorporating the distributions of nanometric particles within the system as input parameters. 
+\\
+This section is structured for clarity and comprehension, starting with an explanation of classical nucleation theory and the thermodynamics of the nucleation process. This is followed by an analysis 
+of the kinetic treatment of the process. 
+The section concludes with the characterization of each impurity.
+
+\subsection{Nucleation Theory}
+
+First-order phase transitions, such as the condensation of vapor, boiling of a liquid, and crystallization of a melt, are critical phenomena in materials science and thermodynamics. These transitions are rigorously analyzed through the framework of homogeneous nucleation theory. This theory is pivotal for calculating the decay rate of a metastable state, essentially quantifying the rate at which nucleating clusters form within an initially homogeneous and nonequilibrium state. According to this theoretical approach, the transformation from a metastable state to a thermodynamically stable phase is facilitated through the formation of new phase clusters \cite{Larissa}. A quintessential example of this is the condensation of small liquid droplets from vapor that has been rapidly cooled into a metastable region. Within such a homogeneous medium, fluctuations spontaneously generate clusters of various sizes, among which those exceeding a critical size will grow, transitioning into a new phase and thus propelling the phase transition process forward. This necessitates a detailed kinetic examination of the cluster evolution to understand the underlying mechanisms of the phase transition.
+
+\paragraph{} In the nucleation regime, the evolution of the system is significantly marked by the formation of clusters that represent a new equilibrium phase. The dynamics of this process are intricately governed by the delicate balance between volume and surface contributions, as encapsulated by the capillary approximation. The volume contribution, acting as the driving force behind nucleation, lowers the system's free energy and is directly proportional to the cluster's volume, thereby favoring the formation and growth of these clusters. Conversely, the surface contribution introduces an energetic cost, scaling with the cluster's surface area. This cost is associated with creating an interface between the original phase and the new cluster, serving as a barrier that inherently inhibits the growth of the cluster \cite{Clouet1}.
+
+\paragraph{} Central to most nucleation theories is the calculation of the cluster free energy, denoted as \(W_i\). Certain characteristics of \(W_i\) are intuitively clear. For instance, the 'monomers' of the new phase are indistinguishable from the molecules of the parent phase, leading to the conclusion that the free energy of monomers should logically be zero (\(W_1 = 0\)). Moreover, \(W_i\) exhibits a maximum as a function of size. Conversely, the average molecular free energy, \(W_i/i\), tends towards the chemical potential difference between the phases, \(\Delta \mu\), for large clusters (\(i \rightarrow \infty\)), where \(\Delta \mu < 0\) signifies the chemical potential difference between the phases \cite{Laszlo1}.
+
+\paragraph{} Within the Classical Nucleation Theory (CNT), the 'droplet' approximation is employed for calculating \(W_i\). In this model, the clusters are envisioned as spherical particles that possess crystalline properties extending up to a mathematically sharp interface. This simplification allows for a more tractable analysis of the nucleation process, albeit with certain assumptions that may not hold in all physical scenarios.
+
+\begin{equation}
+    W_i = i \Delta \mu + a i^{2/3}\gamma_{\infty},
+\end{equation}
+
+where \(\gamma_{\infty}\) represents the interfacial free energy of the equilibrium (planar) crystal/liquid interface, \(a\) is a geometric factor defined as \(a = (36 \pi \nu^2)^{1/3}\), and \(\nu\) is the molecular volume. The critical size of the nucleus and the nucleation barrier are determined by setting the derivative of \(\Delta G\) with respect to the radius, \(r\), equal to zero:
+
+\begin{equation}
+    R^* = -2\gamma_{\infty} (\Delta \mu / \nu)^{-1},
+\end{equation}
+
+and
+
+\begin{equation}
+    W_{i^*} = \frac{16 \pi}{3} \gamma_{\infty}^3(\Delta \mu / \nu)^{-2}.
+\end{equation}
+
+The nucleation free energy is obtained by considering the difference in chemical potentials between the parent and the equilibrium phases for all atoms composing the cluster:
+
+\begin{equation}
+    \Delta \mu = \sum_i y_i^e (\mu_i^e - \mu_i^0),
+\end{equation}
+
+where \(y_i^e\) is the atomic fraction of type \(i\) atoms in the nucleating equilibrium phase, and \(\mu_i^e\) and \(\mu_i^0\) are the corresponding chemical potentials in the nucleating equilibrium phase and in the parent phase, respectively. In a metastable parent phase, chemical potentials are higher than those at equilibrium. The critical factors for applying CNT are the driving force, \(\Delta \mu\), and the surface energy, \(\gamma_{\infty}\), of the solid particle. The driving force depends on the nucleation pathway, such as the saturation-based formalism commonly used in the context of vapor to liquid or crystal transitions \cite{Myerson2019, Ford2004, Sun2009}:
+
+\begin{equation}
+    \Delta\mu = \mu - \mu_{\text{coex}} = kT \ln\left(\frac{n_1}{n_1^{\text{sat}}}\right),
+\end{equation}
+
+where the chemical potential is represented using the ideal gas expression, introducing a monomer density \(n_1^{\text{sat}}(T)\) appropriate to a saturated vapor, i.e., a gas phase in coexistence with the condensed phase at the environmental temperature. The ratio of the monomer density in a metastable vapor to its value in a saturated vapor defines the supersaturation, \(S\):
+
+\begin{equation}
+    \Delta\mu = kT \ln S.
+\end{equation}
+
+This driving force dictates the nucleation process, which is governed by temperature, the degree of supersaturation, and the interfacial energy. The nucleation rate increases with the degree of supersaturation and temperature and decreases with the interfacial energy. This behavior is illustrated in Figure \ref{fig:free_energy_illustrative_degree_saturation}, which shows the energy barrier that must be overcome to form a new phase for various degrees of supersaturation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{free_energy_illustrative_degree_saturation.png}
+    \caption{Required free energy, as per classical nucleation theory, for the formation of a cluster of size \(i\). Curves represent different constant values of supersaturation and temperature, illustrating the free energy barrier associated with the critical size.}
+    \label{fig:free_energy_illustrative_degree_saturation}
+\end{figure}
+
+This formalism is pertinent for analyzing solutes dissolved in liquids that nucleate in either liquid or crystalline states. However, CNT is not always successful, primarily because the capillarity approximation, upon which it is based, is a very primitive characterization of small molecular clusters. Nevertheless, the expressions derived provide intuitive value, suggesting that increasing the vapor supersaturation, \(S\), accelerates the nucleation of droplets, all other parameters being constant. Additionally, the nucleation rate is influenced by the surface tension of the condensed phase: higher surface tension, \(\gamma_{\infty}\), results in a slower rate. The rate is also quite sensitive to supersaturation, surface tension, and temperature, as these quantities appear inside an exponential function \cite{Ford}.
+
+To surpass the predictive capability of classical theory, it is necessary to compute the partition functions of clusters of various sizes and develop a more realistic model of the excess free energy; however, this is beyond the scope of this work.
+
+Another formalism that may be useful for this study involves the definition of the driving force commonly used in the phase transition between melts and crystalline phases. Consider a single-component liquid initially at equilibrium, quenched to a temperature \(T\), below its melting temperature \(T_m\). Since the liquid and solid phases have the same composition, the nucleation free energy corresponds to the free energy difference between the liquid and solid states at temperature \(T\), in other words, the driving force is a function that depends on the undercooling rate \cite{Clouet1, Fokin2006}:
+
+\begin{equation}
+    \Delta\mu = \frac{\Delta H_{m}}{T_{m}}(T_{m} - T) + \int_{T}^{T_{m}} \Delta C_{p} dT' - T \int_{T}^{T_{m}} \frac{\Delta C_{p}}{T'} dT',
+\end{equation}
+
+where \(\Delta H_{m}\) and \(T_{m}\) are the molar heat of melting and the melting temperature of the crystal, respectively, and \(\Delta C_{p} = C_{p}^{l} - C_{p}^{c}\) is the difference between the molar heat capacities of liquid and crystal at constant pressure. The experimental values of \(\Delta G_{V}\) are normally bounded by the approximations usually assigned to Turnbull and Hoffman that assume \(\Delta C_{p} = 0\) and \(\Delta C_{p} = \) constant, respectively:
+
+\begin{equation}
+    \Delta\mu(T) =  \frac{\Delta H_{m}}{N_A} \left( 1 - \frac{T}{T_{m}} \right),
+\end{equation}
+
+\begin{equation}
+    \Delta\mu(T) = \frac{\Delta H_{m}}{N_A} \left( 1 - \frac{T}{T_{m}} \right) \frac{T}{T_{m}},
+\end{equation}
+
+Here, \(\Delta H_{m}\) is the melting enthalpy per mole of the crystal and \(N_A\) is Avogadro's number. When the undercooling is large, the expression may not be precise enough. One can then consider the next term in the Taylor expansion leading to the Turnbull and Hoffman equations respectively \cite{Clouet1}:
+
+\begin{equation}
+    \Delta\mu(T) = \frac{\Delta H_{m}}{N_A} \left( 1 - \frac{T}{T_{m}} \right)  - \Delta C_{p} \left( \frac{(T - T_{m})^2}{2T_{m}} \right),
+\end{equation}
+
+\begin{equation}
+    \Delta\mu(T) =  \frac{\Delta H_{m}}{N_A} \left( 1 - \frac{T}{T_{m}} \right) \frac{T}{T_{m}}   - \Delta C_{p} \left( \frac{(T - T_{m})^2}{2T_{m}} \right).
+\end{equation}
+
+This formalism is widely used in the study of the nucleation of impurities in metallic melts, with a wide range of materials, such as metallic glasses like Li\(_2\)O\(_2\)SiO\(_2\) and LS\(_2\), or other metallic alloys like Ge\(_2\)Sb\(_2\)Te\(_5\) and (Ag,In)-doped Sb\(_2\)Te (AIST) \cite{Laszlo1, Neilson1979, Kelton1983, Laszlo3, Laszlo4, Sun2009}.
+
+Using these models to describe the driving force, they exhibit certain limitations. Firstly, within the formalism derived from the degree of saturation, an ideal mixture is assumed. This is evident since concentrations or mole fractions are used to determine the degree of supersaturation rather than activities. To rigorously work through activities, the driving force can be determined if the interaction parameters between the components of the solution are known \cite{Bartels1991}, or determine the mixing parameters starting from the partition function derived from the grand canonical potential, employing the \textbf{quasi-chemical approximation} formulation \cite{Odusote2020} or exponential models \cite{Yadav2023}.
+
+In the second formulation, which utilizes the undercooling rate to determine the driving force, the approach is widely recognized and accepted. However, this formula encounters limitations when applied to mixtures exhibiting degrees of immiscibility. Specifically, the challenge arises in scenarios where two phases coexist, such as in solid-liquid equilibrium. In these instances, given a particular composition for which a certain temperature allows both phases to be in equilibrium; this temperature is referred to as the liquidus temperature \(T_l\).
+
+The standard application of this formulation presents issues as it traditionally employs the absolute melting point to determine the driving force, neglecting the presence of different phases that may manifest within the system.
+
+A potential rectification for this oversight involves the utilization of the \(T_l\) instead of \(T_m\). However, this correction is not without its challenges. Specifically, when the fraction of one of the phases is exceedingly low, accurately determining the liquidus temperature within the phase diagram becomes problematic. This difficulty is compounded by the typical unavailability of high-resolution phase diagrams.
 
 
-\subsection{Particle Size Distribution}
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+Ideally, the driving force in phase transition studies is determined by a comprehensive thermodynamic model that includes information about the elements present in the system, as demonstrated in previous works \cite{Was1985, Kumar1996}. However, due to the limitations previously stated, an alternative formulation for the driving force has been developed to provide a more accurate description of the volumetric free energy. This method involves calculating the Gibbs free energy change, \(\Delta G\), defined by the free energy expressions for the liquid (\(l\)) and solid (\(s\)) phases.
+
+The chemical potential for component A in the liquid phase, \(\mu_A^l\), is determined by constructing a tangent to the liquid free energy curve at the composition \(x_l\). The point where this tangent line intersects the \(x_A = 1\) axis defines \(\mu_A^l\). Similarly, the chemical potential for component A in the solid phase, \(\mu_A^s\), is identified at the intersection of the tangent line with the \(x_A = 0\) axis.
+
+At the liquidus temperature \(T_l\), the free energy curves for both the liquid and solid phases are tangent to the line constructed from the previous step. The solid composition that is in equilibrium with the liquid composition \(x_l\) at \(T_l\) is given by the tangent point on the Gibbs free energy curve. This equilibrium composition is denoted as \(x_{s,eq}\) and can be identified on the equilibrium phase diagram.
+
+At a temperature \(T\), arbitrarily lower than \(T_l\), the chemical potentials in the solid, \(\mu_A^s\) and \(\mu_B^s\), and for the liquid, \(\mu_A^l\) and \(\mu_B^l\), are determined as before for the liquid phase. The differences in chemical potential, which drive the phase transition, are defined as follows:
+
+\begin{equation}
+\Delta\mu_A = \mu_A^l - \mu_A^s \label{eq:delta_mu_A}
+\end{equation} 
+
+\begin{equation}
+\Delta\mu_B = \mu_B^l - \mu_B^s. \label{eq:delta_mu_B}
+\end{equation} 
+
+The free energy change, per unit volume, associated with forming a small amount of solid of composition \(x_{s}^\ast\) out of the liquid is given by
+\begin{equation}
+\Delta G_r = [x_s^\ast \Delta\mu_A + (1 - x_s^\ast) \Delta\mu_B]V \label{eq:delta_G_r}
+\end{equation} 
+
+where \(V\) is the average molar volume of the solid, assumed here to vary linearly between the molar volumes \(V^A\) and \(V^B\) of the pure solid systems:
+\begin{equation}
+V = x_s^A V^A + (1 - x_s^A) V^B. \label{eq:V}
+\end{equation}
+The solid composition that is most likely to nucleate, \(x_n\), is assumed to be the one with the largest difference in free energy, \(\Delta G_r\), between the liquid and solid state. This intuitively obvious assumption is used because of its simplicity. Further justification based on a more rigorous calculation is given in Appendix I. It can be seen from that \(\Delta G_n\) is maximized if \(\Delta \mu^A = \Delta \mu^B\), so that the composition \(x_n\) corresponds to the point of tangency on the solid curve of a line parallel to the tangent to the liquid curve at \(x_l\), so that
+\begin{equation}
+\bar{\Delta G_r} \approx \Delta \mu^A \approx \Delta \mu^B. \label{eq:bar_delta_G_r}
+\end{equation}
+Therefore, given the composition dependence of the liquid and solid free energies, one can calculate the solid nucleus composition and the free energy of formation for the nucleus as a function of initial liquid composition, \(x_l\), and undercooling \(\Delta T = T_l - T\).
+
+For an actual calculation of \(\Delta G_p\), it is necessary to use solution models. Therefore, regular solution behavior is assumed for the liquid phase so that
+\begin{align}
+\mu_l^A &= \mu_l^{A,0} + RT \ln(x_l^A) + \alpha_l(x_l^A), \label{eq:mu_l_A} \\
+\mu_l^B &= \mu_l^{B,0} + RT \ln(x_l^B) + \alpha_l(x_l^B). \label{eq:mu_l_B}
+\end{align}
+
+The solid phase is assumed to be a dilute or ideal solution so that \(\alpha_s^A\) and \(\alpha_s^B\) are independent of composition:
+
+\begin{align}
+\mu_s^A &= \mu_s^{A,0} + RT \ln(x_s^A) + \alpha_s^A, \label{eq:mu_s_A} \\
+\mu_s^B &= \mu_s^{B,0} + RT \ln(x_s^B) + \alpha_s^B. \label{eq:mu_s_B}
+\end{align}
+
+Combining equations \eqref{eq:mu_l_A} and \eqref{eq:mu_s_A} gives
+
+\begin{equation}
+\Delta \mu^A = (\mu_l^{A} - \mu_s^{A}) + RT \ln\left(\frac{x_l^A}{x_s^A}\right) + \alpha_l(x_l^A) - \alpha_s^A. \label{eq:delta_mu_A_solution}
+\end{equation}
+
+For pure metals, it can be assumed that the difference between the heat capacities of the solid and liquid, \(\Delta C_p\), is small, so that
+
+\begin{equation}
+\mu_l^{A,0} - \mu_s^{A,0} \approx \Delta S_f (T_m^A - T), \label{eq:mu_difference_pure_metals}
+\end{equation}
+
+where \(\Delta S_f\) and \(T_m^A\) are, respectively, the entropy of fusion and the melting temperature of pure A. Therefore, combining equations \eqref{eq:delta_mu_A_solution} and \eqref{eq:mu_difference_pure_metals} gives
+
+\begin{equation}
+\Delta \mu^A = T \left[ R \ln\left(\frac{x_l^A}{x_s^A}\right) - \Delta S_f \right] + \alpha_l'(x_l^A), \label{eq:combined_delta_mu_A}
+\end{equation}
+
+where
+\begin{equation}
+\alpha_l'(x_l^A) = \alpha_l(x_l^A) - \alpha_s^A + \Delta H_f. \label{eq:alpha_prime_A}
+\end{equation}
+
+Similarly, for component B
+\begin{equation}
+\Delta \mu^B = T \left[ R \ln\left(\frac{x_l^B}{x_s^B}\right) - \Delta S_f \right] + \alpha_l'(x_l^B). \label{eq:delta_mu_B_solution}
+\end{equation}
+
+Now recall that at \(T = T_l\), \(\Delta \mu^A = 0\) so that
+\begin{equation}
+\alpha'(x_l^A) = -T_l \left[ R \ln\left(\frac{x_l^A}{x_{s,eq}^A}\right) - \Delta S_f^A \right]. \label{eq:alpha_prime_equilibrium_A}
+\end{equation}
+For a given \(x_l^A\), \(T_l\), and \(x_{s,eq}^A\) can be found from the equilibrium phase diagram. Combining equations \eqref{eq:combined_delta_mu_A} and \eqref{eq:alpha_prime_equilibrium_A} and rearranging terms gives
+\begin{equation}
+\Delta \mu^A = (T_l - T) \Delta S_f^A + RT \ln\left(\frac{x_l^A}{x_{s}^A}\right) - RT_l \ln\left(\frac{x_l^A}{x_{s,eq}^A}\right). \label{eq:final_delta_mu_A}
+\end{equation}
+Similarly, for component B
+\begin{equation}
+\Delta \mu^B = (T_l - T) \Delta S_f^B + RT \ln\left(\frac{x_l^B}{x_{s}^B}\right) - RT_l \ln\left(\frac{x_l^B}{x_{s,eq}^B}\right). \label{eq:final_delta_mu_B}
+\end{equation}
+Finally, as discussed previously, at \(T < T_l\), the free energy change on nucleation is
+\begin{equation}
+V \Delta G_r = \Delta \mu^A = \Delta \mu^B. \label{eq:free_energy_change_nucleation}
+\end{equation}
+Also, since \(\Delta \mu^A = \Delta \mu^B\), from equations \eqref{eq:final_delta_mu_A} and \eqref{eq:final_delta_mu_B}
+\begin{equation}
+(T_l - T)(\Delta S_f^A - \Delta S_f^B) + RT \ln\left(\frac{x_l^A(1 - x_{s}^A)}{x_{s,eq}^A(1 - x_l^A)}\right) = RT \ln\left(\frac{x_l^A(1 - x_{s,eq}^A)}{x_{s,eq}^A(1 - x_l^A)}\right). \label{eq:final_energy_balance}
+\end{equation}
+
+Therefore, given \(x_l\), \(\Delta S_f^A\), \(\Delta S_f^B\), and the equilibrium phase diagram, one can find \(\Delta G\), and \(x_n\) at an arbitrary temperature \(T\) from equations \eqref{eq:final_delta_mu_A}--\eqref{eq:final_energy_balance}. In the limiting case that the solubility of B in crystalline A is zero, the derivation simplifies considerably. Equation \eqref{eq:mu_l_A} still holds but equation \eqref{eq:mu_s_A} becomes \(\mu_s^A = \mu_{s,0}^A\). Therefore, as before
+\begin{equation}
+\Delta \mu^A = T(R \ln x_l^A - \Delta S_f^A) + \alpha'(x_l^A) \label{eq:simplified_delta_mu_A}
+\end{equation}
+and since \(\Delta \mu^A = 0\), at \(T_l\),
+\begin{equation}
+\alpha'(x_l^A) = -T_l(R \ln x_l^A - \Delta S_f^A) \label{eq:simplified_alpha_prime_A}
+\end{equation}
+so that
+\begin{equation}
+V \Delta G_r = \Delta \mu^A = (T_l - T)(\Delta S_f^A - R \ln x_l^A). \label{eq:simplified_free_energy_change}
+\end{equation}
+An analogous equation holds for crystallization of pure B. This simplified result is particularly useful for metal-metalloid glass forming alloys such as Au–Si where the equilibrium solid solubility of the metalloid in the crystalline metal is very low.
 
 \subsection{Temporal Dynamics of Particles Formation}
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\

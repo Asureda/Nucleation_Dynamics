@@ -578,37 +578,788 @@
       \verb https://api.semanticscholar.org/CorpusID:43604591
       \endverb
     \endentry
-    \entry{Van}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=fef2282d2391fba444bfe4876f355538}{%
-           family={Wassenbergh},
+    \entry{Zhu2004}{report}{}
+      \name{author}{6}{}{%
+        {{hash=fef3dbba67e95b4c57579394e390b1db}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={J.\bibnamedelimi Z.},
+           giveni={J\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=2ca38ebc0e0cb8064a936205d2da287f}{%
+           family={Wang},
            familyi={W\bibinitperiod},
-           given={S.\bibnamedelimi Van},
-           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
-        {{hash=8130d2a780f96b04cada8deb1a5a69e6}{%
-           family={Sanderson},
-           familyi={S\bibinitperiod},
-           given={S.\bibnamedelimi L.},
-           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=dd1555ba667b95e02418863a12eac87d}{%
+           family={Ardell},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=5574dccece8b48f91b167a6e46c16e0b}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={S.\bibnamedelimi H.},
+           giveni={S\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=bfa5255348629d44e0dcefa46790861c}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Z.\bibnamedelimi K.},
+           giveni={Z\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=baa1c545061d4f21a48b5c8f1dbb192b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi Q.},
+           giveni={L\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
       }
-      \strng{namehash}{8d37a98a2e24c4b39390b29f4fe24527}
-      \strng{fullhash}{8d37a98a2e24c4b39390b29f4fe24527}
-      \strng{bibnamehash}{8d37a98a2e24c4b39390b29f4fe24527}
-      \strng{authorbibnamehash}{8d37a98a2e24c4b39390b29f4fe24527}
-      \strng{authornamehash}{8d37a98a2e24c4b39390b29f4fe24527}
-      \strng{authorfullhash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{namehash}{bc28dda1b2ff37ccdc2ac1cdfcc396cc}
+      \strng{fullhash}{9abeecec34d761c3a04d61a68365da71}
+      \strng{bibnamehash}{bc28dda1b2ff37ccdc2ac1cdfcc396cc}
+      \strng{authorbibnamehash}{bc28dda1b2ff37ccdc2ac1cdfcc396cc}
+      \strng{authornamehash}{bc28dda1b2ff37ccdc2ac1cdfcc396cc}
+      \strng{authorfullhash}{9abeecec34d761c3a04d61a68365da71}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Hydrodynamic analysis of bioinspired vortical cross-step filtration by computational modelling}
-      \field{year}{2023}
+      \field{abstract}{The coarsening kinetics of precipitates in binary Ni-Al alloy is studied using three-dimensional (3D) phase-field simulations. The bulk thermodynamic information and atomic diffusion mobilities are obtained from databases constructed using the CALPHAD approach, while the experimental values for the interfacial energy, elastic constants and lattice mismatch are directly employed in the phase-field model. Specifically, we predict the morphological evolution, average precipitate size, and size distribution as a function of time for a given temperature and composition. Comparison of the phase-field simulation results with experiments shows good quantitative agreement in both time and length scales. © 2004 Published by Elsevier Ltd on behalf of Acta Materialia Inc.}
+      \field{issn}{13596454}
+      \field{issue}{9}
+      \field{journaltitle}{Acta Materialia}
+      \field{month}{5}
+      \field{title}{Three-dimensional phase-field simulations of coarsening kinetics of particles in binary Ni-Al alloys}
+      \field{volume}{52}
+      \field{year}{2004}
+      \field{pages}{2837\bibrangedash 2845}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1016/j.actamat.2004.02.032
+      \endverb
+      \keyw{Coarsening,Kinetics,Ni-base alloys,Phase-field model,Thermodynamics}
+    \endentry
+    \entry{Garcia}{report}{}
+      \name{author}{4}{}{%
+        {{hash=31e80241a65f4f37d0c58d55e10458ad}{%
+           family={Luneville},
+           familyi={L\bibinitperiod}}}%
+        {{hash=80c17d368b4ea74a36126c9e3d1fb459}{%
+           family={Garcia},
+           familyi={G\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0ee05b86072d3c2bcdcebed31e06fa2e}{%
+           family={Tissot},
+           familyi={T\bibinitperiod},
+           given={O},
+           giveni={O\bibinitperiod}}}%
+        {{hash=114956615b25952ed17ddd6dee639d58}{%
+           family={Simeone},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{84a04b1b193a9d341e8a1aedf4a9d35c}
+      \strng{fullhash}{f11e22a2fb6547d3f456af39728ccb4d}
+      \strng{bibnamehash}{84a04b1b193a9d341e8a1aedf4a9d35c}
+      \strng{authorbibnamehash}{84a04b1b193a9d341e8a1aedf4a9d35c}
+      \strng{authornamehash}{84a04b1b193a9d341e8a1aedf4a9d35c}
+      \strng{authorfullhash}{f11e22a2fb6547d3f456af39728ccb4d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{18}
+      \field{journaltitle}{Applied Physics Letters}
+      \field{title}{Reconciliation of simulation and experiment}
+      \field{volume}{2022}
+      \field{year}{2022}
+      \field{pages}{184102}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1063/5.0122126ï
+      \endverb
       \verb{urlraw}
-      \verb https://doi.org/10.1098/rsos.230315
+      \verb https://hal.science/hal-04101531
       \endverb
       \verb{url}
-      \verb https://doi.org/10.1098/rsos.230315
+      \verb https://hal.science/hal-04101531
       \endverb
+    \endentry
+    \entry{Sommitsch}{report}{}
+      \name{author}{4}{}{%
+        {{hash=54634c94f4a776f7ef28e3536acbb68a}{%
+           family={Sommitsch},
+           familyi={S\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+        {{hash=c5808178c4ab88eadc760001eb348995}{%
+           family={Kozeschnik},
+           familyi={K\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{hash=7481c86a471e6e62d82238b7670db89c}{%
+           family={Wasle},
+           familyi={W\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f0593a486f8f0c6e9859dcf978d6e2ea}{%
+           family={Buchmayr},
+           familyi={B\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa323f6d4682bc39ab26118c91264f4f}
+      \strng{fullhash}{22abcd0bcb4d090e3dac523bf6266e44}
+      \strng{bibnamehash}{aa323f6d4682bc39ab26118c91264f4f}
+      \strng{authorbibnamehash}{aa323f6d4682bc39ab26118c91264f4f}
+      \strng{authornamehash}{aa323f6d4682bc39ab26118c91264f4f}
+      \strng{authorfullhash}{22abcd0bcb4d090e3dac523bf6266e44}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A process model developed by the authors for the calculation of the microstructure evolution of nickel-base alloys during the hot forming process in a rolling mill helps to optimise the rolling process and aids in achieving the desired microstructure. The simulation of the particle development during and after a hot forming process is based on the numerical Kampmann-Wagner model. The chemical driving forces for precipitation are obtained from the thermodynamic equilibrium module of the computer program 'MatCalc'. The multicomponent diffusion coefficients are evaluated from the atomic mobilities that are compiled in the mobility-database of the DICTRA software.}
+      \field{title}{A Precipitation Model for Multi-Component Multi-Phase Systems in Nickel-Base Superalloys}
+      \keyw{Carbides,Gamma-Prime,Nickel-base-alloys,Precipitation,Simulation,Superalloys}
+    \endentry
+    \entry{Larissa}{report}{}
+      \name{author}{2}{}{%
+        {{hash=b20756ebe4d4ac1bf0a1d48069c86280}{%
+           family={Bravina},
+           familyi={B\bibinitperiod},
+           given={Larissa\bibnamedelima V},
+           giveni={L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=66e2e979943e3b878cc6d9960a4b2df8}{%
+           family={Zabrodin},
+           familyi={Z\bibinitperiod},
+           given={Eugene\bibnamedelima E},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd52d83850b0906459b6971a950f8d7e}
+      \strng{fullhash}{bd52d83850b0906459b6971a950f8d7e}
+      \strng{bibnamehash}{bd52d83850b0906459b6971a950f8d7e}
+      \strng{authorbibnamehash}{bd52d83850b0906459b6971a950f8d7e}
+      \strng{authornamehash}{bd52d83850b0906459b6971a950f8d7e}
+      \strng{authorfullhash}{bd52d83850b0906459b6971a950f8d7e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The classical nucleation theory of Becker, Döring and Zeldovich is compared with the Langer coarse-grained field approach to the nucleation phenomenon. Both formalisms have been applied to the condensation from a supersaturated vapor. It is shown that the nucleation rate derived in the classical theory can be expressed in a form equivalent to that of the field nucleation theory. This equivalence serves as an explanation of the puzzling fact that the numerical predictions of both theories for condensation of Xe and CO 2 are almost identical though the standard analytical expressions for the nucleation rates are different. The results obtained can help to link the theories of nucleation and their approximations.}
+      \field{title}{Homogeneous nucleation: Comparison between two theories}
+      \keyw{0570Fh,6460Qb,6470Fx}
+    \endentry
+    \entry{Clouet1}{report}{}
+      \name{author}{1}{}{%
+        {{hash=5a2ece0ffecdc4b2925be854f224d31d}{%
+           family={Clouet},
+           familyi={C\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{5a2ece0ffecdc4b2925be854f224d31d}
+      \strng{fullhash}{5a2ece0ffecdc4b2925be854f224d31d}
+      \strng{bibnamehash}{5a2ece0ffecdc4b2925be854f224d31d}
+      \strng{authorbibnamehash}{5a2ece0ffecdc4b2925be854f224d31d}
+      \strng{authornamehash}{5a2ece0ffecdc4b2925be854f224d31d}
+      \strng{authorfullhash}{5a2ece0ffecdc4b2925be854f224d31d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Nucleation is the onset of a first-order phase transition by which a metastable phase transforms into a more stable one. Such a phase transition occurs when an initial system initially in equilibrium is destabilized by the change of an external parameter like the temperature or the pressure. If the perturbation is small enough, the system does not become unstable but rather stays metastable. In diffusive transformations, the system then evolves through the nucleation, the growth and the coarsening of a second phase. Such a phase transformation is found in a lot of situations in materials science like condensation of liquid droplets from a supersaturated vapor, solidification, precipitation from a supersaturated solid solution, … The initial stage of all these different processes can be well described within the same framework currently know as the classical nucleation theory. Since its initial formulation in 1927 by Volmer, Weber and Farkas [1, 2] and its modification in 1935 by Becker and Döring [3] the classical nucleation theory has been a suitable tool to model the nucleation stage in phase transformations. The success of this theory relies on its simplicity and on the few parameters required to predict the nucleation rate, i.e. the number of clusters of the new phase appearing per unit of time and of volume. It allows rationalizing experimental measurements, predicting the consequences of a change of the control parameters like the temperature or the supersaturation, and describing nucleation stage in mesoscopic modeling of phase transformations. In this article, we first describe the results obtained by Volmer, Weber, Farkas, Becker and Döring [1, 2, 3] and which constitutes the classical nucleation theory. These results are the predictions of the precipitate size distribution, of the steady-state nucleation rate and of the incubation time. This theory describes the nucleating system as a homogeneous phase where heterophase fluctuations occur. Some of these fluctuations reach a size big enough so that they can continue to grow and lead to the formation of precipitates. The nucleating system is thus envisioned mainly from a thermodynamic viewpoint. The key controlling parameters are the nucleation driving force and the interface free energy. A kinetic approach, the cluster dynamics, can also be used to describe nucleation. This constitutes the second part of this article. Here, a master equation describes the time evolution of the system which is modeled as a cluster gas. The key parameters are the cluster condensation and evaporation rates. Both approaches are different in their description of the nucleating system and in their needed input parameters. They are nevertheless closely related. Predictions of the classical nucleation theory have been actually derived from the same master equation used by cluster dynamics [3], and extensions of classical nucleation theory always starts from this master equation. In this article the links as well as the difference between both descriptions are emphasized. Since its initial formulation, the classical nucleation theory has been enriched, mainly by Binder and Stauffer [4, 5, 6], so as to take into account the fact that clusters other than monomers can migrate and react. It has been also extended to multi-component systems [7, 8, 9, 10, 11, 12]. These generalizations of the initial formalism are presented at the end of the second part. Thermodynamic Approach Conditions for Nucleation Nucleation occurs when a homogeneous phase initially in stable thermal equilibrium is put in a state where it becomes metastable by the variation of a controlling parameter. In the following case, the controlling parameter is the temperature and the initial system is quenched through a first-order phase transition in a two-phase region. The system then tends to evolve toward a more stable state and to reach its equilibrium. As the parent phase is not unstable, this transformation cannot proceed through the continuous development of growing infinitesimal perturbations delocalized in the whole}
+      \field{title}{Modeling of Nucleation Processes}
+      \field{volume}{22}
+      \field{pages}{203\bibrangedash 219}
+      \range{pages}{17}
+    \endentry
+    \entry{Laszlo1}{article}{}
+      \name{author}{2}{}{%
+        {{hash=91ab5894e865c9c4bc95c6cbe8337f51}{%
+           family={Gránásy},
+           familyi={G\bibinitperiod},
+           given={László},
+           giveni={L\bibinitperiod}}}%
+        {{hash=50f29d9347b4057814cf2f08fac274dc}{%
+           family={James},
+           familyi={J\bibinitperiod},
+           given={P.\bibnamedelimi F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Science Publishers B.V.}%
+      }
+      \strng{namehash}{4267c76054d7fe27a7968eec15613235}
+      \strng{fullhash}{4267c76054d7fe27a7968eec15613235}
+      \strng{bibnamehash}{4267c76054d7fe27a7968eec15613235}
+      \strng{authorbibnamehash}{4267c76054d7fe27a7968eec15613235}
+      \strng{authornamehash}{4267c76054d7fe27a7968eec15613235}
+      \strng{authorfullhash}{4267c76054d7fe27a7968eec15613235}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The latest theoretical developments of crystal nucleation are critically reviewed in two areas: the modeling of the size and temperature dependence of the interfacial free energy and the description of nucleation kinetics. The predictions of phenomenological and density functional theories are discussed in the knowledge of experiments on oxide glasses. While the advanced molecular approaches based on the density functional theory provide detailed microscopic information on nucleation in simple model systems, they appear to have limited relevance to such complex systems as the oxide glasses. In contrast, a semiempirical Cahn-Hilliard model and a phenomenological diffuse interface theory were found to reproduce the proper magnitude and sign of the temperature coefficient for the crystal-liquid interfacial free energy emerging from nucleation experiments on stoichiometric glasses. The theory of nucleation kinetics has made many advances in recent years. Analytical and numerical methods are available now for the evaluation of experiments, including such effects as dissolution of athermal nuclei in two-step heat treatments.}
+      \field{issn}{00223093}
+      \field{issue}{1-3}
+      \field{journaltitle}{Journal of Non-Crystalline Solids}
+      \field{title}{Non-classical theory of crystal nucleation: Application to oxide glasses: Review}
+      \field{volume}{253}
+      \field{year}{1999}
+      \field{pages}{210\bibrangedash 230}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1016/S0022-3093(99)00354-3
+      \endverb
+    \endentry
+    \entry{Myerson2019}{book_section}{}
+      \name{author}{3}{}{%
+        {{hash=00d6d48e8172dde646a332cfc8d5291f}{%
+           family={Myerson},
+           familyi={M\bibinitperiod},
+           given={Allan\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b6fbd818e49d403b99c6be977d547692}{%
+           family={Erdemir},
+           familyi={E\bibinitperiod},
+           given={Deniz},
+           giveni={D\bibinitperiod}}}%
+        {{hash=510455511c2174b0b1c80f17e1ebb763}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Alfred\bibnamedelima Y.},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{111e9fd63bbe81ea478986744cd78f01}
+      \strng{fullhash}{111e9fd63bbe81ea478986744cd78f01}
+      \strng{bibnamehash}{111e9fd63bbe81ea478986744cd78f01}
+      \strng{authorbibnamehash}{111e9fd63bbe81ea478986744cd78f01}
+      \strng{authornamehash}{111e9fd63bbe81ea478986744cd78f01}
+      \strng{authorfullhash}{111e9fd63bbe81ea478986744cd78f01}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Crystallization from solutions is a complex process completed in several stages. The first stage is the formation of supersaturated solution because the spontaneous appearance of a new phase can occur only when a system is in a nonequilibrium condition. In the next stage, molecules dissolved in solution begin to aggregate to relieve the supersaturation and move the system toward equilibrium. The molecular aggregation process eventually leads to the formation of nuclei that can act as centers of crystallization. A nucleus can be defined as the minimum amount of a new phase capable of independent existence (Khamskii 1969). The nature of nuclei (i.e., whether they are amorphous particles or tiny crystals) is still unknown. The birth of these small nuclei in an initially metastable phase is called nucleation, which is a major mechanism of first-order phase transition. Kashchiev and van Rosmalen (2003) describe nucleation as the process of fluctuational appearance of nanoscopically small clusters of the new crystalline phase, which can grow spontaneously to macroscopic sizes. The growth stage, which immediately follows nucleation, is governed by the diffusion of particles, called growth units, to the surface of the existing nuclei and their incorporation into the structure of the crystal lattice (Khamskii 1969). This stage continues until all the solute in excess of saturation is consumed for the development of mature crystals. The initial stages of crystallization, which can be defined as the period between the achievement of supersaturation and the formation of nuclei, plays a decisive role in determining properties of the resulting solid phase, such as purity, crystal structure, and particle size. Thus higher levels of control over crystallization cannot be achieved without understanding the fundamentals of nucleation.}
+      \field{isbn}{9781139026949}
+      \field{journaltitle}{Handbook of Industrial Crystallization}
+      \field{month}{1}
+      \field{title}{Crystal nucleation}
+      \field{year}{2019}
+      \field{pages}{76\bibrangedash 114}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1017/9781139026949.003
+      \endverb
+    \endentry
+    \entry{Ford2004}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0d9ca03a51fb567373889e93166fb998}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={I.\bibnamedelimi J.},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d9ca03a51fb567373889e93166fb998}
+      \strng{fullhash}{0d9ca03a51fb567373889e93166fb998}
+      \strng{bibnamehash}{0d9ca03a51fb567373889e93166fb998}
+      \strng{authorbibnamehash}{0d9ca03a51fb567373889e93166fb998}
+      \strng{authornamehash}{0d9ca03a51fb567373889e93166fb998}
+      \strng{authorfullhash}{0d9ca03a51fb567373889e93166fb998}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The principles of statistical mechanics have been used to develop a theory of the nucleation of a phase transition, but a number of subtle questions remain and are highlighted in this review. A central issue is the cluster definition, the mathematical scheme which distinguishes a molecular cluster from a collection of separate molecules. There is also the question of whether thermodynamic transition state theory is suitable to describe the process, or whether the development of kinetic rate equations describing cluster growth and decay is a better approach. The classical theory of nucleation is flawed but appears to provide useful estimates in some cases, including water. Phenomenological extensions of the classical theory can improve matters. However, improvements in the theory from microscopic considerations are not simple to apply, require major computational effort and suffer from uncertainties due to lack of knowledge of the fundamental intermolecular interactions. Calculations of the nucleation rate of water droplets are especially difficult since this substance is notoriously difficult to model. Nevertheless, as capabilities improve, accurate calculations should come within reach, which will offer better understanding of the process for practical applications such as the transition from dry to wet steam. © IMechE 2004.}
+      \field{issn}{09544062}
+      \field{issue}{8}
+      \field{journaltitle}{Proceedings of the Institution of Mechanical Engineers, Part C: Journal of Mechanical Engineering Science}
+      \field{month}{8}
+      \field{title}{Statistical mechanics of nucleation: A review}
+      \field{volume}{218}
+      \field{year}{2004}
+      \field{pages}{883\bibrangedash 899}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1243/0954406041474183
+      \endverb
+      \keyw{Nucleation,Statistical mechanics}
+    \endentry
+    \entry{Sun2009}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=b5de2ef1ec5576016d1fe4ae4c95913d}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Yuzhu},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4547e20b0b5d5a03a06aa6ace75cf06c}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Xingfu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=57cf8531003f9d0c22b8a30358523ffc}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Jin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=48302640e00a86253ebb63313803f461}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Yan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=98a94804d00ab98c8f31fc0aeb0f919f}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Jianguo},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4be690a493d7662e359b81cb593484cf}
+      \strng{fullhash}{fdfd77f988f5d89b3caed9b619b73a68}
+      \strng{bibnamehash}{4be690a493d7662e359b81cb593484cf}
+      \strng{authorbibnamehash}{4be690a493d7662e359b81cb593484cf}
+      \strng{authornamehash}{4be690a493d7662e359b81cb593484cf}
+      \strng{authorfullhash}{fdfd77f988f5d89b3caed9b619b73a68}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A set of laser apparatus was used to explore the induction period and the primary nucleation of lithium carbonate. Results show that the induction period increases with the decrease of supersaturation, temperature and stirring speed. Through the classical theory of primary nucleation, many important properties involved in primary nucleation under different conditions were obtained quantitatively, including the interfacial tension between solid and liquid, contact angle, critical nucleus size, critical nuleation free energy etc. © Higher Education Press and Springer-Verlag GmbH 2009.}
+      \field{issn}{16737369}
+      \field{issue}{1 SPEC. ISS.}
+      \field{journaltitle}{Frontiers of Chemical Engineering in China}
+      \field{month}{3}
+      \field{title}{Primary nucleation of lithium carbonate}
+      \field{volume}{3}
+      \field{year}{2009}
+      \field{pages}{73\bibrangedash 77}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1007/s11705-009-0091-y
+      \endverb
+      \keyw{Induction period,Lithium carbonate,Primary nucleation,Reactive crystallization}
+    \endentry
+    \entry{Ford}{report}{}
+      \name{author}{1}{}{%
+        {{hash=8cf57ef7327a43df0e03fc3be76fffaa}{%
+           family={Ford},
+           familyi={F\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{8cf57ef7327a43df0e03fc3be76fffaa}
+      \strng{fullhash}{8cf57ef7327a43df0e03fc3be76fffaa}
+      \strng{bibnamehash}{8cf57ef7327a43df0e03fc3be76fffaa}
+      \strng{authorbibnamehash}{8cf57ef7327a43df0e03fc3be76fffaa}
+      \strng{authornamehash}{8cf57ef7327a43df0e03fc3be76fffaa}
+      \strng{authorfullhash}{8cf57ef7327a43df0e03fc3be76fffaa}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Thermodynamics and Kinetics of Nucleation}
+    \endentry
+    \entry{Fokin2006}{generic}{}
+      \name{author}{4}{}{%
+        {{hash=b730f1cec3f9e017db65bfaa75f28a5c}{%
+           family={Fokin},
+           familyi={F\bibinitperiod},
+           given={Vladimir\bibnamedelima M.},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=26826527982d2516f0ecd030653601f8}{%
+           family={Zanotto},
+           familyi={Z\bibinitperiod},
+           given={Edgar\bibnamedelima D.},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=2d09b904b536fa90ffb0a3daff95b248}{%
+           family={Yuritsyn},
+           familyi={Y\bibinitperiod},
+           given={Nikolay\bibnamedelima S.},
+           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=bbd96cf9bd13431d6c7db180b3c498c6}{%
+           family={Schmelzer},
+           familyi={S\bibinitperiod},
+           given={Jürn\bibnamedelima W.P.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{f06c8585b3b62003403fd70be00b59c3}
+      \strng{fullhash}{f0bd60ec7b4479ac39383b98717aed28}
+      \strng{bibnamehash}{f06c8585b3b62003403fd70be00b59c3}
+      \strng{authorbibnamehash}{f06c8585b3b62003403fd70be00b59c3}
+      \strng{authornamehash}{f06c8585b3b62003403fd70be00b59c3}
+      \strng{authorfullhash}{f0bd60ec7b4479ac39383b98717aed28}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We review a plethora of relevant experimental results on internal homogeneous crystal nucleation in silicate glasses obtained in the last four decades, and their analyses in the framework of the classical nucleation theory (CNT). The basic assumptions and equations of CNT are outlined. Particular attention is devoted to the analysis of the properties of the critical nuclei, which, to a large extent, govern nucleation kinetics. The main methods employed to measure nucleation rates are described and the possible errors in the determination of the crystal number density (and, correspondingly, in nucleation rates) are discussed. The basic regularities of both time and temperature dependencies of nucleation rates are illustrated by numerous experimental data. Experimental evidence for a correlation between maximum nucleation rates and reduced glass transition temperatures is presented and theoretically justified. Special attention is given to serious problems that arise in the quantitative description of nucleation rates when using the CNT, for instance: the dramatic discrepancy between calculated and measured nucleation rates; the high value of the crystal nuclei/melt surface energy, σcm, if compared to the expected value estimated via Stefan's rule; the increase of σcm with increasing temperature; and the discrepancies between the values of the surface energy and the time-lag for nucleation when independently estimated from nucleation and growth kinetics. The analysis of the above mentioned problems leads to the following conclusion: in contrast to Gibbs' description of heterogeneous systems underlying CNT, the bulk thermodynamic properties of the critical nuclei generally differ from those of the corresponding macro-phase resulting simultaneously in significant differences of the surface properties as compared with the respective parameters of the planar interfaces. In particular, direct experimental evidence is presented for compositional changes of the crystal nuclei during formation of the critical nuclei and their growth from critical to macro-sizes. In addition, detailed examinations of crystal nucleation and growth kinetics show a decrease of both the thermodynamic driving force for nucleation and of the critical nuclei/liquid interfacial energy, as compared with the respective properties of the macro-phase. However, despite significant progress in understanding crystal nucleation in glasses in the past four decades, many problems still exist and this is likely to remain a highly interesting subject for both fundamental and applied research for a long time. © 2006 Elsevier B.V. All rights reserved.}
+      \field{issn}{00223093}
+      \field{issue}{26-27}
+      \field{journaltitle}{Journal of Non-Crystalline Solids}
+      \field{month}{8}
+      \field{title}{Homogeneous crystal nucleation in silicate glasses: A 40 years perspective}
+      \field{volume}{352}
+      \field{year}{2006}
+      \field{pages}{2681\bibrangedash 2714}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.1016/j.jnoncrysol.2006.02.074
+      \endverb
+      \keyw{Crystallization,Crystals,Glass ceramics,Glass transition,Nucleation,Oxide glasses,Silicates,Thermodynamics}
+    \endentry
+    \entry{Neilson1979}{report}{}
+      \name{author}{2}{}{%
+        {{hash=67fa42ff5b406bed801eb1caca211871}{%
+           family={Neilson},
+           familyi={N\bibinitperiod},
+           given={G\bibnamedelima F},
+           giveni={G\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=52fe8d9b47e84673fc16e06069c16419}{%
+           family={Weinberg},
+           familyi={W\bibinitperiod},
+           given={M\bibnamedelima C},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca318b202fc0c80b036925160f63b7d4}
+      \strng{fullhash}{ca318b202fc0c80b036925160f63b7d4}
+      \strng{bibnamehash}{ca318b202fc0c80b036925160f63b7d4}
+      \strng{authorbibnamehash}{ca318b202fc0c80b036925160f63b7d4}
+      \strng{authornamehash}{ca318b202fc0c80b036925160f63b7d4}
+      \strng{authorfullhash}{ca318b202fc0c80b036925160f63b7d4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For several inorganic glasses predictions have been made of the homogeneous crystal nuclea-tion rate using classical nucleation theory. However, in none of these cases were comparisons made with experiment, due primarily to the inability of being able to guarantee homogeneous conditions. Evidence has been provided that crystallite formation in Li20-2 SiO2 glass may initiate by a homogeneous mechanism. Thus, we have computed the nucleation rate curve of lithium disilicate crystals in this glass. It is found that not only do all forms of the classical theory predict nucleation rates many orders of magnitude smaller than those observed, but also that the temperature dependence of the theoretical rate is quite different from that observed.}
+      \field{journaltitle}{Journal of Non-Crystalline Solids}
+      \field{title}{A TEST OF CLASSICAL NUCLEATION THEORY: CRYSTAL NUCLEATION OF LITHIUM DISILICATE GLASS}
+      \field{volume}{34}
+      \field{year}{1979}
+      \field{pages}{137\bibrangedash 147}
+      \range{pages}{11}
+    \endentry
+    \entry{Kelton1983}{report}{}
+      \name{author}{3}{}{%
+        {{hash=ac3740169bb161f2860a64dc09b1764f}{%
+           family={Kelton},
+           familyi={K\bibinitperiod},
+           given={K.\bibnamedelimi F.},
+           giveni={K\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=5754c99e08c089990effad4f692fc6e0}{%
+           family={Greer},
+           familyi={G\bibinitperiod},
+           given={A.\bibnamedelimi L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=1a60bbc956b3353c5bb7ec270b2d7c99}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={C.\bibnamedelimi V.},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f51774b15c3ab9ab70ac020254118eb}
+      \strng{fullhash}{9f51774b15c3ab9ab70ac020254118eb}
+      \strng{bibnamehash}{9f51774b15c3ab9ab70ac020254118eb}
+      \strng{authorbibnamehash}{9f51774b15c3ab9ab70ac020254118eb}
+      \strng{authornamehash}{9f51774b15c3ab9ab70ac020254118eb}
+      \strng{authorfullhash}{9f51774b15c3ab9ab70ac020254118eb}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Using classical nucleation theory we consider transient nucleation occurring in a one-component, condensed system under isothermal conditions. We obtain an exact closed-form expression for the time dependent cluster populations. In addition, a more versatile approach is developed: a numerical simulation technique which models directly the reactions by which clusters are produced. This simulation demonstrates the evolution of cluster populations and nucleation rate in the transient regime. Results from the simulation are verified by comparison with exact analytical solutions for the steady state. Experimental methods for measuring transient nucleation are assessed, and it is demonstrated that the observed behavior depends on the method used. The effect of preexisting cluster distributions is studied. Previous analytical and numerical treatments of transient nucleation are compared to the solutions obtained from the simulation. The simple expressions of Kashchiev are shown to give good descriptions of the nucleation behavior. © 1983 American Institute of Physics.}
+      \field{issn}{00219606}
+      \field{issue}{12}
+      \field{journaltitle}{The Journal of Chemical Physics}
+      \field{title}{Transient nucleation in condensed systems}
+      \field{volume}{79}
+      \field{year}{1983}
+      \field{pages}{6261\bibrangedash 6276}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1063/1.445731
+      \endverb
+    \endentry
+    \entry{Laszlo3}{report}{}
+      \name{author}{2}{}{%
+        {{hash=7446ed5ac5ae72f8ba00be7acd763c67}{%
+           family={Granasy},
+           familyi={G\bibinitperiod},
+           given={Laszlo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=4073cfb7b1bf455d3f5502fe3198d0c5}{%
+           family={James},
+           familyi={J\bibinitperiod},
+           given={Peter\bibnamedelima F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Institute of Physics Inc.}%
+      }
+      \strng{namehash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{fullhash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{bibnamehash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{authorbibnamehash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{authornamehash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{authorfullhash}{ce9091e6fbea30686a357f4e1190f867}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To clarify the mechanism of cross-interfacial molecular transport and the role of subcritical cluster population in determining the kinetics of crystal nucleation, cluster dynamics calculations based on viscosity-governed rate coefficients are confronted with experiments on crystal nucleation in six stoichiometric oxide glasses (lithium disilicate, barium disilicate, two soda-lime-silica glasses, wollastonite glass, and lithium diborate). Systematic deviations are observed in the thermal activation of the measured and predicted induction times that lead to a crossover near the glass transition. Below crossover, the viscosity based induction times are higher than the experimental ones, a relation that is reversed at higher temperatures. The differences, that may amount to orders of magnitude far from the crossover temperature, cannot be removed by taking into account the size dependence of the interfacial free energy, the depletion of the monomers, or by enforcing the proper (zero) value of the free energy of monomers. Rather, it appears that while crystal nucleation and viscosity are both diffusion related processes, they are governed by different diffusion modes. © 1999 American Institute of Physics.}
+      \field{issn}{00219606}
+      \field{issue}{2}
+      \field{journaltitle}{Journal of Chemical Physics}
+      \field{month}{7}
+      \field{title}{Transient nucleation in oxide glasses: The effect of interface dynamics and subcritical cluster population}
+      \field{volume}{111}
+      \field{year}{1999}
+      \field{pages}{737\bibrangedash 749}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1063/1.479353
+      \endverb
+    \endentry
+    \entry{Laszlo4}{report}{}
+      \name{author}{2}{}{%
+        {{hash=7446ed5ac5ae72f8ba00be7acd763c67}{%
+           family={Granasy},
+           familyi={G\bibinitperiod},
+           given={Laszlo},
+           giveni={L\bibinitperiod}}}%
+        {{hash=4073cfb7b1bf455d3f5502fe3198d0c5}{%
+           family={James},
+           familyi={J\bibinitperiod},
+           given={Peter\bibnamedelima F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Inst of Physics}%
+      }
+      \strng{namehash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{fullhash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{bibnamehash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{authorbibnamehash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{authornamehash}{ce9091e6fbea30686a357f4e1190f867}
+      \strng{authorfullhash}{ce9091e6fbea30686a357f4e1190f867}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Cluster dynamics calculations have been performed within the framework of the Turnbull-Fisher type discrete kinetic model. It is demonstrated that with appropriate boundary conditions, the model can be used to calculate particle growth up to near macroscopic sizes. The numerical calculations show that the asymptotically exact analytical solution by Shneidman and Weinberg can be used to predict transformation kinetics with confidence. The effect of subcritical cluster population (influenced by the curvature dependence of the interfacial free energy and the self-consistency criterion) on the formation rate and number of observable clusters (that exceed a fixed supercritical size) is investigated. It has been found that both effects have a perceptible influence on transformation kinetics. A quantitative test of the Turnbull-Fisher model has been performed by comparing the experimental growth rates with those calculated with a diffusion coefficient evaluated from the measured nucleation rate and induction time data. For three compositions of the six investigated, significant differences have been observed between theory and experiment, that could not be removed by introducing a curvature dependent interfacial free energy or by enforcing the proper monomer limit of the cluster free energy. It appears that in these cases the kinetic coefficients evaluated from nucleation data cannot be used in describing bulk crystal growth. Possible mechanisms that may explain this finding have been outlined.}
+      \field{issn}{00219606}
+      \field{issue}{21}
+      \field{journaltitle}{Journal of Chemical Physics}
+      \field{month}{12}
+      \field{title}{Nucleation and growth in cluster dynamics: a quantitative test of the classical kinetic approach}
+      \field{volume}{113}
+      \field{year}{2000}
+      \field{pages}{9810\bibrangedash 9821}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1063/1.1322030
+      \endverb
+    \endentry
+    \entry{Bartels1991}{report}{}
+      \name{author}{4}{}{%
+        {{hash=7680b06444f3b00493900008781c90ea}{%
+           family={Bartels},
+           familyi={B\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=75764f02e243a5cfda3016086b5cdf76}{%
+           family={Lembke},
+           familyi={L\bibinitperiod},
+           given={U},
+           giveni={U\bibinitperiod}}}%
+        {{hash=04c7564f452db26a98e8fe82b04a82c5}{%
+           family={Pascova},
+           familyi={P\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5750c9d469d67bcd5810927fd4137f8a}{%
+           family={Gutzow},
+           familyi={G\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9cd18a8341c59c2eca382d09c5542b6}
+      \strng{fullhash}{7116fe2351f603cceb32eaa445796bfb}
+      \strng{bibnamehash}{a9cd18a8341c59c2eca382d09c5542b6}
+      \strng{authorbibnamehash}{a9cd18a8341c59c2eca382d09c5542b6}
+      \strng{authornamehash}{a9cd18a8341c59c2eca382d09c5542b6}
+      \strng{authorfullhash}{7116fe2351f603cceb32eaa445796bfb}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Based on classical nucleation theory, a Fokker-Planck-type partial differential equation for the time evolution of the cluster size distribution is formulated. The numerical solution of this equation leads to a general scenario of first order phase transitions in systems with molecule conservation proceeding via nucleation and growth. For the initial stage of nearly constant supersaturation, the proportionality of the mean cluster radius, (R), to the square root of time, t, is verified. The following transition to the stage of Ostwald ripening may proceed either by a continuous decrease of the growth rate or via a transient stage of (R)-growth considerable slower than t I/3. The explanation of such different possibilities is given in detail. The analysis shows that, for growth processes proceeding via an attachment of single monomers and non-overlapping diffusion zones of the clusters, only one population of clusters with an unimodal size distribution should evolve. The small-angle-X-ray scattering (SAXS) experiment data from the present study show, however, the existence of two cluster populations with significantly different mean radii. Additional physical assumptions are deduced from which an explanation of a bimodal size distribution is proposed. To support this general scenario, a series of experimental results from electron microscopic, SAXS and other measurements are given for the case of silver halide precipitation from glass-forming sodium borate melts. They show the time evolution of characteristic kinetic quantities such as relative supersaturation, mean cluster size and total cluster number.}
+      \field{title}{Evolution of cluster size distribution in nucleation and growth processes}
+      \field{year}{1991}
+    \endentry
+    \entry{Odusote2020}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4453562b195c2c8911c6ec5dde6004a4}{%
+           family={Odusote},
+           familyi={O\bibinitperiod},
+           given={Y.A.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=28941b679aaf4af7fd36bc410bbecbf3}{%
+           family={Popoola},
+           familyi={P\bibinitperiod},
+           given={A.I},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {African Journals Online (AJOL)}%
+      }
+      \strng{namehash}{36ba3a44148a8e38a84a8270ceac2426}
+      \strng{fullhash}{36ba3a44148a8e38a84a8270ceac2426}
+      \strng{bibnamehash}{36ba3a44148a8e38a84a8270ceac2426}
+      \strng{authorbibnamehash}{36ba3a44148a8e38a84a8270ceac2426}
+      \strng{authornamehash}{36ba3a44148a8e38a84a8270ceac2426}
+      \strng{authorfullhash}{36ba3a44148a8e38a84a8270ceac2426}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The free energy of mixing and activities of gold in selected six Au-based binary liquid Au-Cu, Au-Zn, Au-Pb, Au-Ni, Au-Sn and Al-Au alloys at different working temperatures have been studied using the quasi-chemical approximation model (QCAM). The predicted free enegry of mixing and activities results were compared with available experimental values. The predicted results are in reasonable agreement with reported experimental data and confirms that the model is reliable and, thus should serve as an alternative for the prediction of thermodynamic properties of binary liquid alloys. Keywords: free energy of mixing, activities, Au, Binary liquid alloys, concentration}
+      \field{issue}{1}
+      \field{journaltitle}{Nigeria Journal of Pure and Applied Physics}
+      \field{month}{4}
+      \field{title}{Thermodynamic Prediction of the Free Energy of Mixing and Activities of some Goldbased Binary Liquid Alloys}
+      \field{volume}{9}
+      \field{year}{2020}
+      \field{pages}{11\bibrangedash 16}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.4314/njpap.v9i1.3
+      \endverb
+    \endentry
+    \entry{Yadav2023}{article}{}
+      \name{author}{6}{}{%
+        {{hash=a3b351ca2d6dd35dc924981c3e18b52d}{%
+           family={Yadav},
+           familyi={Y\bibinitperiod},
+           given={Shahsit\bibnamedelima Kumar},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=6ca00e615d7c11384c33409a075f5361}{%
+           family={GC},
+           familyi={G\bibinitperiod},
+           given={Dinesh},
+           giveni={D\bibinitperiod}}}%
+        {{hash=32b229134a5d6098865db792536f1aea}{%
+           family={Gohivar},
+           familyi={G\bibinitperiod},
+           given={Ramesh\bibnamedelima Kumar},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=88af0ac8cf5657e93e7769777e545051}{%
+           family={Mehta},
+           familyi={M\bibinitperiod},
+           given={Upendra},
+           giveni={U\bibinitperiod}}}%
+        {{hash=66eb3b68369b4de26c54cab6b5dfefc2}{%
+           family={Adhikari},
+           familyi={A\bibinitperiod},
+           given={Devendra},
+           giveni={D\bibinitperiod}}}%
+        {{hash=868f7b279bda920e18945becfef1bfeb}{%
+           family={Koirala},
+           familyi={K\bibinitperiod},
+           given={Ram\bibnamedelima Prasad},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nepal Journals Online (JOL)}%
+      }
+      \strng{namehash}{a8cfab1112e1dd706d07644626109f5a}
+      \strng{fullhash}{00f9a3829aa23d3b6b21a727f2754038}
+      \strng{bibnamehash}{a8cfab1112e1dd706d07644626109f5a}
+      \strng{authorbibnamehash}{a8cfab1112e1dd706d07644626109f5a}
+      \strng{authornamehash}{a8cfab1112e1dd706d07644626109f5a}
+      \strng{authorfullhash}{00f9a3829aa23d3b6b21a727f2754038}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Redlich-Kister (R-K) polynomial has been generally used to model the mixing properties of binary and higher order alloys. The interaction energy parameters of the R-K polynomial are assumed to be either linear or exponentially temperature-dependent. When these parameters are assumed to be linear temperature-dependent, the computed thermodynamic functions sometimes show unusual trends. But when they are assumed to be exponential temperature-dependent, such trends do not appear in the theoretical calculations. Therefore, the mixing properties of Cu-Mg liquid alloy have been studied using the exponential temperature-dependent parameters of the above-mentioned model. These parameters for excess Gibb’s free energy of mixing have been optimised using the experimental values of enthalpy of mixing and excess entropy of mixing. The study of thermodynamic properties involves the measurement of excess Gibb’s free energy of mixing, enthalpy of mixing and activities of monomers at different temperatures. Likewise, the assessment of surface property includes surface tension and surface concentration. Similarly, the structural properties have been studied by computing concentration fluctuation in long wave-length limit and short-range order parameter at different temperatures. The investigation revealed that the exponential model can explain mixing behavior of Cu-Mg liquid alloy and the system is found to have strong compound forming tendency at its melting temperature. This mixing tendency has been observed to decrease with the increase in temperature above its melting temperature.}
+      \field{issn}{2467-9062}
+      \field{issue}{1}
+      \field{journaltitle}{Journal of Institute of Science and Technology}
+      \field{month}{6}
+      \field{title}{Mixing Properties of Cu-Mg Liquid Alloy Using Exponential Model}
+      \field{volume}{28}
+      \field{year}{2023}
+      \field{pages}{91\bibrangedash 101}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.3126/jist.v28i1.54594
+      \endverb
+    \endentry
+    \entry{Was1985}{report}{}
+      \name{author}{2}{}{%
+        {{hash=0a7b9b8712ff0daed0587902a6ab3ce5}{%
+           family={Was},
+           familyi={W\bibinitperiod},
+           given={G\bibnamedelima S},
+           giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=fa4d49a9f31457e2818a41e985883ccf}{%
+           family={Kruger},
+           familyi={K\bibinitperiod},
+           given={R\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{90b2a620cc349136393cd241b5b4f10e}
+      \strng{fullhash}{90b2a620cc349136393cd241b5b4f10e}
+      \strng{bibnamehash}{90b2a620cc349136393cd241b5b4f10e}
+      \strng{authorbibnamehash}{90b2a620cc349136393cd241b5b4f10e}
+      \strng{authornamehash}{90b2a620cc349136393cd241b5b4f10e}
+      \strng{authorfullhash}{90b2a620cc349136393cd241b5b4f10e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Thermodynamic and kinetic models are constructed to describe the development of the chromium depleted zone in Ni-Cr-Fe alloys heated in the range 773-l 173 K}
+      \field{issue}{5}
+      \field{journaltitle}{Acta merall}
+      \field{title}{A THERMODYNAMIC AND KINETIC BASIS FOR UNDERSTANDING CHROMIUM DEPLETION IN Ni-Cr-Fe ALLOYS}
+      \field{volume}{33}
+      \field{year}{1985}
+      \field{pages}{841\bibrangedash 854}
+      \range{pages}{14}
+    \endentry
+    \entry{Kumar1996}{report}{}
+      \name{author}{1}{}{%
+        {{hash=ac480063a097b769bae5aa33cd291d46}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Deepak},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ELSEVIER}%
+      }
+      \strng{namehash}{ac480063a097b769bae5aa33cd291d46}
+      \strng{fullhash}{ac480063a097b769bae5aa33cd291d46}
+      \strng{bibnamehash}{ac480063a097b769bae5aa33cd291d46}
+      \strng{authorbibnamehash}{ac480063a097b769bae5aa33cd291d46}
+      \strng{authornamehash}{ac480063a097b769bae5aa33cd291d46}
+      \strng{authorfullhash}{ac480063a097b769bae5aa33cd291d46}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The nucleation kinetics of a binary mixture is studied using a Gibbs free energy function that we have recently used to obtain a range of generic phase diagrams when liquid mixtures are cooled to solid state. This allows us to compute analytically all the quantifies related to the free energy barrier that occur in the nucleation kinetic equation. This equation is solved using the general procedure due to Langer. The variation of the nucleation rate and other related quantities are calculated as functions of undercooling and composition for a representative phase diagram.}
+      \field{journaltitle}{Physica A}
+      \field{title}{PHYSICA Nucleation in binary mixtures}
+      \field{volume}{224}
+      \field{year}{1996}
+      \field{pages}{128\bibrangedash 139}
+      \range{pages}{12}
     \endentry
     \entry{Concha2007}{article}{}
       \name{author}{1}{}{%
@@ -624,8 +1375,8 @@
       \strng{authorbibnamehash}{f6c4a1cf962ae57795fcddc243c28ab3}
       \strng{authornamehash}{f6c4a1cf962ae57795fcddc243c28ab3}
       \strng{authorfullhash}{f6c4a1cf962ae57795fcddc243c28ab3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Department of Metallurgial Engineering, University of Conception}
@@ -676,8 +1427,8 @@
       \strng{authorbibnamehash}{bef56e7b4704c0c6db7734dfc6a4e390}
       \strng{authornamehash}{bef56e7b4704c0c6db7734dfc6a4e390}
       \strng{authorfullhash}{ee3aaeddff08dcece8859a8ca867669a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Chemical Engineering and Processing}
@@ -699,8 +1450,8 @@
       \strng{authorbibnamehash}{411d55c8a5bfee709dbb7816c8227131}
       \strng{authornamehash}{411d55c8a5bfee709dbb7816c8227131}
       \strng{authorfullhash}{411d55c8a5bfee709dbb7816c8227131}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Separation and Purification Technology}
@@ -742,8 +1493,8 @@
       \strng{authorbibnamehash}{30544becdb20c305269a080eb43d3388}
       \strng{authornamehash}{30544becdb20c305269a080eb43d3388}
       \strng{authorfullhash}{c6eadf94e672288ba918b11995034fc3}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Conference of Applied Energy}
@@ -764,8 +1515,8 @@
       \strng{authorbibnamehash}{3883896b860a0822e5fad19f21c926e5}
       \strng{authornamehash}{3883896b860a0822e5fad19f21c926e5}
       \strng{authorfullhash}{3883896b860a0822e5fad19f21c926e5}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Department of Physics and Technology University of Bergen}
@@ -801,8 +1552,8 @@
       \strng{authorbibnamehash}{a2038e4c5071f9f7b19537cc3baecba4}
       \strng{authornamehash}{a2038e4c5071f9f7b19537cc3baecba4}
       \strng{authorfullhash}{2c3fcd047fad21232efbfc68c2ffc740}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ASME}
@@ -821,13 +1572,45 @@
       \strng{authorbibnamehash}{edd376bec6ebdf535f1c356e6e176482}
       \strng{authornamehash}{edd376bec6ebdf535f1c356e6e176482}
       \strng{authorfullhash}{edd376bec6ebdf535f1c356e6e176482}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIM007 v.1}
       \field{title}{Reactor Chamber design: power scenario analysis}
       \field{year}{2023}
+    \endentry
+    \entry{Van}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=fef2282d2391fba444bfe4876f355538}{%
+           family={Wassenbergh},
+           familyi={W\bibinitperiod},
+           given={S.\bibnamedelimi Van},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=8130d2a780f96b04cada8deb1a5a69e6}{%
+           family={Sanderson},
+           familyi={S\bibinitperiod},
+           given={S.\bibnamedelimi L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{fullhash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{bibnamehash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{authorbibnamehash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{authornamehash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \strng{authorfullhash}{8d37a98a2e24c4b39390b29f4fe24527}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hydrodynamic analysis of bioinspired vortical cross-step filtration by computational modelling}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://doi.org/10.1098/rsos.230315
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1098/rsos.230315
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

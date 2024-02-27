@@ -86,7 +86,7 @@ class ScipyClusterDynamics:
                 self.dydt_array[:, i] = dy_dt_wrapper(t, sol.y[:, i])
         else:
             print("La integración no fue exitosa.")
-
+        print("hello")
         end_time = time.time()
         self.execution_time = end_time - start_time
         self.success = sol.success
