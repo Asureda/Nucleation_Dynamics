@@ -2432,35 +2432,36 @@
     <bcf:citekey order="59" intorder="1">Skapski1956ATO</bcf:citekey>
     <bcf:citekey order="60" intorder="1">Zadumkin1966SurfaceEA</bcf:citekey>
     <bcf:citekey order="61" intorder="1">Spaepen1975ASM</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">Spaepen1975ASM</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">SoA</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">Concha2007</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">Altmeyer2003</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">Zhao2011</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">Wei2016</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">Marthinussen2011</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">Sabbagh2014</bcf:citekey>
-    <bcf:citekey order="70" intorder="1">Marthinussen2011</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">Thompson1983HomogeneousCN</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">Spaepen1975ASM</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">SoA</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">Concha2007</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">Altmeyer2003</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">Zhao2011</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">Wei2016</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">Marthinussen2011</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">Sabbagh2014</bcf:citekey>
     <bcf:citekey order="71" intorder="1">Marthinussen2011</bcf:citekey>
-    <bcf:citekey order="72" intorder="1">Sabbagh2014</bcf:citekey>
-    <bcf:citekey order="73" intorder="1">Concha2007</bcf:citekey>
-    <bcf:citekey order="73" intorder="2">Marthinussen2011</bcf:citekey>
-    <bcf:citekey order="74" intorder="1">Zhao2011</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">Marthinussen2011</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">Sabbagh2014</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">Concha2007</bcf:citekey>
+    <bcf:citekey order="74" intorder="2">Marthinussen2011</bcf:citekey>
     <bcf:citekey order="75" intorder="1">Zhao2011</bcf:citekey>
     <bcf:citekey order="76" intorder="1">Zhao2011</bcf:citekey>
     <bcf:citekey order="77" intorder="1">Zhao2011</bcf:citekey>
-    <bcf:citekey order="77" intorder="2">Wei2016</bcf:citekey>
     <bcf:citekey order="78" intorder="1">Zhao2011</bcf:citekey>
+    <bcf:citekey order="78" intorder="2">Wei2016</bcf:citekey>
     <bcf:citekey order="79" intorder="1">Zhao2011</bcf:citekey>
-    <bcf:citekey order="80" intorder="1">power_scenario</bcf:citekey>
-    <bcf:citekey order="81" intorder="1">Concha2007</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">Zhao2011</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">power_scenario</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">Zhao2011</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">power_scenario</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">Concha2007</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">Zhao2011</bcf:citekey>
     <bcf:citekey order="84" intorder="1">power_scenario</bcf:citekey>
     <bcf:citekey order="85" intorder="1">power_scenario</bcf:citekey>
-    <bcf:citekey order="86" intorder="1">Concha2007</bcf:citekey>
-    <bcf:citekey order="86" intorder="2">Altmeyer2003</bcf:citekey>
-    <bcf:citekey order="87" intorder="1">Van</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">power_scenario</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">Concha2007</bcf:citekey>
+    <bcf:citekey order="87" intorder="2">Altmeyer2003</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">Van</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -2209,6 +2209,42 @@
       \verb https://api.semanticscholar.org/CorpusID:137397767
       \endverb
     \endentry
+    \entry{Thompson1983HomogeneousCN}{article}{}
+      \name{author}{2}{}{%
+        {{hash=87bb08c989475e0606409afc9948ebaa}{%
+           family={Thompson},
+           familyi={T\bibinitperiod},
+           given={Carl\bibnamedelima V.},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=d238779b18a2e2a3468cd70df8443582}{%
+           family={Spaepen},
+           familyi={S\bibinitperiod},
+           given={Frans},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{d3bce91ca0a6a2b661a81dfa0815580a}
+      \strng{fullhash}{d3bce91ca0a6a2b661a81dfa0815580a}
+      \strng{bibnamehash}{d3bce91ca0a6a2b661a81dfa0815580a}
+      \strng{authorbibnamehash}{d3bce91ca0a6a2b661a81dfa0815580a}
+      \strng{authornamehash}{d3bce91ca0a6a2b661a81dfa0815580a}
+      \strng{authorfullhash}{d3bce91ca0a6a2b661a81dfa0815580a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Metallurgica}
+      \field{title}{Homogeneous crystal nucleation in binary metallic melts}
+      \field{volume}{31}
+      \field{year}{1983}
+      \field{pages}{2021\bibrangedash 2027}
+      \range{pages}{7}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:136589124
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:136589124
+      \endverb
+    \endentry
     \entry{Concha2007}{article}{}
       \name{author}{1}{}{%
         {{hash=f6c4a1cf962ae57795fcddc243c28ab3}{%
@@ -2400,8 +2436,8 @@
       \strng{authorbibnamehash}{a2038e4c5071f9f7b19537cc3baecba4}
       \strng{authornamehash}{a2038e4c5071f9f7b19537cc3baecba4}
       \strng{authorfullhash}{2c3fcd047fad21232efbfc68c2ffc740}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ASME}
