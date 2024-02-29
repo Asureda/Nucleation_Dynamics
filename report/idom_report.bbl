@@ -2245,6 +2245,73 @@
       \verb https://api.semanticscholar.org/CorpusID:136589124
       \endverb
     \endentry
+    \entry{Kelton1986}{report}{}
+      \name{author}{2}{}{%
+        {{hash=ac3740169bb161f2860a64dc09b1764f}{%
+           family={Kelton},
+           familyi={K\bibinitperiod},
+           given={K\bibnamedelima F},
+           giveni={K\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=5754c99e08c089990effad4f692fc6e0}{%
+           family={Greer},
+           familyi={G\bibinitperiod},
+           given={A\bibnamedelima L},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{a30a6c967bebe9092f35263eb64c1e9e}
+      \strng{fullhash}{a30a6c967bebe9092f35263eb64c1e9e}
+      \strng{bibnamehash}{a30a6c967bebe9092f35263eb64c1e9e}
+      \strng{authorbibnamehash}{a30a6c967bebe9092f35263eb64c1e9e}
+      \strng{authornamehash}{a30a6c967bebe9092f35263eb64c1e9e}
+      \strng{authorfullhash}{a30a6c967bebe9092f35263eb64c1e9e}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We extend to the non-isothermal case a numerical technique that was developed to treat transient homogeneous nucleation in a one-component system by modeling directly the reaction by which clusters are produced. Calculations are presented for the nucleation frequency during the quench and for the number of nuclei produced and the volume fraction transformed at the end of quench for different rates of cooling from the melt. Three model systems are considered: an alkali silicate which is a relatively good glass former, and two metallic glasses. These show a wide range of critical cooling rates for glass formation. In some systems transient effects are predicted to be critical for glass formation. A simple technique is presented for determining when transient effects are important based on a calculation using steady state nucleation frequencies and macroscopic growth velocities.}
+      \field{journaltitle}{Journal of Non-Crystalline Solids}
+      \field{title}{TRANSIENT NUCLEATION EFFECTS IN GLASS FORMATION}
+      \field{volume}{79}
+      \field{year}{1986}
+      \field{pages}{295\bibrangedash 309}
+      \range{pages}{15}
+    \endentry
+    \entry{Leavenworth1961TheSO}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f9f7d0388d3594eb9cf96e30a471d09a}{%
+           family={Leavenworth},
+           familyi={L\bibinitperiod},
+           given={H.\bibnamedelimi W.},
+           giveni={H\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=0c6a12e41e39136c3c26c805f5859183}{%
+           family={Cleary},
+           familyi={C\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{11a983aa1e6bf0455bac8358a6b841c6}
+      \strng{fullhash}{11a983aa1e6bf0455bac8358a6b841c6}
+      \strng{bibnamehash}{11a983aa1e6bf0455bac8358a6b841c6}
+      \strng{authorbibnamehash}{11a983aa1e6bf0455bac8358a6b841c6}
+      \strng{authornamehash}{11a983aa1e6bf0455bac8358a6b841c6}
+      \strng{authorfullhash}{11a983aa1e6bf0455bac8358a6b841c6}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Acta Metallurgica}
+      \field{title}{The solubility of Ni, Cr, Fe, Ti and Mo in liquid lithium}
+      \field{volume}{9}
+      \field{year}{1961}
+      \field{pages}{519\bibrangedash 520}
+      \range{pages}{2}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:93159840
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:93159840
+      \endverb
+    \endentry
     \entry{Concha2007}{article}{}
       \name{author}{1}{}{%
         {{hash=f6c4a1cf962ae57795fcddc243c28ab3}{%
@@ -2259,8 +2326,8 @@
       \strng{authorbibnamehash}{f6c4a1cf962ae57795fcddc243c28ab3}
       \strng{authornamehash}{f6c4a1cf962ae57795fcddc243c28ab3}
       \strng{authorfullhash}{f6c4a1cf962ae57795fcddc243c28ab3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Department of Metallurgial Engineering, University of Conception}
@@ -2311,8 +2378,8 @@
       \strng{authorbibnamehash}{bef56e7b4704c0c6db7734dfc6a4e390}
       \strng{authornamehash}{bef56e7b4704c0c6db7734dfc6a4e390}
       \strng{authorfullhash}{ee3aaeddff08dcece8859a8ca867669a}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Chemical Engineering and Processing}
@@ -2334,8 +2401,8 @@
       \strng{authorbibnamehash}{411d55c8a5bfee709dbb7816c8227131}
       \strng{authornamehash}{411d55c8a5bfee709dbb7816c8227131}
       \strng{authorfullhash}{411d55c8a5bfee709dbb7816c8227131}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Separation and Purification Technology}
@@ -2377,8 +2444,8 @@
       \strng{authorbibnamehash}{30544becdb20c305269a080eb43d3388}
       \strng{authornamehash}{30544becdb20c305269a080eb43d3388}
       \strng{authorfullhash}{c6eadf94e672288ba918b11995034fc3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Conference of Applied Energy}
@@ -2399,8 +2466,8 @@
       \strng{authorbibnamehash}{3883896b860a0822e5fad19f21c926e5}
       \strng{authornamehash}{3883896b860a0822e5fad19f21c926e5}
       \strng{authorfullhash}{3883896b860a0822e5fad19f21c926e5}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Department of Physics and Technology University of Bergen}
@@ -2483,8 +2550,8 @@
       \strng{authorbibnamehash}{8d37a98a2e24c4b39390b29f4fe24527}
       \strng{authornamehash}{8d37a98a2e24c4b39390b29f4fe24527}
       \strng{authorfullhash}{8d37a98a2e24c4b39390b29f4fe24527}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Hydrodynamic analysis of bioinspired vortical cross-step filtration by computational modelling}

@@ -347,11 +347,21 @@ This driving force dictates the nucleation process, which is governed by tempera
     \label{fig:free_energy_illustrative_degree_saturation}
 \end{figure}
 
-This formalism is pertinent for analyzing solutes dissolved in liquids that nucleate in either liquid or crystalline states. However, CNT is not always successful, primarily because the capillarity approximation, upon which it is based, is a very primitive characterization of small molecular clusters. Nevertheless, the expressions derived provide intuitive value, suggesting that increasing the vapor supersaturation, \(S\), accelerates the nucleation of droplets, all other parameters being constant. Additionally, the nucleation rate is influenced by the surface tension of the condensed phase: higher surface tension, \(\gamma_{\infty}\), results in a slower rate. The rate is also quite sensitive to supersaturation, surface tension, and temperature, as these quantities appear inside an exponential function \cite{Ford}.
+This formalism is pertinent for analyzing solutes dissolved in liquids that nucleate in either liquid or crystalline states. However, CNT is not 
+always successful, primarily because the capillarity approximation, upon which it is based, is a very primitive characterization of small molecular clusters. 
+Nevertheless, the expressions derived provide intuitive value, suggesting that increasing the vapor supersaturation, \(S\), accelerates the nucleation of droplets, 
+all other parameters being constant. Additionally, the nucleation rate is influenced by the surface tension of the condensed phase: higher surface 
+tension, \(\gamma_{\infty}\), results in a slower rate. The rate is also quite sensitive to supersaturation, surface tension, and temperature, as 
+these quantities appear inside an exponential function \cite{Ford}.
 
-To surpass the predictive capability of classical theory, it is necessary to compute the partition functions of clusters of various sizes and develop a more realistic model of the excess free energy; however, this is beyond the scope of this work.
+To surpass the predictive capability of classical theory, it is necessary to compute the partition functions of clusters of various sizes and develop 
+a more realistic model of the excess free energy; however, this is beyond the scope of this work.
 
-Another formalism that may be useful for this study involves the definition of the driving force commonly used in the phase transition between melts and crystalline phases. Consider a single-component liquid initially at equilibrium, quenched to a temperature \(T\), below its melting temperature \(T_m\). Since the liquid and solid phases have the same composition, the nucleation free energy corresponds to the free energy difference between the liquid and solid states at temperature \(T\), in other words, the driving force is a function that depends on the undercooling rate \cite{Clouet1, Fokin2006}:
+Another formalism that may be useful for this study involves the definition of the driving force commonly used in the phase transition between melts 
+and crystalline phases. Consider a single-component liquid initially at equilibrium, quenched to a temperature \(T\), below its melting 
+temperature \(T_m\). Since the liquid and solid phases have the same composition, the nucleation free energy corresponds to the free 
+energy difference between the liquid and solid states at temperature \(T\), in other words, the driving force is a function that depends 
+on the undercooling rate \cite{Clouet1, Fokin2006}:
 
 \begin{equation}
     \Delta\mu = \frac{\Delta H_{m}}{T_{m}}(T_{m} - T) + \int_{T}^{T_{m}} \Delta C_{p} dT' - T \int_{T}^{T_{m}} \frac{\Delta C_{p}}{T'} dT',
@@ -361,10 +371,12 @@ where \(\Delta H_{m}\) and \(T_{m}\) are the molar heat of melting and the melti
 
 \begin{equation}
     \Delta\mu(T) =  \frac{\Delta H_{m}}{N_A} \left( 1 - \frac{T}{T_{m}} \right),
+	\label{fig:turnbull_delta}
 \end{equation}
 
 \begin{equation}
     \Delta\mu(T) = \frac{\Delta H_{m}}{N_A} \left( 1 - \frac{T}{T_{m}} \right) \frac{T}{T_{m}},
+	\label{fig:hoffmann_delta}
 \end{equation}
 
 Here, \(\Delta H_{m}\) is the melting enthalpy per mole of the crystal and \(N_A\) is Avogadro's number. When the undercooling is large, the expression may not be precise enough. One can then consider the next term in the Taylor expansion leading to the Turnbull and Hoffman equations respectively \cite{Clouet1}:
@@ -377,24 +389,49 @@ Here, \(\Delta H_{m}\) is the melting enthalpy per mole of the crystal and \(N_A
     \Delta\mu(T) =  \frac{\Delta H_{m}}{N_A} \left( 1 - \frac{T}{T_{m}} \right) \frac{T}{T_{m}}   - \Delta C_{p} \left( \frac{(T - T_{m})^2}{2T_{m}} \right).
 \end{equation}
 
-This formalism is widely used in the study of the nucleation of impurities in metallic melts, with a wide range of materials, such as metallic glasses like Li\(_2\)O\(_2\)SiO\(_2\) and LS\(_2\), or other metallic alloys like Ge\(_2\)Sb\(_2\)Te\(_5\) and (Ag,In)-doped Sb\(_2\)Te (AIST) \cite{Laszlo1, Neilson1979, Kelton1983, Laszlo3, Laszlo4, Sun2009}.
+This formalism is widely used in the study of the nucleation of impurities in metallic melts, with a wide range of materials, such 
+as metallic glasses like Li\(_2\)O\(_2\)SiO\(_2\) and LS\(_2\), or other metallic alloys 
+like Ge\(_2\)Sb\(_2\)Te\(_5\) and (Ag,In)-doped Sb\(_2\)Te (AIST) \cite{Laszlo1, Neilson1979, Kelton1983, Laszlo3, Laszlo4, Sun2009}.
 
-Using these models to describe the driving force, they exhibit certain limitations. Firstly, within the formalism derived from the degree of saturation, an ideal mixture is assumed. This is evident since concentrations or mole fractions are used to determine the degree of supersaturation rather than activities. To rigorously work through activities, the driving force can be determined if the interaction parameters between the components of the solution are known \cite{Bartels1991}, or determine the mixing parameters starting from the partition function derived from the grand canonical potential, employing the \textbf{quasi-chemical approximation} formulation \cite{Odusote2020} or exponential models \cite{Yadav2023}.
+Using these models to describe the driving force, they exhibit certain limitations. Firstly, within the 
+formalism derived from the degree of saturation, an ideal mixture is assumed. This is evident since 
+concentrations or mole fractions are used to determine the degree of supersaturation rather than activities. 
+To rigorously work through activities, the driving force can be determined if the interaction parameters 
+between the components of the solution are known \cite{Bartels1991}, or determine the mixing parameters 
+starting from the partition function derived from the grand canonical potential, employing the quasi-chemical approximation formulation \cite{Odusote2020} or 
+exponential models \cite{Yadav2023}.
 
-In the second formulation, which utilizes the undercooling rate to determine the driving force, the approach is widely recognized and accepted. However, this formula encounters limitations when applied to mixtures exhibiting degrees of immiscibility. Specifically, the challenge arises in scenarios where two phases coexist, such as in solid-liquid equilibrium. In these instances, given a particular composition for which a certain temperature allows both phases to be in equilibrium; this temperature is referred to as the liquidus temperature \(T_l\).
+In the second formulation, which utilizes the undercooling rate to determine the driving force, the approach is widely 
+recognized and accepted. However, this formula encounters limitations when applied to mixtures exhibiting degrees of immiscibility. 
+Specifically, the challenge arises in scenarios where two phases coexist, such as in solid-liquid equilibrium. In these instances, 
+given a particular composition for which a certain temperature allows both phases to be in equilibrium; this temperature is referred 
+to as the liquidus temperature \(T_l\).
 
-The standard application of this formulation presents issues as it traditionally employs the absolute melting point to determine the driving force, neglecting the presence of different phases that may manifest within the system.
+The standard application of this formulation presents issues as it traditionally employs the absolute melting point to determine the 
+driving force, neglecting the presence of different phases that may manifest within the system.
 
-A potential rectification for this oversight involves the utilization of the \(T_l\) instead of \(T_m\). However, this correction is not without its challenges. Specifically, when the fraction of one of the phases is exceedingly low, accurately determining the liquidus temperature within the phase diagram becomes problematic. This difficulty is compounded by the typical unavailability of high-resolution phase diagrams.
+A potential rectification for this oversight involves the utilization of the \(T_l\) instead of \(T_m\). However, this correction 
+is not without its challenges. Specifically, when the fraction of one of the phases is exceedingly low, accurately determining the 
+liquidus temperature within the phase diagram becomes problematic. This difficulty is compounded by the typical unavailability of high-resolution phase diagrams.
 
 
-Ideally, the driving force in phase transition studies is determined by a comprehensive thermodynamic model that includes information about the elements present in the system, as demonstrated in previous works \cite{Was1985, Kumar1996}. However, due to the limitations previously stated, an alternative formulation for the driving force has been developed to provide a more accurate description of the volumetric free energy. This method involves calculating the Gibbs free energy change, \(\Delta G\), defined by the free energy expressions for the liquid (\(l\)) and solid (\(s\)) phases.
+Ideally, the driving force in phase transition studies is determined by a comprehensive thermodynamic model that includes 
+information about the elements present in the system, as demonstrated in previous works \cite{Was1985, Kumar1996}. However, 
+due to the limitations previously stated, an alternative formulation for the driving force has been developed to provide a more 
+accurate description of the volumetric free energy. This method involves calculating the Gibbs free energy change, \(\Delta G\), 
+defined by the free energy expressions for the liquid (\(l\)) and solid (\(s\)) phases.
 
-The chemical potential for component A in the liquid phase, \(\mu_A^l\), is determined by constructing a tangent to the liquid free energy curve at the composition \(x_l\). The point where this tangent line intersects the \(x_A = 1\) axis defines \(\mu_A^l\). Similarly, the chemical potential for component A in the solid phase, \(\mu_A^s\), is identified at the intersection of the tangent line with the \(x_A = 0\) axis.
+The chemical potential for component A in the liquid phase, \(\mu_A^l\), is determined by constructing a tangent to the liquid 
+free energy curve at the composition \(x_l\). The point where this tangent line intersects the \(x_A = 1\) axis defines \(\mu_A^l\). 
+Similarly, the chemical potential for component A in the solid phase, \(\mu_A^s\), is identified at the intersection of the tangent line with the \(x_A = 0\) axis.
 
-At the liquidus temperature \(T_l\), the free energy curves for both the liquid and solid phases are tangent to the line constructed from the previous step. The solid composition that is in equilibrium with the liquid composition \(x_l\) at \(T_l\) is given by the tangent point on the Gibbs free energy curve. This equilibrium composition is denoted as \(x_{s,eq}\) and can be identified on the equilibrium phase diagram.
+At the liquidus temperature \(T_l\), the free energy curves for both the liquid and solid phases are tangent to the line constructed 
+from the previous step. The solid composition that is in equilibrium with the liquid composition \(x_l\) at \(T_l\) is given by the 
+tangent point on the Gibbs free energy curve. This equilibrium composition is denoted as \(x_{s,eq}\) and can be identified on the equilibrium phase diagram.
 
-At a temperature \(T\), arbitrarily lower than \(T_l\), the chemical potentials in the solid, \(\mu_A^s\) and \(\mu_B^s\), and for the liquid, \(\mu_A^l\) and \(\mu_B^l\), are determined as before for the liquid phase. The differences in chemical potential, which drive the phase transition, are defined as follows:
+At a temperature \(T\), arbitrarily lower than \(T_l\), the chemical potentials in the solid, \(\mu_A^s\) and \(\mu_B^s\), and for 
+the liquid, \(\mu_A^l\) and \(\mu_B^l\), are determined as before for the liquid phase. The differences in chemical potential, which 
+drive the phase transition, are defined as follows:
 
 \begin{equation}
 \Delta\mu_A = \mu_A^l - \mu_A^s \label{eq:delta_mu_A}
@@ -406,7 +443,7 @@ At a temperature \(T\), arbitrarily lower than \(T_l\), the chemical potentials 
 
 The free energy change, per unit volume, associated with forming a small amount of solid of composition \(x_{s}^\ast\) out of the liquid is given by
 \begin{equation}
-\Delta G_v = [x_s^\ast \Delta\mu_A + (1 - x_s^\ast) \Delta\mu_B]/V \label{eq:delta_G_v}
+\Delta G_v = [x_s^A \Delta\mu_A + (1 - x_s^A) \Delta\mu_B]/V \label{eq:delta_G_v}
 \end{equation} 
 
 where \(V\) is the average molar volume of the solid, assumed here to vary linearly between the molar volumes \(V^A\) and \(V^B\) of the pure solid systems:
@@ -514,7 +551,7 @@ Given the difficulties noted above in measuring or simulating the surface free e
 can predict its magnitude and the physical processes that affect it. 
 theoretical methods can predict its magnitude and the physical processes that affect it. 
 
-In order to determine $gamma$, it is useful to discuss the energetic and entropic components that make it up, 
+In order to determine $\gamma$, it is useful to discuss the energetic and entropic components that make it up, 
 since, as we shall see, the different models that have been developed differ markedly in the relative contributions they attribute to these two components. 
 The surface Gibbs free energy can be written as
 \begin{equation} \label{eq:Gibbs_free_energy}
@@ -548,13 +585,12 @@ aligns with empirical findings from initial nucleation studies, underpinning cla
 
 In \cite{Zadumkin1966SurfaceEA} introduced an energy-centric model for surface free energy, emphasizing electron-ion interactions and 
 significant volume changes upon melting. Conversely, Turnbull proposed an entropy-focused model, envisioning the solid as a plane 
-intersecting the liquid, effectively halving the surface density compared to the bulk liquid. This model assumes negligible energy 
-alteration when replacing absent atoms, albeit with reduced configurational entropy due to their fixed positions, tying this adjustment directly to the fusion entropy.
+intersecting the liquid. 
 \begin{equation} \label{eq:Turnbull_model}
 \gamma_{sl} = \frac{T_m \Delta S}{2f N_{A} v^{2/3}} - \frac{\Delta H}{2f N_{A} v^{2/3}}
 \end{equation}
 
-Recent approaches have applied physical or computational simulations, notably using hard sphere packings, to gauge surface free energy, 
+More recent approaches have applied physical or computational simulations, notably using hard sphere packings, to gauge surface free energy, 
 as detailed by \cite{Spaepen1975ASM}. In these models, spheres form a densely packed crystalline structure, excluding octahedral voids 
 to mirror the dense liquid's random packing. Preference is given to tetrahedral gaps, aiming to enhance interfacial layer density. After 
 assessing the configurational entropy across different surface arrangements, findings indicated no significant density reduction at the 
@@ -562,34 +598,245 @@ interface compared to the dense, random liquid structure. This suggests a minima
 thus classifying the model as predominantly entropic and forecasting minor energy contributions to $\gamma_{sl}$.
 
 \begin{equation} \label{eq:Spaepen_model}
-\gamma = \frac{\alpha_m \Delta S}{N_{av} v^{2/3}} T
+\gamma = \frac{\alpha_m \Delta S_f}{N_{A} v^{2/3}} T
 \end{equation}
 where $\alpha_m$ is 0.86 for the fcc (111) or hcp (0001) surfaces, and 0.71 for the bcc (110) surface. At $T = T_m$, this has the same form as 
 the empirical equation with $\gamma$ proportional to $\Delta H/v^{2/3}$.
 
 Up to now we discussed almost exclusively the case of one-component substances. There is considerable interest, 
-especially for metallurgical applications, in the nucleation of binary mixtures or alloys. Calculations in this case 
-require a knowledge not only of the bulk thermodynamics of the mixtures (both liquid and solid), but also information about the liquid--solid surface free energy.
+in the nucleation of binary mixtures or alloys. Calculations in this case 
+require a knowledge of the bulk thermodynamics of the mixtures (both liquid and solid).
 
 In \cite{Thompson1983HomogeneousCN} extended the theory of \cite{Spaepen1975ASM} to binary alloys. They use Eq.~\ref{eq:Spaepen_model}
 
 \begin{equation} \label{eq:Thompson_Spaepen_model}
-\gamma = \frac{\alpha_m \Delta S}{N_{A} v^{2/3}} T
+\gamma = \frac{\alpha_m \Delta S_f}{N_{A} v^{2/3}} T
 \end{equation}
 and take $v$ to change linearly with mole fraction between its values for the two pure components. In the same way they take
 \begin{equation} \label{eq:Delta_S}
-\Delta S = x_A \Delta S_A + (1 - x_A) \Delta S_B
+\Delta S_f = x_s^A \Delta S_f^A + (1 - x_s^A) \Delta S_f^B
 \end{equation}
-where $x_A$ is the mole fraction of A in the solid and $\Delta S_A$ and $\Delta S_B$ are the entropies of fusion of the two separate components.
+where $x_s^A$ is the mole fraction of A in the solid and $\Delta S_f^A$ and $\Delta S_f^B$ are the entropies of fusion of the two separate components.
+
+This last equation is simple and useful as a starting point to obtain the surface energy for each impurity.
+
+\subsection{Kinetic theory}
+Understanding the nucleation rate necessitates analyzing the dynamics of cluster size evolution. This is addressed 
+within the framework of the classical nucleation theory, also identified as the phenomenological or Becker-Döring-Zeldovich (BDZ) theory, 
+which is used to our analysis. Define \( N_n(t) \) as the average quantity of clusters containing \( i \) molecules at an instance \( t \). 
+It is assumed that the interaction between clusters are neglected. As a result, alterations in the size of the clusters are only 
+attributed to the mechanisms of evaporation and condensation, signifying that a cluster containing \( i \) molecules may either enlarge by acquiring another 
+molecule or diminish through the release of one. Such is the fundamental postulate of the classical nucleation theory. Consequently, the variation in the 
+count of clusters of a particular size is governed by what is known as the master equation \cite{Larissa}.
+
+\begin{equation}
+\frac{\partial N_i(t)}{\partial t} = J_{i} - J_{i-1},
+\label{eq:master_equation}
+\end{equation}
+
+where
+\begin{equation}
+J_i = g^+_{i+1} N_{i+1}(t) - g^-_i N_i(t)
+\label{eq:current_size_space}
+\end{equation}
+
+is a current in a size space, i.e., it is the rate at which clusters of size \( i-1 \) grow to clusters of 
+size \( i \). Here \( g^+_{i+1} \) is the rate of the molecule attachment to a cluster of size \( i \), and \( g^-_i \) 
+is the rate of detachment. According to the theory of thermodynamic fluctuations, the equilibrium distribution of clusters obeys the Boltzmann (or Gibbs) distribution
+\begin{equation}
+N^{\text{eq}}_i = N_0 \exp \left( -\frac{\Delta G_i}{k_B T} \right),
+\label{eq:boltzmann_distribution}
+\end{equation}
+
+where \(\Delta G_i\) is the minimum work needed to form a cluster of size \(i\), \(k_B\) is Boltzmann’s 
+constant, \(T\) is the temperature, and \(N_0\) is a pre-exponential factor.
+
+At equilibrium the current \(J_i\) is zero, as this consequence only the forward rate needs to be specified to calculate the opposte rate.
+
+\begin{equation}
+g^+_{i+1} N^{\text{eq}}_{i+1}(t) - g^-_i N^{\text{eq}}_i(t) = 0
+\label{eq:current_equilibrium}
+\end{equation}
+
+For crystal nucleation in melt or glass, the rate of attachment can be expressed as
+\begin{equation}
+g^+_{n-1} = bD \lambda^{-2/3} i^{-2/3} \exp\left(-\frac{\Delta G_{i+1} - \Delta G_i}{2kT}\right),
+\label{eq:attachment_rate}
+\end{equation}
+
+where \( b = 24 \) is a geometrical factor, \( D \) the diffusion coefficient, and \( \lambda \) the jump distance in the parent phase.
+The quantities we are mainly concerned with are the net formation rate of clusters of given size (observable size), and the number density 
+of such clusters that exceed this size. The former can be expressed as
+\begin{equation}
+J_{i_0} = A_{i_0} N_{i_0} - D_{i_0 + 1} N_{i_0 + 1},
+\end{equation}
+where \( i_0 \) is the number of molecules in the cluster of ``observable'' size, while the latter is given by
+\begin{equation}
+N_{> i_0} = \sum_{i=i_0}^{\infty} N_i.
+\end{equation}
+Owing to the finite maximum size one is able to handle in the computations, the evaluation of \( N_{> i_0} \), is not without difficulties, 
+and depends on the choice of the boundary conditions.
+
+We set the following initial and boundary conditions. At \( t = 0 \), the cluster distribution is defined 
+as \( N_i = N_{\text{eq}, i} \) for \( i < u \), and \( N_i = 0 \) for \( i \geq u \), where \( u = 2 \) unless 
+specified otherwise. This scenario is interpreted as rapid cooling from high temperatures, where molecules predominantly 
+exist in a monomeric state; that is, \( N_1 = N_L \exp(-\Delta G_1 / kT) \), with \( \Delta G_1 = 0 \), since monomers from the parent 
+and new phases are indistinguishable. It is noted that most cluster models fail to accurately describe the smallest clusters, 
+as evidenced by the non-zero \( \Delta G_1 \) values they predict, leading to an unphysical number density for monomers. Consequently, 
+setting \( N_1 = N_L \) amounts to adjusting \( \Delta G_i \) to \( \Delta G_i - \Delta G_1 \) (i.e., setting \( \Delta G_1 = 0 \)), since only differences 
+of the form \( \Delta G_{i+1} - \Delta G_i \) are present in the rate coefficients \cite{Laszlo4}.
+
+In these studies, a ``no-depletion'' boundary condition maintains the monomer number density 
+constant, \( N_1(t) = N_{\text{eq},1} \), leading to an increase in system's molecule count over time, 
+which is an unphysical behavior. However, as demonstrated previously, this excess is negligible for the 
+timescale of steady-state formation, provided that an absorbing boundary is set for the largest cluster, \( N_{i_{\text{max}} + 1} = 0 \). 
+This condition unfortunately results in a nonzero flux of clusters out of the system, causing significant deviations in the truncated 
+sum \( \sum_{i=i_0}^{i_{\text{max}}} N_i \) from the actual integrated formation rate \( J_{i_0} \).
+
+In this study, focusing on large cluster populations, we aim to validate numerical results by 
+comparing \( N_{> i_0} \) with \( \int_0^\infty J_{i_0} \, dt \). Thus, we implement a unique upper boundary 
+condition by setting both \( A_{i_{\text{max}}} \) and \( D_{i_{\text{max}} + 1} \) to zero, effectively "closing" the system at \( i_{\text{max}} \). 
+This ensures no flux between cluster sizes \( i_{\text{max}} \) and \( i_{\text{max}} + 1 \), maintaining the balance \( N_{> i_0} = \int_0^\infty J_{i_0} \, dt \). 
+However, this leads to an accumulation of clusters at \( i_{\text{max}} \) due to these boundary conditions \cite{Laszlo4,Kelton1986}.
+
+This value, \( i_{\text{max}} \) is equal to the number of equations which have to be solved simultaneously and is determined, therefore, by a balance between 
+the critical number density and the available computer time \cite{Bartels1991}. To achieve this objective, a parametric code has been developed for the extraction of all 
+thermodynamic data and for solving the system of master equations utilizing Python. However, for scenarios where the quantity of equations to be resolved 
+is exceedingly large, an alternative version of the code has been implemented in Julia. This adaptation enhances both computational speed and memory 
+efficiency for model resolution.
+In order to check that the code solves the model correctly, benchmarking has been proposed with the works of \cite{Laszlo1, Neilson1979, Kelton1983, Laszlo3, Laszlo4, Sun2009}
+for Li\(_2\)O\(_2\)SiO\(_2\).
+For this benchmark, the simulation is performed for a simplified set of physical properties of the lithium disilicate glass given in \ref{table:properties_ls2}. In this case, 
+the Gibbs molar free energy difference is calculated using the linear Turnbull approximation Eq. \ref{fig:turnbull_delta}, while the calculations were performed at $T = 750 \text{K}$.
+
+\begin{table}[ht]
+	\caption{Simplified set of physical properties of LS$_2$.}
+	\label{table:properties_ls2}
+	\begin{center}
+	\begin{tabular}{l c r}
+	\hline
+	Property & Symbol & Value \\
+	\hline
+	Molar mass & $M$ & $150.05 \, \text{g}$ \\
+	Mass density & $\rho_m$ & $2.5 \, \text{g cm}^{-3}$ \\
+	Jump distance & $\lambda$ & $4.6 \, \text{\AA}$ \\
+	Interfacial free energy & $\gamma_\infty$ & $150 \, \text{mJ m}^{-2}$ \\
+	Heat of fusion & $\Delta H_f$ & $52 \, \text{kJ mol}^{-1}$ \\
+	Melting temperature & $T_f$ & $1300 \, \text{K}$ \\
+	Arrhenius-coeffs. of diffusion: & $D_0$ & $2 \times 10^{-9} \, \text{m}^2 \text{s}^{-1}$ \\
+	& $D_1$ & $59\,920.2 \, \text{K}$ \\
+	\hline
+	\end{tabular}
+	\end{center}
+\end{table}
+	
+In the following figures, comparisons between results from absorption and closing boundary conditions are presented. Utilizing $\Delta G_i$ from the 
+uncorrected droplet model, maximum cluster sizes were set at $i_{\text{max}} = 40$ and $100$, surpassing the critical size $i^* = 23$. 
+In the Fig. \ref{fig:free_energy_comparison}, it can be seen that the calculated driving force and the reference driving force are exactly the same, so we can be sure that the 
+thermodynamics is defined in the same way.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{laszlo_results/free_energy_comparison.png}
+    \caption{Simulation and reference size dependent free energy of clusters for the uncorrected classical droplet model, CNT.}
+    \label{fig:free_energy_comparison}
+\end{figure}
+
+In the case of the population distribution, the results obtained from the simulation are in perfect agreement with the reference results. 
+We note the difference in the results depending on the upper boundary condition used. With the closed boundary condition the distribution is very close to the 
+equilibrium distribution, for $i_{\text{max}} = 40$, since for high imax the equilibrium distribution is not fulfilled for postcritical sizes, 
+as can be seen for the case of $i_{\text{max}} = 100$. 
+\begin{figure}[H]
+    \centering
+    \hspace*{-2cm} % Adjust the -1cm to your needs
+    \includegraphics[width=1.2\linewidth]{laszlo_results/number_distribution.png}
+    \caption{Effect of upper boundary condition comparison between simulation and reference cluster number density distribution for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \label{fig:number_distribution}
+\end{figure}
+
+This analysis indicates that for extended times, the number densities of supercritical clusters, obtained by summing $N_i$ and integrating the nucleation rate, match. 
+In contrast, closing conditions lead to a peak in the nucleation rate before a steady state is reached, which is reflected in a drop to zero in later stages and a 
+stabilization of the supercritical number densities.
+Similar qualitative results were achieved for $i_{\max} = 100$ as shown in Fig. \ref{fig:number_comparison}, yet the steady state is now realized under both boundary conditions. 
+The variations emerge at larger cluster sizes and over extended durations. The accumulation at significant cluster dimensions affects the cluster population primarily 
+near $i_{\max}$, marked by the exponential rise of $N_i$, requiring extensive computational efforts to achieve equilibrium for such nominal maximum sizes.
+
+Due to the limitations of this study, where calculations are confined to $t = 10^5$ s required for reaching 
+equilibrium at $i_{\max}=40$, the outcomes using the 
+closing boundary condition mirror those from the absorbing-state condition, aside from a trivial area near $i_{\max}$. Nonetheless, the equivalence 
+of $ N_{i > i_0} = \int_{0}^{\infty} J_{i_0} \, dt$ remains intact.
+
+\begin{figure}[H]
+    \centering
+    \hspace*{-2cm} % Adjust the -1cm to your needs
+    \includegraphics[width=1.2\linewidth]{laszlo_results/nucleation_rates.png}
+    \caption{Effect of upper boundary condition comparison between simulation and reference postcritical nucleation rates for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \label{fig:nucleation_rates}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \hspace*{-2cm} % Adjust the -1cm to your needs
+    \includegraphics[width=1.2\linewidth]{laszlo_results/number_comparison.png}
+    \caption{Effect of upper boundary condition comparison between simulation and reference postcritical total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \label{fig:number_comparison}
+\end{figure}
+
+To see the difference in nucleation rates for $i_{\text{max}} = 40$ and $100$ using different boundary conditions, 
+the total nucleation rate for different molecule sizes is plotted.
+The figures are divided as follows, on the left are the results for $i_{\text{max}} = 40$ using different upper boundary conditions, and on the right for $i_{\text{max}} = 100$.
+\begin{figure}[H]
+    \centering
+    \hspace*{-2cm} % Adjust the -1cm to your needs
+    \includegraphics[width=1.2\linewidth]{laszlo_results/rate_evolution_comparison.png}
+    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \label{fig:rate_evolution_comparison}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \hspace*{-2cm} % Adjust the -1cm to your needs
+    \includegraphics[width=1.2\linewidth]{laszlo_results/number_evolution_comparison.png}
+    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \label{fig:number_evolution_comparison}
+\end{figure}
 
 
-\subsection{Temporal Dynamics of Particles Formation}
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+\subsection{Impurities results}
+In this section we will summarise the thermodynamic parameters found for each impurity and the results obtained from simulation.
+The section is then divided into metallic and non-metallic impurities. 
+\subsubsection{Metallic impurities}
+In this section the data and results for metallic impurities (Fe, Cr, AlN) are presented.
+\paragraph{Fe}
 
-\subsection{Homogeneous Precipitation}
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \\
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+First of all, the most important thing to consider is which phases are present in the Li-Fe system at the temperature at 
+which this fluid will be found. Below is the phase diagram of this binary mixture.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Fe-Li_phase_diagram.png}
+    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \label{fig:fe_li_diagram}
+\end{figure}
+
+
+From \cite{Leavenworth1961TheSO} the solubility of Fe in Li is extracted ad different temperatures and then fitting the data. In the Fig. \ref{fig:Fe_solubility} the solubility of Fe in Li is shown.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Fe_solubility.png}
+    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \label{fig:Fe_solubility}
+\end{figure}
+dsasda
+
+
+\paragraph{Cr}
+
+The phase diagram of the Li-Cr system is shown below.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Li_Cr_phase_diagram.png}
+    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \label{fig:cr_li_diagram}
+\end{figure}
 
 \newpage
 
