@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  29 FEB 2024 17:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.18)  29 FEB 2024 22:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1254,7 +1254,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6] (./idom_report.toc
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 37.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 36.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -1422,7 +1422,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
-<methodology.png, id=446, 466.74374pt x 440.39531pt>
+<methodology.png, id=448, 466.74374pt x 440.39531pt>
 File: methodology.png Graphic file (type png)
 <use methodology.png>
 Package pdftex.def Info: methodology.png  used on input line 77.
@@ -1452,7 +1452,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [18]
-<Li_init_imp_chart.png, id=461, 714.7503pt x 426.393pt>
+<Li_init_imp_chart.png, id=463, 714.7503pt x 426.393pt>
 File: Li_init_imp_chart.png Graphic file (type png)
 <use Li_init_imp_chart.png>
 Package pdftex.def Info: Li_init_imp_chart.png  used on input line 139.
@@ -1684,7 +1684,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [21]
-<maroni_schema.png, id=512, 529.98pt x 350.81062pt>
+<maroni_schema.png, id=514, 529.98pt x 350.81062pt>
 File: maroni_schema.png Graphic file (type png)
 <use maroni_schema.png>
 Package pdftex.def Info: maroni_schema.png  used on input line 210.
@@ -1741,7 +1741,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [25]
-<free_energy_illustrative_degree_saturation.png, id=576, 559.3698pt x 414.8298pt>
+<free_energy_illustrative_degree_saturation.png, id=578, 559.3698pt x 414.8298pt>
 File: free_energy_illustrative_degree_saturation.png Graphic file (type png)
 <use free_energy_illustrative_degree_saturation.png>
 Package pdftex.def Info: free_energy_illustrative_degree_saturation.png  used on input line 345.
@@ -1863,7 +1863,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [34]
-<laszlo_results/free_energy_comparison.png, id=761, 568.0422pt x 423.5022pt>
+<laszlo_results/free_energy_comparison.png, id=763, 568.0422pt x 423.5022pt>
 File: laszlo_results/free_energy_comparison.png Graphic file (type png)
 <use laszlo_results/free_energy_comparison.png>
 Package pdftex.def Info: laszlo_results/free_energy_comparison.png  used on input line 739.
@@ -1881,7 +1881,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [35]
-<laszlo_results/number_distribution.png, id=770, 957.0957pt x 384.4764pt>
+<laszlo_results/number_distribution.png, id=772, 957.0957pt x 384.4764pt>
 File: laszlo_results/number_distribution.png Graphic file (type png)
 <use laszlo_results/number_distribution.png>
 Package pdftex.def Info: laszlo_results/number_distribution.png  used on input line 751.
@@ -1903,7 +1903,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [36 <./laszlo_results/free_energy_comparison.png>]
-<laszlo_results/nucleation_rates.png, id=778, 951.3141pt x 380.8629pt>
+<laszlo_results/nucleation_rates.png, id=780, 951.3141pt x 380.8629pt>
 File: laszlo_results/nucleation_rates.png Graphic file (type png)
 <use laszlo_results/nucleation_rates.png>
 Package pdftex.def Info: laszlo_results/nucleation_rates.png  used on input line 771.
@@ -1925,7 +1925,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [37 <./laszlo_results/number_distribution.png>]
-<laszlo_results/number_comparison.png, id=786, 958.782pt x 386.1627pt>
+<laszlo_results/number_comparison.png, id=788, 958.782pt x 386.1627pt>
 File: laszlo_results/number_comparison.png Graphic file (type png)
 <use laszlo_results/number_comparison.png>
 Package pdftex.def Info: laszlo_results/number_comparison.png  used on input line 779.
@@ -1935,7 +1935,7 @@ Overfull \hbox (36.2619pt too wide) in paragraph at lines 778--780
  []|  [] 
  []
 
-<laszlo_results/rate_evolution_comparison.png, id=787, 1146.2022pt x 597.1911pt>
+<laszlo_results/rate_evolution_comparison.png, id=789, 1146.2022pt x 597.1911pt>
 File: laszlo_results/rate_evolution_comparison.png Graphic file (type png)
 <use laszlo_results/rate_evolution_comparison.png>
 Package pdftex.def Info: laszlo_results/rate_evolution_comparison.png  used on input line 790.
@@ -1957,7 +1957,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [38 <./laszlo_results/nucleation_rates.png> <./laszlo_results/number_comparison.png>]
-<laszlo_results/number_evolution_comparison.png, id=795, 1146.2022pt x 597.1911pt>
+<laszlo_results/number_evolution_comparison.png, id=797, 1146.2022pt x 597.1911pt>
 File: laszlo_results/number_evolution_comparison.png Graphic file (type png)
 <use laszlo_results/number_evolution_comparison.png>
 Package pdftex.def Info: laszlo_results/number_evolution_comparison.png  used on input line 798.
@@ -1979,12 +1979,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [39 <./laszlo_results/rate_evolution_comparison.png> <./laszlo_results/number_evolution_comparison.png>]
-<Fe-Li_phase_diagram.png, id=803, 492.03825pt x 369.17924pt>
+<Fe-Li_phase_diagram.png, id=806, 492.03825pt x 369.17924pt>
 File: Fe-Li_phase_diagram.png Graphic file (type png)
 <use Fe-Li_phase_diagram.png>
-Package pdftex.def Info: Fe-Li_phase_diagram.png  used on input line 815.
+Package pdftex.def Info: Fe-Li_phase_diagram.png  used on input line 816.
 (pdftex.def)             Requested size: 409.71692pt x 307.41577pt.
-<Fe_solubility.png, id=806, 857.1222pt x 568.0422pt>
+<Fe_solubility.png, id=809, 857.1222pt x 568.0422pt>
 File: Fe_solubility.png Graphic file (type png)
 <use Fe_solubility.png>
 Package pdftex.def Info: Fe_solubility.png  used on input line 824.
@@ -2002,14 +2002,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [40 <./Fe-Li_phase_diagram.png>]
-<Li_Cr_phase_diagram.png, id=815, 492.03825pt x 380.01974pt>
+<Li_Cr_phase_diagram.png, id=821, 492.03825pt x 380.01974pt>
 File: Li_Cr_phase_diagram.png Graphic file (type png)
 <use Li_Cr_phase_diagram.png>
-Package pdftex.def Info: Li_Cr_phase_diagram.png  used on input line 836.
+Package pdftex.def Info: Li_Cr_phase_diagram.png  used on input line 849.
 (pdftex.def)             Requested size: 409.71692pt x 316.44266pt.
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 840.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 853.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -2022,7 +2022,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [41 <./Fe_solubility.png>]
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 841.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 854.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -2033,23 +2033,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [42 <./Li_Cr_phase_diagram.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 844--845
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
 
  []
 
-<rad_chart.png, id=833, 569.87906pt x 435.87843pt>
+<rad_chart.png, id=838, 569.87906pt x 435.87843pt>
 File: rad_chart.png Graphic file (type png)
 <use rad_chart.png>
-Package pdftex.def Info: rad_chart.png  used on input line 872.
+Package pdftex.def Info: rad_chart.png  used on input line 885.
 (pdftex.def)             Requested size: 386.96027pt x 295.96774pt.
-<rad_chart_comp.png, id=834, 917.67844pt x 454.69875pt>
+<rad_chart_comp.png, id=839, 917.67844pt x 454.69875pt>
 File: rad_chart_comp.png Graphic file (type png)
 <use rad_chart_comp.png>
-Package pdftex.def Info: rad_chart_comp.png  used on input line 879.
+Package pdftex.def Info: rad_chart_comp.png  used on input line 892.
 (pdftex.def)             Requested size: 455.24411pt x 225.57265pt.
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 883.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 896.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2061,7 +2061,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [43]
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 906.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 919.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -2074,7 +2074,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [44 <./rad_chart.png> <./rad_chart_comp.png>]
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 906.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 919.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -2087,7 +2087,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [45]
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 926.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 939.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -2100,7 +2100,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [46]
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 934.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 947.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -2111,28 +2111,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [47]
-Underfull \hbox (badness 10000) in paragraph at lines 936--937
+Underfull \hbox (badness 10000) in paragraph at lines 949--950
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 939--940
-
- []
-
-<multi_stage.png, id=867, 1099.85907pt x 562.35094pt>
-File: multi_stage.png Graphic file (type png)
-<use multi_stage.png>
-Package pdftex.def Info: multi_stage.png  used on input line 946.
-(pdftex.def)             Requested size: 409.71692pt x 209.4824pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 952--953
 
  []
 
+<multi_stage.png, id=872, 1099.85907pt x 562.35094pt>
+File: multi_stage.png Graphic file (type png)
+<use multi_stage.png>
+Package pdftex.def Info: multi_stage.png  used on input line 959.
+(pdftex.def)             Requested size: 409.71692pt x 209.4824pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 965--966
+
+ []
+
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 953.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 966.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2142,14 +2142,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [48 <./multi_stage.png>]
-<multi_stage_technical.png, id=875, 998.9822pt x 577.40718pt>
+<multi_stage_technical.png, id=880, 998.9822pt x 577.40718pt>
 File: multi_stage_technical.png Graphic file (type png)
 <use multi_stage_technical.png>
-Package pdftex.def Info: multi_stage_technical.png  used on input line 958.
+Package pdftex.def Info: multi_stage_technical.png  used on input line 971.
 (pdftex.def)             Requested size: 455.24411pt x 263.12596pt.
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 964.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 977.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -2160,7 +2160,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [49 <./multi_stage_technical.png>] (./cyclone_modelling.tex
-<images/schema.png, id=890, 233.37187pt x 230.8625pt>
+<images/schema.png, id=895, 233.37187pt x 230.8625pt>
 File: images/schema.png Graphic file (type png)
 <use images/schema.png>
 Package pdftex.def Info: images/schema.png  used on input line 26.
@@ -2182,7 +2182,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [50]
-<images/tangential_velocity_schema.png, id=902, 343.2825pt x 194.7275pt>
+<images/tangential_velocity_schema.png, id=907, 343.2825pt x 194.7275pt>
 File: images/tangential_velocity_schema.png Graphic file (type png)
 <use images/tangential_velocity_schema.png>
 Package pdftex.def Info: images/tangential_velocity_schema.png  used on input line 70.
@@ -2231,7 +2231,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [53]
-<images/control_volume.png, id=944, 246.9225pt x 137.51375pt>
+<images/control_volume.png, id=949, 246.9225pt x 137.51375pt>
 File: images/control_volume.png Graphic file (type png)
 <use images/control_volume.png>
 Package pdftex.def Info: images/control_volume.png  used on input line 169.
@@ -2249,7 +2249,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [54 <./images/control_volume.png>]
-<images/efficiency_vs_Temperature.png, id=961, 487.8225pt x 367.1316pt>
+<images/efficiency_vs_Temperature.png, id=966, 487.8225pt x 367.1316pt>
 File: images/efficiency_vs_Temperature.png Graphic file (type png)
 <use images/efficiency_vs_Temperature.png>
 Package pdftex.def Info: images/efficiency_vs_Temperature.png  used on input line 228.
@@ -2267,7 +2267,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [55]
-<images/efficiency_vs_cyclone_diameter.png, id=972, 487.8225pt x 367.1316pt>
+<images/efficiency_vs_cyclone_diameter.png, id=977, 487.8225pt x 367.1316pt>
 File: images/efficiency_vs_cyclone_diameter.png Graphic file (type png)
 <use images/efficiency_vs_cyclone_diameter.png>
 Package pdftex.def Info: images/efficiency_vs_cyclone_diameter.png  used on input line 239.
@@ -2285,22 +2285,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [56 <./images/efficiency_vs_Temperature.png> <./images/efficiency_vs_cyclone_diameter.png>]
-<images/efficiency_vs_inlet_VFR.png, id=983, 487.8225pt x 367.1316pt>
+<images/efficiency_vs_inlet_VFR.png, id=988, 487.8225pt x 367.1316pt>
 File: images/efficiency_vs_inlet_VFR.png Graphic file (type png)
 <use images/efficiency_vs_inlet_VFR.png>
 Package pdftex.def Info: images/efficiency_vs_inlet_VFR.png  used on input line 257.
 (pdftex.def)             Requested size: 223.07211pt x 167.88542pt.
-<images/inlet_VRF_vs_inlet_velocity.png, id=984, 487.8225pt x 367.8543pt>
+<images/inlet_VRF_vs_inlet_velocity.png, id=989, 487.8225pt x 367.8543pt>
 File: images/inlet_VRF_vs_inlet_velocity.png Graphic file (type png)
 <use images/inlet_VRF_vs_inlet_velocity.png>
 Package pdftex.def Info: images/inlet_VRF_vs_inlet_velocity.png  used on input line 263.
 (pdftex.def)             Requested size: 223.07211pt x 168.2159pt.
-<images/efficiency_vs_inlet_VFR_porcent.png, id=988, 487.8225pt x 367.1316pt>
+<images/efficiency_vs_inlet_VFR_porcent.png, id=993, 487.8225pt x 367.1316pt>
 File: images/efficiency_vs_inlet_VFR_porcent.png Graphic file (type png)
 <use images/efficiency_vs_inlet_VFR_porcent.png>
 Package pdftex.def Info: images/efficiency_vs_inlet_VFR_porcent.png  used on input line 279.
 (pdftex.def)             Requested size: 223.07211pt x 167.88542pt.
-<images/efficiency_vs_inlet_VFR_relative.png, id=989, 495.7722pt x 367.1316pt>
+<images/efficiency_vs_inlet_VFR_relative.png, id=994, 495.7722pt x 367.1316pt>
 File: images/efficiency_vs_inlet_VFR_relative.png Graphic file (type png)
 <use images/efficiency_vs_inlet_VFR_relative.png>
 Package pdftex.def Info: images/efficiency_vs_inlet_VFR_relative.png  used on input line 285.
@@ -2344,17 +2344,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [59]
-<images/d_pc_Fe.png, id=1039, 502.87875pt x 398.23781pt>
+<images/d_pc_Fe.png, id=1044, 502.87875pt x 398.23781pt>
 File: images/d_pc_Fe.png Graphic file (type png)
 <use images/d_pc_Fe.png>
 Package pdftex.def Info: images/d_pc_Fe.png  used on input line 387.
 (pdftex.def)             Requested size: 223.07211pt x 176.65317pt.
-<images/d_pc_Cr.png, id=1040, 502.87875pt x 398.23781pt>
+<images/d_pc_Cr.png, id=1045, 502.87875pt x 398.23781pt>
 File: images/d_pc_Cr.png Graphic file (type png)
 <use images/d_pc_Cr.png>
 Package pdftex.def Info: images/d_pc_Cr.png  used on input line 393.
 (pdftex.def)             Requested size: 223.07211pt x 176.65317pt.
-<images/d_pc_AlN.png, id=1041, 502.87875pt x 398.23781pt>
+<images/d_pc_AlN.png, id=1046, 502.87875pt x 398.23781pt>
 File: images/d_pc_AlN.png Graphic file (type png)
 <use images/d_pc_AlN.png>
 Package pdftex.def Info: images/d_pc_AlN.png  used on input line 399.
@@ -2379,7 +2379,7 @@ Overfull \hbox (6.66064pt too wide) in paragraph at lines 414--433
 )
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 972.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 985.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -2392,7 +2392,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [61]
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 972.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 985.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 
@@ -2403,18 +2403,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-16.99081pt}.
 
 [62]
-Underfull \hbox (badness 10000) in paragraph at lines 974--975
+Underfull \hbox (badness 10000) in paragraph at lines 987--988
 
  []
 
-<design_conceptual.png, id=1065, 870.25125pt x 441.90094pt>
+<design_conceptual.png, id=1070, 870.25125pt x 441.90094pt>
 File: design_conceptual.png Graphic file (type png)
 <use design_conceptual.png>
-Package pdftex.def Info: design_conceptual.png  used on input line 982.
+Package pdftex.def Info: design_conceptual.png  used on input line 995.
 (pdftex.def)             Requested size: 455.24411pt x 231.17209pt.
 File: IDOM_blue_logo.png Graphic file (type png)
 <use IDOM_blue_logo.png>
-Package pdftex.def Info: IDOM_blue_logo.png  used on input line 990.
+Package pdftex.def Info: IDOM_blue_logo.png  used on input line 1003.
 (pdftex.def)             Requested size: 85.35826pt x 20.39078pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2559,10 +2559,10 @@ Package logreq Info: Writing requests to 'idom_report.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39199 strings out of 475724
- 790453 string characters out of 5781876
+ 39204 strings out of 475724
+ 790616 string characters out of 5781876
  1877755 words of memory out of 5000000
- 59014 multiletter control sequences out of 15000+600000
+ 59018 multiletter control sequences out of 15000+600000
  545429 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,19n,107p,4280b,1749s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2576,10 +2576,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on idom_report.pdf (70 pages, 6386212 bytes).
+Output written on idom_report.pdf (70 pages, 6387195 bytes).
 PDF statistics:
- 1318 PDF objects out of 1440 (max. 8388607)
- 1111 compressed objects within 12 object streams
- 302 named destinations out of 1000 (max. 500000)
+ 1323 PDF objects out of 1440 (max. 8388607)
+ 1116 compressed objects within 12 object streams
+ 303 named destinations out of 1000 (max. 500000)
  642 words of extra memory for PDF output out of 10000 (max. 10000000)
 

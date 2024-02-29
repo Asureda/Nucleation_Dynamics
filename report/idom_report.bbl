@@ -2276,6 +2276,106 @@
       \field{pages}{295\bibrangedash 309}
       \range{pages}{15}
     \endentry
+    \entry{Bale2016}{article}{}
+      \name{author}{16}{}{%
+        {{hash=eb2bd2db2fde9342f6506d526f7e41c3}{%
+           family={Bale},
+           familyi={B\bibinitperiod},
+           given={C.\bibnamedelimi W.},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=ad67571b70ced3149ca3aad38fdbb86e}{%
+           family={Bélisle},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=de2f10ecb7394da58f4f0a1144eac4bd}{%
+           family={Chartrand},
+           familyi={C\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3fbe779ca604e70cb8177e1c52a82ee8}{%
+           family={Decterov},
+           familyi={D\bibinitperiod},
+           given={S.\bibnamedelimi A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=3bfb9a80ec9f1c54fba1d51ebcb685cd}{%
+           family={Eriksson},
+           familyi={E\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=06bc8d3b2c6a1e9d38ea4acab122576d}{%
+           family={Gheribi},
+           familyi={G\bibinitperiod},
+           given={A.\bibnamedelimi E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=a57a7ce6a6380bb431ff425ba27a63f4}{%
+           family={Hack},
+           familyi={H\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=93dd33c8c3f159f607292e442c25e324}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={I.\bibnamedelimi H.},
+           giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=52c7d2015178efb394b66edb7b123181}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={Y.\bibnamedelimi B.},
+           giveni={Y\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=1733ebebd8aa83bd686ac2c4855ddd2d}{%
+           family={Melançon},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f1071049224c3d0d90637e8293c104b7}{%
+           family={Pelton},
+           familyi={P\bibinitperiod},
+           given={A.\bibnamedelimi D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=c2d0cf2f1436883da9c6253111f9afcc}{%
+           family={Petersen},
+           familyi={P\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=227b58e015482ad7dc1b96da614b556c}{%
+           family={Robelin},
+           familyi={R\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=557a03e15eb3dd7327d5d835e00ccd90}{%
+           family={Sangster},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e846e75e1d840086712571d38801fe34}{%
+           family={Spencer},
+           familyi={S\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7e433d29c62497d4e774ce8404f9518d}{%
+           family={Ende},
+           familyi={E\bibinitperiod},
+           given={M-A.\bibnamedelimi Van},
+           giveni={M\bibinithyphendelim A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{240ed2d5156bbcb9216c1b0148805097}
+      \strng{fullhash}{b7fdba75a1f3282afea69f50a34170a1}
+      \strng{bibnamehash}{240ed2d5156bbcb9216c1b0148805097}
+      \strng{authorbibnamehash}{240ed2d5156bbcb9216c1b0148805097}
+      \strng{authornamehash}{240ed2d5156bbcb9216c1b0148805097}
+      \strng{authorfullhash}{b7fdba75a1f3282afea69f50a34170a1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Calphad}
+      \field{title}{FactSage Thermochemical Software and Databases - 2010 - 2016}
+      \field{volume}{54}
+      \field{year}{2016}
+      \field{pages}{35\bibrangedash 53}
+      \range{pages}{19}
+    \endentry
     \entry{Leavenworth1961TheSO}{article}{}
       \name{author}{2}{}{%
         {{hash=f9f7d0388d3594eb9cf96e30a471d09a}{%
@@ -2295,8 +2395,8 @@
       \strng{authorbibnamehash}{11a983aa1e6bf0455bac8358a6b841c6}
       \strng{authornamehash}{11a983aa1e6bf0455bac8358a6b841c6}
       \strng{authorfullhash}{11a983aa1e6bf0455bac8358a6b841c6}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Acta Metallurgica}
@@ -2523,8 +2623,8 @@
       \strng{authorbibnamehash}{edd376bec6ebdf535f1c356e6e176482}
       \strng{authornamehash}{edd376bec6ebdf535f1c356e6e176482}
       \strng{authorfullhash}{edd376bec6ebdf535f1c356e6e176482}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{SIM007 v.1}

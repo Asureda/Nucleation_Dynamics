@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'idom_report.blg'
-[57] biber:340> INFO - === Thu Feb 29, 2024, 17:53:07
-[67] Biber.pm:419> INFO - Reading 'idom_report.bcf'
-[140] Biber.pm:979> INFO - Found 66 citekeys in bib section 0
-[151] Biber.pm:4419> INFO - Processing section 0
-[161] Biber.pm:4610> INFO - Looking for bibtex file 'reference.bib' for section 0
-[165] bibtex.pm:1713> INFO - LaTeX decoding ...
-[232] bibtex.pm:1519> INFO - Found BibTeX data source 'reference.bib'
-[628] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[628] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[628] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[628] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[659] bbl.pm:660> INFO - Writing 'idom_report.bbl' with encoding 'UTF-8'
-[696] bbl.pm:763> INFO - Output to idom_report.bbl
+[75] biber:340> INFO - === Thu Feb 29, 2024, 22:55:16
+[90] Biber.pm:419> INFO - Reading 'idom_report.bcf'
+[175] Biber.pm:979> INFO - Found 67 citekeys in bib section 0
+[189] Biber.pm:4419> INFO - Processing section 0
+[199] Biber.pm:4610> INFO - Looking for bibtex file 'reference.bib' for section 0
+[204] bibtex.pm:1713> INFO - LaTeX decoding ...
+[286] bibtex.pm:1519> INFO - Found BibTeX data source 'reference.bib'
+[799] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[799] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[799] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[799] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[838] bbl.pm:660> INFO - Writing 'idom_report.bbl' with encoding 'UTF-8'
+[882] bbl.pm:763> INFO - Output to idom_report.bbl

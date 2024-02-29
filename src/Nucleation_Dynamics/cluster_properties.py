@@ -14,7 +14,7 @@ class ClusterPhysics:
         _params (dict): A dictionary storing the physical parameters of the system.
     """
 
-    def __init__(self, json_file_path, method="melting"):
+    def __init__(self, json_file_path, method="melting", binary_mixture_model = None, liquid_fraction_A = None, liquidus_temperature = None, equilibrium_solid_fraction = None, solid_fraction = None):
         """
         Initializes the ClusterPhysics object with parameters loaded from a JSON file.
 
@@ -25,6 +25,13 @@ class ClusterPhysics:
         self._method = method
         params = self._load_params_from_json(json_file_path)  # Cargar parámetros desde un archivo JSON
         self._initialize_params(params)
+        if self._method == "binary_mixture":
+            self.binary_mixture = binary_mixture_model
+            self.liquid_fraction_A = liquid_fraction_A
+            self.liquidus_temperature = ureg.Quantity(liquidus_temperature, "kelvin")
+            if self.binary_mixture == "full_model":
+                self.equilibrium_solid_fraction = equilibrium_solid_fraction
+                self.solid_fraction = solid_fraction
         self._precompute_constants()
 
     def _load_params_from_json(self, file_path):
@@ -62,13 +69,13 @@ class ClusterPhysics:
                             ('sigma', params['sigma'], "joule / meter**2"),
                             ('supersaturation_ratio', params['supersaturation_ratio'], None)
                         ]}
-        
+                
     def _precompute_constants(self):
         """
         Precomputes constants that will be used in calculations, such as Avogadro's number.
         """
         self.AVOGADRO =  6.0221409e+23 * ureg.Quantity(1.0, "1/mol")
-
+        self.constant_gas =  8.314 * ureg.Quantity(1.0, "joules/(mol*kelvin)")
     @property
     def temperature(self):
         """Returns the temperature of the system."""
@@ -221,6 +228,10 @@ class ClusterPhysics:
         elif method == 'saturation':
             S = self._params.get('supersaturation_ratio')
             return -((ureg.boltzmann_constant * self.temperature * np.log(S)).to('joule')).to('joule')
+        elif method == "binary_mixture":
+            if self.binary_mixture == "dilute":
+                driving_force = self.molecular_volume*(self.liquidus_temperature - self.temperature)*(self.entropy_fusion - self.constant_gas*np.log(self.liquid_fraction_A))/self.molar_volume.to("meter**3/mole")
+                return -(driving_force).to("joules")
         else:
             raise ValueError("Invalid method. Choose 'melting' or 'saturation'.")
 

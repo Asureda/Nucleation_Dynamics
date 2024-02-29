@@ -809,14 +809,14 @@ In this section the data and results for metallic impurities (Fe, Cr, AlN) are p
 \paragraph{Fe}
 
 First of all, the most important thing to consider is which phases are present in the Li-Fe system at the temperature at 
-which this fluid will be found. Below is the phase diagram of this binary mixture.
+which this fluid will be found.The phase diagram of the Fe-Li system is obtained from FactSage database \cite{Bale2016}, where also allows 
+equilibrium calculations for some systems.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{Fe-Li_phase_diagram.png}
     \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
     \label{fig:fe_li_diagram}
 \end{figure}
-
 
 From \cite{Leavenworth1961TheSO} the solubility of Fe in Li is extracted ad different temperatures and then fitting the data. In the Fig. \ref{fig:Fe_solubility} the solubility of Fe in Li is shown.
 \begin{figure}[H]
@@ -825,10 +825,23 @@ From \cite{Leavenworth1961TheSO} the solubility of Fe in Li is extracted ad diff
     \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
     \label{fig:Fe_solubility}
 \end{figure}
-dsasda
 
+As previously mentioned, FactSage allows equilibrium calculations to be made for certain systems, in this case, for the Fe-Li system, it has been 
+possible to calculate equilibrium compositions for the operating temperature and subsequently 
+comparing the solubility of the reference with the calculated parameters.
 
-\paragraph{Cr}
+\begin{table}[ht]
+	\centering
+	\caption{Your table title here}
+	\label{tab:your_label_here}
+	\begin{tabular}{ccc}
+	\hline
+	$Reference$ & $x^{\text{A}}_{l,eq}$ & $x^{\text{A}}_{s,eq}$ \\ \hline
+	FactSage \cite{Bale2016} & $1.76 \times 10^{-5} $        & $1.00$         \\
+	Ref. \cite{Leavenworth1961TheSO}       & $1.12 \times 10^{-5}$         & $0.99998$         \\
+	\end{tabular}
+\end{table}
+
 
 The phase diagram of the Li-Cr system is shown below.
 \begin{figure}[H]
