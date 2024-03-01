@@ -832,24 +832,139 @@ comparing the solubility of the reference with the calculated parameters.
 
 \begin{table}[ht]
 	\centering
-	\caption{Your table title here}
 	\label{tab:your_label_here}
 	\begin{tabular}{ccc}
 	\hline
 	$Reference$ & $x^{\text{A}}_{l,eq}$ & $x^{\text{A}}_{s,eq}$ \\ \hline
 	FactSage \cite{Bale2016} & $1.76 \times 10^{-5} $        & $1.00$         \\
-	Ref. \cite{Leavenworth1961TheSO}       & $1.12 \times 10^{-5}$         & $0.99998$         \\
+	Ref. \cite{Leavenworth1961TheSO}       & $1.12 \times 10^{-5}$         & -         \\
 	\end{tabular}
+	\caption{Equilibrium compositions of iron using FactSage and reference data.}
+\end{table}
+
+The findings closely match and share the same order of magnitude, indicating consistency in the values. In the table below, we 
+display the balanced compositions calculated with FactSage for specific values: first, the initial values used, and then, those slightly increased.
+
+\begin{table}[ht]
+	\centering
+	\label{tab:updated_stream_phases}
+	\begin{tabular}{lccc}
+	\hline
+	\multicolumn{4}{c}{Molar fractions (T = 668 K)} \\
+	\hline
+	Species & Amount/mol & & \\
+	\hline
+	Fe & $1.6000 \times 10^{-7}$ & & \\
+	Li & $1.0000 \times 10^{0}$ & & \\
+	\hline
+	\multicolumn{4}{c}{PHASE: Liquid\#1(\#2)} \\
+	\hline
+	Species & Amount/mol & Mole Fraction & Activity \\
+	\hline
+	Fe & $1.6000 \times 10^{-7}$ & $1.6000 \times 10^{-7}$ & $1.3491 \times 10^{-3}$ \\
+	Li & $1.0000 \times 10^{0}$ & $1.0000 \times 10^{0}$ & $1.0000 \times 10^{0}$ \\
+	Total & $1.0000 \times 10^{0}$ & $1.0000$ & $1.0000$ \\
+	\hline
+	\multicolumn{4}{c}{PHASE: BCC-A2\#1} \\
+	\hline
+	Species & Amount/mol & Mole Fraction & Activity \\
+	\hline
+	Fe-alpha & $0.0000 \times 10^{0}$ & $5.6693 \times 10^{-16}$ & $9.1079 \times 10^{-3}$ \\
+	Li & $0.0000 \times 10^{0}$ & $1.0000$ & $7.7433 \times 10^{-1}$ \\
+	Total & $0.0000 \times 10^{0}$ & $1.0000$ & $7.7433 \times 10^{-1}$ \\
+	\hline
+	\end{tabular}
+	\caption{Equilibrium compositions of iron using FactSage with an iron molar fraction used as input.}
+
+\end{table}
+	
+\begin{table}[ht]
+	\centering
+	\label{tab:stream_phases}
+	\begin{tabular}{lccc}
+	\hline
+	\multicolumn{2}{c}{Molar fractions (T = 668 K)} \\
+	\hline
+	Species & Amount/mol  \\
+	\hline
+	Fe & $9.2880 \times 10^{-5}$  \\
+	Li & $9.9991 \times 10^{-1}$  \\
+	\hline
+	\multicolumn{4}{c}{PHASE: Liquid\#1} \\
+	\hline
+	Species & Amount/mol & Mole Fraction & Activity \\
+	\hline
+	Fe & $1.7601 \times 10^{-5}$ & $1.7603 \times 10^{-5}$ & $1.4813 \times 10^{-1}$ \\
+	Li & $9.9991 \times 10^{-1}$ & $9.9998 \times 10^{-1}$ & $9.9998 \times 10^{-1}$ \\
+	Total & $9.9992 \times 10^{-1}$ & $1.0000$ & $1.0000$ \\
+	\hline
+	\multicolumn{4}{c}{PHASE: BCC-A2\#1} \\
+	\hline
+	Species & Amount/mol & Mole Fraction & Activity \\
+	\hline
+	Fe-alpha & $7.5279 \times 10^{-5}$ & $1.0000$ & $1.0000$ \\
+	Li & $1.3112 \times 10^{-18}$ & $1.7418 \times 10^{-14}$ & $7.7432 \times 10^{-1}$ \\
+	Total & $7.5279 \times 10^{-5}$ & $1.0000$ & $1.0000$ \\
+	\hline
+	\end{tabular}
+	\caption{Equilibrium compositions of iron using FactSage with an iron molar fraction increased to $x^{\text{A}}_{l} = 9.2880 \times 10^{-5}$.}
+\end{table}
+		
+From these results, several conclusions can be drawn. Initially, it is evident that employing the 
+assumed mole fraction as input results in the presence of only one liquid phase, thereby intersecting 
+with the equilibrium state. This is a significant observation as it highlights the system's state under the given conditions.
+
+In an enhanced analysis, as illustrated by the second table, an increase in the mole fraction leads to the liquid 
+phase reaching the equilibrium fraction of iron, equivalent to its solubility limit. Conversely, in the solid phase 
+that subsequently forms, it is observed to be entirely composed of iron. This finding is critical as it suggests that, 
+based on the mole fraction initially used for the input, iron is insoluble in lithium at the specified operating temperature.
+
+Consequently, to determine the driving force, the formalism from Eq. \ref{eq:simplified_free_energy_change} is used, considering that the solid fraction is 
+entirely constituted by one of the mixture's elements. Similarly, for calculating the surface energy, the Eq. \ref{eq:Thompson_Spaepen_model} is employed.
+
+The following table provides a summary of the obtained and identified values, which are essential for calculating the size distribution of the clusters.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Parameter} & \textbf{Symbol} & \textbf{Value (Unit)} \\ \hline
+    Temperature        & $T$             & 668 K                 \\ \hline
+    Molar Mass         & $M$             & 55.85 g/mol         \\ \hline
+    Mass Density       & $\rho$          & 7.87 g/cm$^3$         \\ \hline
+    Melting Point      & $T_m$           & 1811 K                \\ \hline
+    Heat of Fusion     & $\Delta H_f$    & 13.8 kJ/mol           \\ \hline
+    Surface Tension    & $\sigma$        & 0.2 J/m$^2$          \\ \hline
+    \end{tabular}
+    \caption{Parameters for Fe}
+    \label{tab:params_Fe}
+\end{table}
+
+In Table. \ref{tab:critical_fe} the critical parameters are obtained.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+	\hline
+	\textbf{Parameter} & \textbf{Symbol} & \textbf{Value (Unit)} \\ \hline
+	Critical radius        & $r$             & 1.25 nm                 \\ \hline
+	Energy barrier         & $\Delta G_c$             & $1.42 \times 10^{-18}$ J         \\ \hline
+	Critical number of molecules       & $n$          & 114         \\ \hline
+	\end{tabular}
+	\caption{Critical values for Fe}
+	\label{tab:critical_fe}
 \end{table}
 
 
-The phase diagram of the Li-Cr system is shown below.
+\paragraph{Cr}
+
+	
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{Li_Cr_phase_diagram.png}
     \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
     \label{fig:cr_li_diagram}
 \end{figure}
+
+The phase diagram of the Li-Cr system is shown below.
 
 \newpage
 

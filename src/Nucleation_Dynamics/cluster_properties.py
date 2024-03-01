@@ -14,7 +14,8 @@ class ClusterPhysics:
         _params (dict): A dictionary storing the physical parameters of the system.
     """
 
-    def __init__(self, json_file_path, method="melting", binary_mixture_model = None, liquid_fraction_A = None, liquidus_temperature = None, equilibrium_solid_fraction = None, solid_fraction = None):
+    def __init__(self, json_file_path, method="melting", binary_mixture_model = None, liquid_fraction_A = None, liquidus_temperature = None, 
+                 equilibrium_solid_fraction = None, solid_fraction = None, molar_volume_A = None, molar_volume_B = None, entropy_fusion_A = None, entropy_fusion_B = None):
         """
         Initializes the ClusterPhysics object with parameters loaded from a JSON file.
 
@@ -32,6 +33,11 @@ class ClusterPhysics:
             if self.binary_mixture == "full_model":
                 self.equilibrium_solid_fraction = equilibrium_solid_fraction
                 self.solid_fraction = solid_fraction
+                self.molar_volume_A = ureg.Quantity(molar_volume_A, "meter**3/mole")
+                self.molar_volume_B = ureg.Quantity(molar_volume_B, "meter**3/mole")
+                self.entropy_fusion_A = ureg.Quantity(entropy_fusion_A, "joule/(mole*kelvin)")
+                self.entropy_fusion_B = ureg.Quantity(entropy_fusion_B, "joule/(mole*kelvin)")
+
         self._precompute_constants()
 
     def _load_params_from_json(self, file_path):
@@ -232,6 +238,10 @@ class ClusterPhysics:
             if self.binary_mixture == "dilute":
                 driving_force = self.molecular_volume*(self.liquidus_temperature - self.temperature)*(self.entropy_fusion - self.constant_gas*np.log(self.liquid_fraction_A))/self.molar_volume.to("meter**3/mole")
                 return -(driving_force).to("joules")
+            else:
+                self.binary_volume = self.molar_volume_A*self.liquid_fraction_A + self.molar_volume_B*(1-self.liquid_fraction_A)
+                self.driving_force_A = self.molecular_volume*((self.liquidus_temperature - self.temperature)*self.entropy_fusion_A + self.constant_gas*self.temperature*np.log(self.liquid_fraction_A/self.solid_fraction) - self.constant_gas*self.liquidus_temperature*np.log(self.liquid_fraction_A/self.equilibrium_solid_fraction))/self.binary_volume.to("meter**3/mole")
+                return -(self.driving_force_A).to("joules")
         else:
             raise ValueError("Invalid method. Choose 'melting' or 'saturation'.")
 

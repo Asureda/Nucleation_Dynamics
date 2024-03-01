@@ -20,23 +20,24 @@
 \contentsline {subsection}{\numberline {8.3}Impurities results}{40}{subsection.8.3}%
 \contentsline {subsubsection}{\numberline {8.3.1}Metallic impurities}{40}{subsubsection.8.3.1}%
 \contentsline {paragraph}{Fe}{40}{section*.18}%
-\contentsline {section}{\numberline {9}CENTRIFUGAL TECHNOLOGY SELECTION}{43}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Single Step Separation Approach}{43}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Multi-Step Separation Approach}{48}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}Hydrocyclone: Mathematical modelling}{50}{subsection.9.3}%
-\contentsline {subsection}{\numberline {9.4}Fluid model}{51}{subsection.9.4}%
-\contentsline {subsection}{\numberline {9.5}Motion of suspended particles}{52}{subsection.9.5}%
-\contentsline {subsection}{\numberline {9.6}Cyclone effective volume}{53}{subsection.9.6}%
-\contentsline {subsection}{\numberline {9.7}Residence time model}{54}{subsection.9.7}%
-\contentsline {subsection}{\numberline {9.8}Separation efficiency model}{54}{subsection.9.8}%
-\contentsline {section}{\numberline {10}Results: Parametric analysis}{55}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Parametric analysis: Temperature}{55}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Parametric analysis: Cyclone diameter}{56}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Parametric analysis: volumetric inlet flow rate}{57}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Optimization methodology}{58}{subsection.10.4}%
-\contentsline {subsubsection}{\numberline {10.4.1}Geometrical optimization}{58}{subsubsection.10.4.1}%
-\contentsline {subsubsection}{\numberline {10.4.2}Optimization: Results}{59}{subsubsection.10.4.2}%
-\contentsline {subsection}{\numberline {10.5}Conceptual Design Approach}{63}{subsection.10.5}%
-\contentsline {section}{\numberline {11}CONCLUSIONS}{64}{section.11}%
-\contentsline {section}{\numberline {}REFERENCES}{65}{section.11}%
-\contentsline {section}{\numberline {}ANNEX 1}{70}{section*.40}%
+\contentsline {paragraph}{Cr}{43}{figure.caption.27}%
+\contentsline {section}{\numberline {9}CENTRIFUGAL TECHNOLOGY SELECTION}{44}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Single Step Separation Approach}{44}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Multi-Step Separation Approach}{49}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Hydrocyclone: Mathematical modelling}{51}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Fluid model}{52}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Motion of suspended particles}{53}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Cyclone effective volume}{54}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Residence time model}{55}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Separation efficiency model}{55}{subsection.9.8}%
+\contentsline {section}{\numberline {10}Results: Parametric analysis}{56}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Parametric analysis: Temperature}{56}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Parametric analysis: Cyclone diameter}{57}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Parametric analysis: volumetric inlet flow rate}{58}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Optimization methodology}{59}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}Geometrical optimization}{59}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}Optimization: Results}{60}{subsubsection.10.4.2}%
+\contentsline {subsection}{\numberline {10.5}Conceptual Design Approach}{64}{subsection.10.5}%
+\contentsline {section}{\numberline {11}CONCLUSIONS}{65}{section.11}%
+\contentsline {section}{\numberline {}REFERENCES}{66}{section.11}%
+\contentsline {section}{\numberline {}ANNEX 1}{71}{section*.45}%

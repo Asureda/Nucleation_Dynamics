@@ -8,8 +8,10 @@ import h5py
 ureg = pint.UnitRegistry()
 
 class ScipyClusterDynamics:
-    def __init__(self, params, time_steps, dt, u, MAX_NUMBER_MOLECULES, boundary_type='closed'):
-        self.physics_object = ClusterPhysics(params)
+    def __init__(self, params, time_steps, dt, u, MAX_NUMBER_MOLECULES, boundary_type='closed', method="melting", binary_mixture_model = None, liquid_fraction_A = None, liquidus_temperature = None, 
+                 equilibrium_solid_fraction = None, solid_fraction = None, molar_volume_A = None, molar_volume_B = None, entropy_fusion_A = None, entropy_fusion_B = None):
+        self.physics_object = ClusterPhysics(params, method=method, binary_mixture_model=binary_mixture_model, liquid_fraction_A=liquid_fraction_A, liquidus_temperature=liquidus_temperature, 
+                 equilibrium_solid_fraction=equilibrium_solid_fraction, solid_fraction=solid_fraction, molar_volume_A=molar_volume_A, molar_volume_B=molar_volume_B, entropy_fusion_A=entropy_fusion_A, entropy_fusion_B=entropy_fusion_B)        
         self.temperature = self.physics_object.temperature.magnitude
         self.time_steps = time_steps
         self.u = u
