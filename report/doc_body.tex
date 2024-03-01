@@ -756,7 +756,7 @@ as can be seen for the case of $i_{\text{max}} = 100$.
 This analysis indicates that for extended times, the number densities of supercritical clusters, obtained by summing $N_i$ and integrating the nucleation rate, match. 
 In contrast, closing conditions lead to a peak in the nucleation rate before a steady state is reached, which is reflected in a drop to zero in later stages and a 
 stabilization of the supercritical number densities.
-Similar qualitative results were achieved for $i_{\max} = 100$ as shown in Fig. \ref{fig:number_comparison}, yet the steady state is now realized under both boundary conditions. 
+Similar qualitative results were achieved for $i_{\max} = 100$ as shown in Fig. \ref{fig:number_comparison}, the steady state is reached under both boundary conditions. 
 The variations emerge at larger cluster sizes and over extended durations. The accumulation at significant cluster dimensions affects the cluster population primarily 
 near $i_{\max}$, marked by the exponential rise of $N_i$, requiring extensive computational efforts to achieve equilibrium for such nominal maximum sizes.
 
@@ -788,33 +788,43 @@ The figures are divided as follows, on the left are the results for $i_{\text{ma
     \centering
     \hspace*{-2cm} % Adjust the -1cm to your needs
     \includegraphics[width=1.2\linewidth]{laszlo_results/rate_evolution_comparison.png}
-    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \caption{Nucleation rates for different observable sizes for closed- boundary (top) and open-boundary(bottom) for $i_{\text{max}} = 40$ (left) and $100$ (right).}
     \label{fig:rate_evolution_comparison}
 \end{figure}
+
+The differences observed are primarily due to the boundary conditions, as previously mentioned. In scenarios with closed boundary conditions, there 
+is an accumulation of large clusters, resulting in a higher nucleation rate compared to clusters of intermediate sizes.
+
+Additionally, it has been noted that when the maximum cluster size $i_{\text{max}}$ increases, the behavior of the curve changes to an exponential form, maintaining a 
+constant value at the steady state. This is in contrast to a maximum size of $i_{\text{max}} = 40$, where the rate tends to zero, thereby mirroring the equilibrium distribution more closely.
+
+From these observations, we can deduce that for smaller maximum sizes, the stationary population distribution aligns more closely with the equilibrium distribution. 
+However, as the maximum size expands, the stationary distribution begins to diverge from the equilibrium state.
 
 \begin{figure}[H]
     \centering
     \hspace*{-2cm} % Adjust the -1cm to your needs
     \includegraphics[width=1.2\linewidth]{laszlo_results/number_evolution_comparison.png}
-    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \caption{Total number density for different observable sizes for closed- boundary (top) and open-boundary(bottom) for $i_{\text{max}} = 40$ (left) and $100$ (right).}
     \label{fig:number_evolution_comparison}
 \end{figure}
 
+In the case of number density, for open boundary conditions, a steady state is reached more quickly than for closed conditions.
 
 \subsection{Impurities results}
 In this section we will summarise the thermodynamic parameters found for each impurity and the results obtained from simulation.
 The section is then divided into metallic and non-metallic impurities. 
 \subsubsection{Metallic impurities}
 In this section the data and results for metallic impurities (Fe, Cr, AlN) are presented.
-\paragraph{Fe}
-
+\paragraph{Fe}~\\
+\vspace{1mm} % Adjust the space as needed
 First of all, the most important thing to consider is which phases are present in the Li-Fe system at the temperature at 
 which this fluid will be found.The phase diagram of the Fe-Li system is obtained from FactSage database \cite{Bale2016}, where also allows 
 equilibrium calculations for some systems.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{Fe-Li_phase_diagram.png}
-    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \caption{Phase diagram of Li-Fe mixture from FactSage database \cite{Bale2016}.}
     \label{fig:fe_li_diagram}
 \end{figure}
 
@@ -822,7 +832,7 @@ From \cite{Leavenworth1961TheSO} the solubility of Fe in Li is extracted ad diff
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{Fe_solubility.png}
-    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \caption{Fe solubility in liquid lithium dependence on temperature \ref{Leavenworth1961TheSO}. }
     \label{fig:Fe_solubility}
 \end{figure}
 
@@ -922,7 +932,8 @@ based on the mole fraction initially used for the input, iron is insoluble in li
 Consequently, to determine the driving force, the formalism from Eq. \ref{eq:simplified_free_energy_change} is used, considering that the solid fraction is 
 entirely constituted by one of the mixture's elements. Similarly, for calculating the surface energy, the Eq. \ref{eq:Thompson_Spaepen_model} is employed.
 
-The following table provides a summary of the obtained and identified values, which are essential for calculating the size distribution of the clusters.
+The following table provides a summary of the obtained and identified values, which are essential for calculating the size distribution of the clusters. 
+The diffusivity of iron in liquid lithium has not been found, and therefore, the diffusivity of chromium in Pb-Li has been used for both iron and chromium \cite{KHANCHYCH2023101527}.
 \begin{table}[h]
     \centering
     \begin{tabular}{|l|l|l|}
@@ -933,7 +944,8 @@ The following table provides a summary of the obtained and identified values, wh
     Mass Density       & $\rho$          & 7.87 g/cm$^3$         \\ \hline
     Melting Point      & $T_m$           & 1811 K                \\ \hline
     Heat of Fusion     & $\Delta H_f$    & 13.8 kJ/mol           \\ \hline
-    Surface Tension    & $\sigma$        & 0.2 J/m$^2$          \\ \hline
+    Surface Tension    & $\sigma$        & 0.11 J/m$^2$          \\ \hline
+	Diffusion Coefficient & $D$          & $4 \times 10^{-14}$ m$^2$/s \\ \hline
     \end{tabular}
     \caption{Parameters for Fe}
     \label{tab:params_Fe}
@@ -945,26 +957,284 @@ In Table. \ref{tab:critical_fe} the critical parameters are obtained.
 	\begin{tabular}{|l|l|l|}
 	\hline
 	\textbf{Parameter} & \textbf{Symbol} & \textbf{Value (Unit)} \\ \hline
-	Critical radius        & $r$             & 1.25 nm                 \\ \hline
-	Energy barrier         & $\Delta G_c$             & $1.42 \times 10^{-18}$ J         \\ \hline
-	Critical number of molecules       & $n$          & 114         \\ \hline
+	Critical radius        & $r^*$             & 0.35 nm                 \\ \hline
+	Energy barrier         & $\Delta G^*$             & $4.22 \times 10^{-19}$ J         \\ \hline
+	Critical number of molecules       & $n^*$          & 114         \\ \hline
 	\end{tabular}
 	\caption{Critical values for Fe}
 	\label{tab:critical_fe}
 \end{table}
 
+To solve the system of kinetic equations and obtain the size distribution, we utilized the model described in the previous section. 
+A closed boundary condition was selected for this purpose. Additionally, as a pre-exponential factor $N_0$ for the equilibrium distribution, 
+the Avogadro number $N_A$ was employed, consistent with methodologies used in prior benchmarking, ensuring that the results are expressed per mole. 
+Furthermore, the jump rate $\lambda$ has been defined as the cubic root of the solid's molecular volume.
+In this case, we have chosen to perform simulations with molecule sizes larger than $3*n^*$, normally used in these kind of calculations. In the 
+following graph we can see the size distribution for $i_{max}=400$ and $i_{max}=900$.
 
-\paragraph{Cr}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{psd_iron.png}
+    \caption{Iron cluster number density distribution for different sizes $i_{\text{max}} = 400$ and $900$.}
+    \label{fig:psd_iron}
+\end{figure}
 
-	
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_nucleation_rate_fe.png}
+    \caption{Iron nucleation rates for different sizes $i_{\text{max}} = 400$ and $900$.}
+    \label{fig:postcritical_nucleation_rate_fe}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_number_fe.png}
+    \caption{Iron postcritical total number density for different sizes $i_{\text{max}} = 400$ and $900$.}
+    \label{fig:postcritical_number_fe}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_nucleation_rate_fe_particles_comparison.png}
+    \caption{Iron nucleation rates for different observable sizes for $i_{\text{max}} = 400$ (left) and $900$ (right).}
+    \label{fig:postcritical_nucleation_rate_fe_particles_comparison}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_number_density_fe_particles_comparison.png}
+    \caption{Iron postcritical total number density for different observable sizes for $i_{\text{max}} = 400$ (left) and $900$ (right).}
+    \label{fig:postcritical_number_density_fe_particles_comparison}
+\end{figure}
+
+
+\paragraph{Cr}~\\
+\vspace{1mm} % Adjust the space as needed
+
+The phase diagram of the Li-Cr system is shown below.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{Li_Cr_phase_diagram.png}
-    \caption{Effect of upper boundary condition comparison between simulation and reference total cluster number density for different sizes $i_{\text{max}} = 40$ and $100$.}
+    \caption{Phase diagram of Li-Cr mixture from FactSage database \cite{Bale2016}.}
     \label{fig:cr_li_diagram}
 \end{figure}
 
-The phase diagram of the Li-Cr system is shown below.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{solubility_cr.png}
+    \caption{Cr solubility in liquid lithium dependence on temperature \ref{Leavenworth1961TheSO}.}
+    \label{fig:solubility_cr}
+\end{figure}
+
+
+\begin{table}[ht]
+	\centering
+	\label{tab:your_label_here}
+	\begin{tabular}{ccc}
+	\hline
+	$Reference$ & $x^{\text{A}}_{l,eq}$ & $x^{\text{A}}_{s,eq}$ \\ \hline
+	FactSage \cite{Bale2016} & $5.86 \times 10^{-6} $        & $1.00$         \\
+	Ref. \cite{Leavenworth1961TheSO}       & $1.21 \times 10^{-5}$         & -         \\
+	\end{tabular}
+	\caption{Equilibrium compositions of iron using FactSage and reference data.}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\label{tab:molar_fractions_cr_li}
+	\begin{tabular}{lccc}
+	\hline
+	\multicolumn{4}{c}{Molar fractions (T = 668 K)} \\
+	\hline
+	Species & Amount/mol & & \\
+	\hline
+	Cr & $2.0000 \times 10^{-8}$ & & \\
+	Li & $1.0000 \times 10^{0}$ & & \\
+	\hline
+	\multicolumn{4}{c}{PHASE: Liquid\#1(\#2)} \\
+	\hline
+	Species & Amount/mol & Mole Fraction & Activity \\
+	\hline
+	Cr & $2.0000 \times 10^{-8}$ & $2.0000 \times 10^{-8}$ & $1.6853 \times 10^{-4}$ \\
+	Li & $1.0000 \times 10^{0}$ & $1.0000 \times 10^{0}$ & $1.0000 \times 10^{0}$ \\
+	Total & $1.0000 \times 10^{0}$ & $1.0000$ & $1.0000$ \\
+	\hline
+	\multicolumn{4}{c}{PHASE: BCC-A2\#1} \\
+	\hline
+	Species & Amount/mol & Mole Fraction & Activity \\
+	\hline
+	Cr & $0.0000 \times 10^{0}$ & $6.7643 \times 10^{-13}$ & $3.4140 \times 10^{-3}$ \\
+	Li & $0.0000 \times 10^{0}$ & $1.0000$ & $7.7430 \times 10^{-1}$ \\
+	Total & $0.0000 \times 10^{0}$ & $1.0000$ & $7.7430 \times 10^{-1}$ \\
+	\hline
+	\end{tabular}
+	\caption{Equilibrium compositions of chromium using FactSage with a chromium molar fraction used as input.}
+\end{table}
+
+\begin{table}[ht]
+	\centering
+	\label{tab:molar_fractions_cr_li_updated}
+	\begin{tabular}{lccc}
+	\hline
+	\multicolumn{4}{c}{Molar fractions (T = 668 K)} \\
+	\hline
+	Species & Amount/mol & & \\
+	\hline
+	Cr & $1.1190 \times 10^{-5}$ & & \\
+	Li & $9.9999 \times 10^{-1}$ & & \\
+	\hline
+	\multicolumn{4}{c}{PHASE: Liquid\#1} \\
+	\hline
+	Species & Amount/mol & Mole Fraction & Activity \\
+	\hline
+	Cr & $5.8621 \times 10^{-6}$ & $5.8622 \times 10^{-6}$ & $4.9364 \times 10^{-2}$ \\
+	Li & $9.9999 \times 10^{-1}$ & $9.9999 \times 10^{-1}$ & $9.9999 \times 10^{-1}$ \\
+	Total & $9.9999 \times 10^{-1}$ & $1.0000$ & $1.0000$ \\
+	\hline
+	\multicolumn{4}{c}{PHASE: BCC-A2\#1} \\
+	\hline
+	Species & Amount/mol & Mole Fraction & Activity \\
+	\hline
+	Cr & $5.3279 \times 10^{-6}$ & $1.0000$ & $1.0000$ \\
+	Li & $6.3285 \times 10^{-16}$ & $1.1878 \times 10^{-10}$ & $7.7430 \times 10^{-1}$ \\
+	Total & $5.3279 \times 10^{-6}$ & $1.0000$ & $1.0000$ \\
+	\hline
+	\end{tabular}
+	\caption{Equilibrium compositions of chromium using FactSage with a chromium molar fraction increased to $x^{\text{A}}_{l} = 1.1190 \times 10^{-5}$.}
+\end{table}
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Parameter} & \textbf{Symbol} & \textbf{Value (Unit)} \\ \hline
+    Temperature        & $T$             & 668 K                 \\ \hline
+    Molar Mass         & $M$             & 51.99 g/mol         \\ \hline
+    Mass Density       & $\rho$          & 7.19 g/cm$^3$         \\ \hline
+    Melting Point      & $T_m$           & 2130 K                \\ \hline
+    Heat of Fusion     & $\Delta H_f$    & 20.48 kJ/mol           \\ \hline
+    Surface Tension    & $\sigma$        & 0.14 J/m$^2$          \\ \hline
+	Diffusion Coefficient & $D$          & $8 \times 10^{-11}$ m$^2$/s \\ \hline
+    \end{tabular}
+    \caption{Parameters for Cr}
+    \label{tab:params_Fe}
+\end{table}
+
+In Table. \ref{tab:critical_cr} the critical parameters are obtained.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|}
+	\hline
+	\textbf{Parameter} & \textbf{Symbol} & \textbf{Value (Unit)} \\ \hline
+	Critical radius        & $r^*$             & 0.45 nm                 \\ \hline
+	Energy barrier         & $\Delta G^*$             & $2.26 \times 10^{-19}$ J         \\ \hline
+	Critical number of molecules       & $n^*$          & 31         \\ \hline
+	\end{tabular}
+	\caption{Critical values for Cr}
+	\label{tab:critical_cr}
+\end{table}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{psd_cr.png}
+    \caption{Iron cluster number density distribution for different sizes $i_{\text{max}} = 200$ and $600$.}
+    \label{fig:psd_iron}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_nucleation_rate_cr.png}
+    \caption{Iron nucleation rates for different sizes $i_{\text{max}} = 400$ and $900$.}
+    \label{fig:postcritical_nucleation_rate_fe}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_number_cr.png}
+    \caption{Iron postcritical total number density for different sizes $i_{\text{max}} = 200$ and $600$.}
+    \label{fig:postcritical_number_fe}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_nucleation_rate_cr_particles_comparison.png}
+    \caption{Iron nucleation rates for different observable sizes for $i_{\text{max}} = 200$ (left) and $600$ (right).}
+    \label{fig:postcritical_nucleation_rate_fe_particles_comparison}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_number_density_cr_particles_comparison.png}
+    \caption{Iron postcritical total number density for different observable sizes for $i_{\text{max}} = 200$ (left) and $600$ (right).}
+    \label{fig:postcritical_number_density_fe_particles_comparison}
+\end{figure}
+
+\paragraph{AlN}~\\
+\vspace{1mm} % Adjust the space as needed
+
+In this case, for the impurity Al-N, no phase diagram with lithium has been found, ideally a ternary diagram would be available in great detail, but the biography is very scarce, only a 
+ternary diagram has been found but with little detail.\cite{Zhu}
+The only phase diagram with minimal detail available is that of the Li-Al system from FactSage. While it is not accurate to directly assume 
+that the Li-Al-N system will exhibit identical behavior, for the sake of analysis, we might consider similarities. According to the phase diagram, at the 
+operating temperature specific to lithium, a significantly high fraction of aluminum (Al) is necessary for the formation of two distinct phases. In the absence 
+of sufficient aluminum, the system is expected to remain entirely in the liquid state.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{al_li_diagram.png}
+    \caption{Temperature dependence of hydrogen isotope solubility in lithium. \cite{Bale2016}.}
+    \label{fig:al_li_diagram}
+\end{figure}
+
+
+Additionally, information on the diffusivity of Al-N in lithium is lacking. The only rigorous reference identified pertains to the diffusivity of different phases of Al-N \cite{CROWLEY2022231973}.
+Due to the uncertainty surrounding the variables, it would be premature to present results that may not accurately reflect reality. Therefore, we propose deferring a more detailed investigation of this 
+impurity to secure more reliable thermodynamic and kinetic parameters. Consequently, this deliverable will exclude simulations involving this specific impurity.
+
+\subsubsection{Non-metallic impurities}
+\paragraph{LiH, LiD, LiT}~\\
+\vspace{1mm} % Adjust the space as needed
+
+The system consisting of lithium, lithium hydride, and hydrogen (Li-LiH-H2) has undergone numerous studies. References where solubilities are experimentally found have been reviewed \cite{Veleckis1974THELH,Smith1979,Wang2012,Katsuta1977,Veleckis1977}. 
+In \cite{Smith1979}, experimental isotherms were obtained, 
+Values have been compared with each other and the values are consistent. 
+Each of the isotherms is comprised of three regions. The first rising portion represents hydrogen reacting with and dissolving in lithium to produce a homogeneous 
+liquid phase of lithium hydride dissolved in lithium. The constant pressure plateau defines the two-phase coexistence region. The boundaries of the plateau give the 
+composition of the two coexisting phases. One phase is rich in lithium and contains dissolved lithium hydride. The other phase is rich in lithium hydride and contains 
+dissolved lithium. As a hydrogen isotope is added to the system in this region, the amount of the lithium-rich phase decreases, and the amount of the lithium hydride-rich 
+phase increases, but the composition of each phase remains constant. Within experimental accuracy, the boundaries (miscibility gap) and, therefore, the composition of the 
+two phases were identical for the Li-LiH-H$_2$ and Li-LiD-D$_2$ systems. The second rising portion represents the homogeneous phase of lithium dissolved in liquid lithium hydride.
+
+
+The experimental data are considered in terms of the equilibrium:
+
+\begin{equation}
+\frac{1}{2} H_2(g) + Li_{(\text{soln})} \rightleftharpoons LiH_{(\text{soln})}
+\end{equation}
+
+where $H$ represents any of the hydrogen isotopes. The equilibrium constant for the above reaction is:
+
+\begin{equation}
+K = \frac{N_{LiH} \gamma_{LiH}}{N_{Li} \gamma_{Li} \sqrt{P_{H2}}}
+\label{eq:equilibrium_constant_h}
+\end{equation}
+
+Within the concentration range, Eq. \ref{eq:equilibrium_constant_h} can be rearranged to give the Sieverts relationship:
+
+\begin{equation}
+\sqrt{P_{H_2}} = K_s N_{LiH}
+\end{equation}
+
+The solubilities chosen as design variables are shown below.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{hydrogen_solubility.png}
+    \caption{Phase diagram of Li-Al mixture from FactSage database \cite{Bale2016}.}
+    \label{fig:al_li_diagram}
+\end{figure}
 
 \newpage
 

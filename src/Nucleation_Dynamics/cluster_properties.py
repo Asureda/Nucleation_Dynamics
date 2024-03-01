@@ -296,12 +296,12 @@ class ClusterPhysics:
             print(Rs)
             free_energy = -(4*np.pi/3)*((Rs -  self._params['interface_layer'])**3*self.heat_fusion/self.molar_volume - Rs**3*self.temperature*self.entropy_fusion/self.molar_volume).to('joule')
 
-            total_energy = np.where(number_of_molecules < 1,
+            total_energy = np.where(number_of_molecules <= 1,
                         0 * ureg.joule,
                         free_energy * number_of_molecules +
                         self.surface_free_energy * number_of_molecules ** (2 / 3))
         else:
-            total_energy = np.where(number_of_molecules < 1,
+            total_energy = np.where(number_of_molecules <= 1,
                                     0 * ureg.joule,
                                     self.bulk_free_energy * number_of_molecules +
                                     self.surface_free_energy * number_of_molecules ** (2 / 3))
