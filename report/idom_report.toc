@@ -1,0 +1,47 @@
+\contentsline {section}{\numberline {1}EXECUTIVE SUMMARY}{13}{section.1}%
+\contentsline {section}{\numberline {2}INTRODUCTION AND BACKGROUND}{14}{section.2}%
+\contentsline {section}{\numberline {3}SCOPE}{15}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Exceptions}{15}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Exclusions}{15}{subsection.3.2}%
+\contentsline {section}{\numberline {4}STRUCTURE OF THE DOCUMENT}{16}{section.4}%
+\contentsline {section}{\numberline {5}METHODOLOGY}{17}{section.5}%
+\contentsline {section}{\numberline {6}INPUTS}{18}{section.6}%
+\contentsline {section}{\numberline {7}IMPURITY AND CORROSION ANALYSIS}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Impurities Matrix}{19}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Lithium initial impurities}{19}{subsubsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.2}Corrosion Products}{21}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Maroni's Process}{22}{subsection.7.3}%
+\contentsline {section}{\numberline {8}CHEMICAL ANALYSIS}{24}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Nucleation Theory}{24}{subsection.8.1}%
+\contentsline {paragraph}{}{25}{section*.9}%
+\contentsline {subsubsection}{\numberline {8.1.1}Driving force}{26}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}Surface energy}{31}{subsubsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.2}Kinetic theory}{34}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Impurities results}{40}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Metallic impurities}{40}{subsubsection.8.3.1}%
+\contentsline {paragraph}{Fe}{40}{section*.18}%
+\contentsline {paragraph}{Cr}{46}{section*.31}%
+\contentsline {paragraph}{AlN}{51}{section*.44}%
+\contentsline {subsubsection}{\numberline {8.3.2}Non-metallic impurities}{52}{subsubsection.8.3.2}%
+\contentsline {paragraph}{LiH, LiD, LiT}{52}{section*.46}%
+\contentsline {paragraph}{Li2O, Li2C2}{60}{section*.58}%
+\contentsline {section}{\numberline {9}CENTRIFUGAL TECHNOLOGY SELECTION}{61}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Single Step Separation Approach}{61}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Multi-Step Separation Approach}{66}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Hydrocyclone: Mathematical modelling}{68}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Fluid model}{69}{subsection.9.4}%
+\contentsline {subsection}{\numberline {9.5}Motion of suspended particles}{70}{subsection.9.5}%
+\contentsline {subsection}{\numberline {9.6}Cyclone effective volume}{71}{subsection.9.6}%
+\contentsline {subsection}{\numberline {9.7}Residence time model}{72}{subsection.9.7}%
+\contentsline {subsection}{\numberline {9.8}Separation efficiency model}{72}{subsection.9.8}%
+\contentsline {section}{\numberline {10}Results: Parametric analysis}{73}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Parametric analysis: Temperature}{73}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Parametric analysis: Cyclone diameter}{74}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Parametric analysis: volumetric inlet flow rate}{75}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Optimization methodology}{76}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}Geometrical optimization}{76}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}Optimization: Results}{77}{subsubsection.10.4.2}%
+\contentsline {subsection}{\numberline {10.5}Conceptual Design Approach}{81}{subsection.10.5}%
+\contentsline {section}{\numberline {11}CONCLUSIONS}{82}{section.11}%
+\contentsline {section}{\numberline {}REFERENCES}{83}{section.11}%
+\contentsline {section}{\numberline {}ANNEX 1}{89}{section*.76}%

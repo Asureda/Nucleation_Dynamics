@@ -1119,7 +1119,7 @@ The phase diagram of the Li-Cr system is shown below.
 	Diffusion Coefficient & $D$          & $8 \times 10^{-11}$ m$^2$/s \\ \hline
     \end{tabular}
     \caption{Parameters for Cr}
-    \label{tab:params_Fe}
+    \label{tab:params_Cr}
 \end{table}
 
 In Table. \ref{tab:critical_cr} the critical parameters are obtained.
@@ -1136,28 +1136,38 @@ In Table. \ref{tab:critical_cr} the critical parameters are obtained.
 	\label{tab:critical_cr}
 \end{table}
 
+In Fig. \ref{fig:psd_cr} the cluster population density is solved for two $i_max$, in this case smaller values than iron have been chosen, logically because the free energy barrier is lower producing smaller critical number of molecules and radius values.
+Therefore, due to this, the postcritical clusters have densities orders of magnitude higher than iron, therefore, it can be assured that the nucleation is more favourable for chromium than iron. Clusters with a number of molecules higher than the critical number in the case of chromium have a much higher probability.
+The higher the barrier, the higher the probability that a cluster will dissolve.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\linewidth]{psd_cr.png}
-    \caption{Iron cluster number density distribution for different sizes $i_{\text{max}} = 200$ and $600$.}
-    \label{fig:psd_iron}
+    \caption{Chromium cluster number density distribution for different sizes $i_{\text{max}} = 200$ and $600$.}
+    \label{fig:psd_cr}
 \end{figure}
 
+In the chromium nucleation rate, the order of magnitude is significantly higher than that of iron, due to the same reason as the particle distribution, 
+the postcritical clusters have a significantly higher order of magnitude than the iron, due to the same reason as the particle distribution, the postcritical 
+clusters have a significantly higher order of magnitude.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\linewidth]{postcritical_nucleation_rate_cr.png}
-    \caption{Iron nucleation rates for different sizes $i_{\text{max}} = 400$ and $900$.}
-    \label{fig:postcritical_nucleation_rate_fe}
+    \caption{Chromium nucleation rates for different sizes $i_{\text{max}} = 200$ and $600$.}
+    \label{fig:postcritical_nucleation_rate_cr}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\linewidth]{postcritical_number_cr.png}
-    \caption{Iron postcritical total number density for different sizes $i_{\text{max}} = 200$ and $600$.}
-    \label{fig:postcritical_number_fe}
+    \caption{Chromium postcritical total number density for different sizes $i_{\text{max}} = 200$ and $600$.}
+    \label{fig:postcritical_number_cr}
 \end{figure}
 
+The change in behavior of the nucleation rate for postcritical clusters is noticeable. 
+Initially, for smaller clusters, the pattern follows a normal distribution. As cluster 
+size increases, the trend shifts to resemble the integral of a normal distribution. This shift 
+in behavior is attributed to the adoption of closed boundary conditions, which are implemented to maintain the total number of clusters.
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\linewidth]{postcritical_nucleation_rate_cr_particles_comparison.png}
@@ -1198,18 +1208,19 @@ impurity to secure more reliable thermodynamic and kinetic parameters. Consequen
 \paragraph{LiH, LiD, LiT}~\\
 \vspace{1mm} % Adjust the space as needed
 
-The system consisting of lithium, lithium hydride, and hydrogen (Li-LiH-H2) has undergone numerous studies. References where solubilities are experimentally found have been reviewed \cite{Veleckis1974THELH,Smith1979,Wang2012,Katsuta1977,Veleckis1977}. 
+The system consisting of lithium, lithium hydride, and hydrogen (Li-LiH-H$_2$) has undergone numerous studies. References where solubilities are experimentally found have been reviewed \cite{Veleckis1974THELH,Smith1979,Wang2012,Katsuta1977,Veleckis1977}. 
 In \cite{Smith1979}, experimental isotherms were obtained, 
 Values have been compared with each other and the values are consistent. 
-Each of the isotherms is comprised of three regions. The first rising portion represents hydrogen reacting with and dissolving in lithium to produce a homogeneous 
-liquid phase of lithium hydride dissolved in lithium. The constant pressure plateau defines the two-phase coexistence region. The boundaries of the plateau give the 
-composition of the two coexisting phases. One phase is rich in lithium and contains dissolved lithium hydride. The other phase is rich in lithium hydride and contains 
-dissolved lithium. As a hydrogen isotope is added to the system in this region, the amount of the lithium-rich phase decreases, and the amount of the lithium hydride-rich 
-phase increases, but the composition of each phase remains constant. Within experimental accuracy, the boundaries (miscibility gap) and, therefore, the composition of the 
-two phases were identical for the Li-LiH-H$_2$ and Li-LiD-D$_2$ systems. The second rising portion represents the homogeneous phase of lithium dissolved in liquid lithium hydride.
+Each isotherm is divided into three distinct sections. Initially, the rising segment illustrates the interaction of hydrogen with lithium, leading to 
+the formation of a uniform liquid phase where lithium hydride is uniformly mixed within lithium. This region of constant pressure delineates the area 
+where two distinct phases coexist. The edge of this flat section indicates the precise mix of the two simultaneous phases: one predominantly composed of 
+lithium with lithium hydride dissolved within, and the other primarily consisting of lithium hydride with lithium dissolved in it. Upon introducing a 
+hydrogen isotope into this specific area, the proportion of the lithium-enriched phase reduces, whereas the lithium hydride-enriched phase expands, 
+yet the makeup of each phase does not change. According to the precision of experimental measurements, the dividing line (or miscibility gap) and 
+thus the makeup of the two phases remain consistent between the Li-LiH-H$_2$ and Li-LiD-D$_2$ systems. The latter part of the rise indicates a 
+phase where lithium integrates evenly within the liquid lithium hydride.
 
-
-The experimental data are considered in terms of the equilibrium:
+The experimental data are considered in terms of the equilibrium \cite{Smith1979}:
 
 \begin{equation}
 \frac{1}{2} H_2(g) + Li_{(\text{soln})} \rightleftharpoons LiH_{(\text{soln})}
@@ -1228,13 +1239,157 @@ Within the concentration range, Eq. \ref{eq:equilibrium_constant_h} can be rearr
 \sqrt{P_{H_2}} = K_s N_{LiH}
 \end{equation}
 
-The solubilities chosen as design variables are shown below.
+Where $K_s$ is the Sieverts constant. 
+
+The solubilities chosen as design variables are shown in the Fig. \ref{fig:hydrogen_solubility}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\linewidth]{hydrogen_solubility.png}
-    \caption{Phase diagram of Li-Al mixture from FactSage database \cite{Bale2016}.}
-    \label{fig:al_li_diagram}
+    \caption{Temperature dependence of hydrogen isotope solubility in lithium.}
+    \label{fig:hydrogen_solubility}
 \end{figure}
+
+At the operation temperature, the following equilibrium fractions are obtained for each of the hydrogen isotopes
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|}
+	\hline
+	\textbf{Nuclide} & \textbf{Sieverts Constant (Torr$^{0.5}$/[(H:Li)])} & \textbf{(H:Li) Ratio} \\ \hline
+	H & 1.65 &  0.0045 \\ \hline
+	D & 2.90 &  0.00363 \\ \hline
+	T & 5.02 &  0.00360 \\ \hline
+	\end{tabular}
+	\caption{Solubility of hydrogen isotopes in lithium}
+	\label{tab:Equilibrium properties of hydrogen nuclides}
+\end{table}
+
+To examine the existing phases, presented below are two phase diagrams of the LiH system: one sourced from the FactSage database \cite{Bale2016} and the other from a reference \cite{Wang2012}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{lih_diagram.png}
+    \caption{LiH phase diagram from FactSage database (left) and for \cite{Wang2012} (right).}
+    \label{fig:lih_diagram}
+\end{figure}
+
+Unlike the other impurities, hydrogen isotopes are formed from neutron reactions between lithium and the neutrons generated by the fusion reaction. 
+Therefore, the mass fraction obtained in one pulse is assumed. The following table shows the results obtained for each nuclide respectively and the neutron source used.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|l|}
+	\hline
+	\textbf{Reaction} & \textbf{Ratio} & \textbf{mol/m³} & \textbf{(H:Li) Ratio} \\ \hline
+	$(n,Xp)$ & $0.015$ & $6.5 \times 10^{-7}$ & $9.12 \times 10^{-6}$ \\ \hline
+	$(n,Xd)$ & $0.15$ & $6.34 \times 10^{-6}$ & $8.96 \times 10^{-5}$ \\ \hline
+	$(n,Xt)$ & $1.53$ & $6.5 \times 10^{-5}$ & $9.1 \times 10^{-4}$ \\ \hline
+	Neutrons/Pulse & $6.2 \times 10^{21}$ &  & \\ \cline{1-2}
+	\end{tabular}
+	\caption{Hydrogen nuclides production}
+	\label{tab:h_production}
+\end{table}
+
+Based on the solubility data and phase diagrams at our disposal, it appears that the mixture will 
+be quite dilute at these specific fractions, exhibiting only a single liquid phase. This observation 
+implies that to reach a state of saturation, where nuclides can precipitate as lithium hydrides, the 
+solution must undergo additional concentration. Consequently, achieving nucleation of the particles 
+may necessitate multiple operational pulses to enhance the liquid's saturation level.
+
+Hence, to acquire initial insights into the size distribution of the clusters, we will proceed under 
+the assumption that the mole fraction of tritium is 1e-1 and deuterium 1e-2, and the liquidus temperature for each composition is extracted from the phase diagram \cite{Veleckis1977}.
+Evidently, it is a concentrated fraction, but looking at the production per pulse of each nuclide, we will always have a higher order of magnitude for tritium 
+compared to deuterium, also the hydrogen concentration will be low, to see the qualitative trend of the distribution of the clusters is enough. In future simulations, the mole fractions and their evolution by pulses will have to be much more refined.
+For the simulations the following table summarise the parameters, extracted form \cite{Konstantin,Veleckis1974THELH,Smith1979,Wang2012,Katsuta1977,Veleckis1977}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    \textbf{Parameter} & \textbf{Symbol} & \textbf{LiH (Unit)} & \textbf{LiD (Unit)} & \textbf{LiT (Unit)} \\ \hline
+    Temperature        & $T$             & 668 K              & 668 K             & 668 K             \\ \hline
+    Molar Mass         & $M$             & 7.95 g/mol         & 8.94 g/mol        & 9.93 g/mol        \\ \hline
+    Mass Density       & $\rho$          & 0.82 g/cm$^3$      & 0.82 g/cm$^3$     & 0.82 g/cm$^3$     \\ \hline
+    Melting Point      & $T_m$           & 961 K              & 963 K             & 964 K             \\ \hline
+    Heat of Fusion     & $\Delta H_f$    & 22.59 kJ/mol       & 22.59 kJ/mol        & 22.59 kJ/mol        \\ \hline
+    Surface Tension    & $\sigma$        & 0.29 J/m$^2$        & 0.26 J/m$^2$      & 0.25 J/m$^2$      \\ \hline
+    Diffusion Coefficient & $D$          & 1.5 x $10^{-12}$ m$^2$/s & 1.4 x $10^{-12}$ m$^2$/s & 1.3 x $10^{-12}$ m$^2$/s \\ \hline
+    \end{tabular}
+    \caption{Parameters for LiH, LiD, and LiT}
+    \label{tab:params_LiHDT}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|l|l|l|l|}
+	\hline
+	\textbf{Parameter} & \textbf{Symbol} &\textbf{D (Unit)} & \textbf{T (Unit)} \\ \hline
+	Critical radius        & $r^*$             & 1.1 nm              & 0.78 nm              \\ \hline
+	Energy barrier         & $\Delta G^*$      &  $1.36 \times 10^{-18}$ J              & $6.31 \times 10^{-19}$ J              \\ \hline
+	Critical number of molecules       & $n^*$          &  325                 & 98                 \\ \hline
+	\end{tabular}
+	\caption{Critical values for H, D, and T}
+	\label{tab:critical_HDT}
+\end{table}
+
+Under the given conditions, can be seen that hydrides display a notably low density of postcritical clusters, accompanied by a high energy barrier. 
+This is particularly true for deuterium, which, under these conditions, demonstrates a lower concentration. The varying mole fractions and 
+thermodynamic parameters lead to a distinct outcome: tritium exhibits a higher density of postcritical clusters, indicating it is the nuclide 
+that forms more abundantly under these conditions.
+
+Furthermore, the rate at which both nuclides reach a steady state in terms of postcritical nucleation is slow. Tritium, however, 
+shows a sharp increase over a short duration, while deuterium's increase remains significantly lower. This same pattern is observed 
+in the total number density of the nuclides.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{psd_hydrogen.png}
+    \caption{Hydrides cluster number density distribution for $i_{\text{max}} = 1000$.}
+    \label{fig:psd_cr}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_rate_lih.png}
+    \caption{Hydrides postcritical nucleation rates for $i_{\text{max}} = 1200$.}
+    \label{fig:psd_cr}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{postcritical_number_lih.png}
+    \caption{Hydrides postcriticalnumber density for $i_{\text{max}} = 1200$.}
+    \label{fig:psd_cr}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{rates_lid_lit.png}
+    \caption{Hydrides nucleation rates (deuterium (left) and tritum (right)) for $i_{\text{max}} = 1200$.}
+    \label{fig:psd_cr}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\linewidth]{number_lid_lit.png}
+    \caption{Hydrides nucleation rates (deuterium (left) and tritum (right)) for $i_{\text{max}} = 1200$.}
+    \label{fig:psd_cr}
+\end{figure}
+
+The figures presented showcase the nucleation rates and total number densities for deuterium and tritium across various cluster sizes. Notably, deuterium displays significantly lower postcritical values compared to tritium, leading to the inference that deuterium nuclei are more likely to dissolve in lithium without further growth.
+
+Hydrogen is excluded from this analysis due to its substantially lower concentration, as previously mentioned. Therefore, beyond this kinetic 
+examination of nucleus growth, a comprehensive thermo-hydraulic analysis, accompanied by neutron studies, is necessary to fully understand the 
+evolution of hydrides within the system. Incorporating this kinetic analysis as a nucleation foundation allows for a detailed examination of 
+the mass evolution of these nuclides, both on a kinetic level and within the broader scope of macroscopic process scales.
+
+Additionally, as previously mentioned, the choice of model for defining the driving force is critical, as the relationships are exponential, 
+meaning small changes can result in significant differences in the outcomes. Therefore, it is essential to conduct comparisons with careful 
+selection of these parameters. Surface energy is another crucial factor, and it is recognized that this can vary based on cluster size among 
+other factors. In this analysis, a constant value for surface energy has been assumed, which is acknowledged to potentially lead to significant 
+discrepancies in results. Hence, it is determined that for non-metallic impurities, a more detailed examination of these parameters and their 
+evolution within the heat exchanger is necessary.
+
+\paragraph{Li2O, Li2C2}~\\
+\vspace{1mm} % Adjust the space as needed
+For these non-metallic impurities, no input is available, but their precipitation behaviour in the heat 
+exchanger is also important. Therefore, it has been decided to make a more detailed study for the next deliverable.
 
 \newpage
 

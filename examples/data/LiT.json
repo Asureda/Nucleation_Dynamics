@@ -1,0 +1,14 @@
+{
+    "temperature": 668,
+    "activation_energy": 0,
+    "diffusivity_factor": 8.21223871194897e-11,
+    "jump_distance": 2.52e-10,
+    "molar_mass": 9.93,
+    "mass_density": 0.82,
+    "melting_point": 964,
+    "heat_fusion": 22590,
+    "interface_layer": 2.265,   
+    "supersaturation_ratio": 1.1,
+    "sigma": 0.249,
+    "method": "melting"
+}
